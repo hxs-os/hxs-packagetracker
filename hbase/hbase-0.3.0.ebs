@@ -14,10 +14,10 @@ pkgdesc="a minimal posix core user utils implementation"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/hbase"
-pkgprovides="coreutils"
+pkgprovides="system:coreutils"
 
 build() {
-    CC="${CC:-cc}" meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
+    meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
 }
 
 check() {

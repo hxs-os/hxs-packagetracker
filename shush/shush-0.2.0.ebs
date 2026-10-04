@@ -16,10 +16,10 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/shush"
 pkgcheck=false
 pkgdeps="libedit"
-pkgprovides="sh"
+pkgprovides="system:sh"
 
 build() {
-    CC="${CC:-cc}" make WITH_LIBEDIT=true
+    make WITH_LIBEDIT=true
 }
 
 package() {

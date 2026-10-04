@@ -15,10 +15,10 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/shush"
 pkgcheck=false
-pkgprovides="sh"
+pkgprovides="system:sh"
 
 build() {
-    CC="${CC:-cc}" CFLAGS="-static -O2" LDFLAGS="-static" make WITH_LIBEDIT=false
+    CFLAGS="-static -O2" LDFLAGS="-static" make WITH_LIBEDIT=false
 }
 
 package() {
