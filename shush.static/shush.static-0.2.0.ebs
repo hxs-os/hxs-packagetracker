@@ -1,0 +1,26 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=shush.static
+pkgver=0.2.0
+pkgsrc=https://dl.juanvel400.com/shush/shush-$pkgver.tar.xz
+pkgchecksum=sha256:f3edb5f3088d55d1cb9e93401c9f8df0fd29c6ad3ba4f31061c75e3d4138d378
+pkgdesc="a static build of shush, lacking libedit support"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://git.sr.ht/~juanvel400/shush"
+pkgcheck=false
+pkgprovides="sh"
+
+build() {
+    CC="${CC:-cc}" CFLAGS="-static -O2" LDFLAGS="-static" make WITH_LIBEDIT=false
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir" PREFIX="/usr" INSTALL_MAN=false INSTALL_API=false
+}
