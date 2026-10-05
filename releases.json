@@ -1,0 +1,43 @@
+{
+  "packagetracker": 1,
+  "packages": [
+    {
+      "name": "hbase",
+      "versions": {
+        "0.3.0": {
+          "path": "hbase/hbase-0.3.0.ebs",
+          "static": { "has_static": false }
+        }
+      },
+      "latest_version": "0.3.0"
+    },
+
+    {
+      "name": "xpt",
+      "versions": {
+        "0.8.0": {
+          "path": "xpt/xpt-0.8.0.ebs",
+          "static": {
+            "has_static": true,
+            "path": "xpt.static/xpt.static-0.8.0.ebs"
+          }
+        }
+      },
+      "latest_version": "0.8.0"
+    },
+
+    {
+      "name": "shush",
+      "versions": {
+        "0.2.0": {
+          "path": "shush/shush-0.2.0.ebs",
+          "static": {
+            "has_static": true,
+            "path": "shush.static/shush.static-0.2.0.ebs"
+          }
+        }
+      },
+      "latest_version": "0.2.0"
+    }
+  ]
+}

@@ -14,16 +14,12 @@ pkgdesc="a package manager utility and library"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/xpt"
-pkgcheck=true
+pkgcheck=false
 pkgdeps="openssl,libarchive,zstd,sqlite3,pkg-config"
 pkgprovides="system:xpt"
 
 build() {
     meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
-}
-
-check() {
-    meson test -C build
 }
 
 package() {

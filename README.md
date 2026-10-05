@@ -1,6 +1,6 @@
 # HxS PackageTracker
 
-the HxS PackageTracker is a collection of `ebs(5)` formulae, designed to be built to assemble a complete HxS system.
+the HxS PackageTracker is a collection of `ebs(5)` formulae, used to build the packages that make up a complete HxS system.
 
 ## formulae
 
