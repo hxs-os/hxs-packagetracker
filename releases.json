@@ -6,7 +6,10 @@
       "versions": {
         "0.3.0": {
           "path": "hbase/hbase-0.3.0.ebs",
-          "static": { "has_static": false }
+          "static": {
+            "has_static": true,
+            "path": "hbase.static/hbase.static-0.3.0.ebs"
+          }
         }
       },
       "latest_version": "0.3.0"
@@ -38,6 +41,19 @@
         }
       },
       "latest_version": "0.2.0"
+    },
+
+    {
+      "name": "adam",
+      "versions": {
+        "0.1.0": {
+          "path": "adam/adam-0.1.0.ebs",
+          "static": {
+            "has_static": true,
+            "path": "adam.static/adam.static-0.1.0.ebs"
+          }
+      },
+      "latest_version": "0.1.0"
     }
   ]
 }

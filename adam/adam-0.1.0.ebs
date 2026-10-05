@@ -1,0 +1,23 @@
+#!/bin/sh
+#ebs.formulae
+ebsver=1
+
+pkgname=adam
+pkgver=0.1.0
+pkgsrc=https://dl.juanvel400.com/adam/adam-$pkgver.tar.xz
+pkgchecksum=sha256:a9f98d24a9e5d3f219ccd0f9cd1ee97d1eadcc7d86a4be8f28f4d4f4b1f6b003
+
+pkgdesc="a tiny PID 1 implementation"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/adam"
+
+build() {
+    meson setup build --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release
+    meson compile -C build
+}
+
+package() {
+    DESTDIR="$pkgdir" fakeroot meson install -C build
+}
