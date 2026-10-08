@@ -19,5 +19,5 @@ build() {
 }
 
 package() {
-    DESTDIR="$pkgdir" fakeroot meson install -C build
+    DESTDIR="$pkgdir" fakeroot meson install -C build --strip
 }
