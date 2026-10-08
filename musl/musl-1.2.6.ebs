@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=musl
+pkgver=1.2.6
+pkgsrc=https://musl.libc.org/releases/musl-$pkgver.tar.gz
+pkgchecksum=sha256:d585fd3b613c66151fc3249e8ed44f77020cb5e6c1e635a616d3f9f82460512a
+pkgdesc="MIT-licensed implementation of the C standard library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://musl.libc.org"
+pkgcheck=false
+pkgprovides="system:libc"
+
+build() {
+    ./configure --prefix=/usr --syslibdir=/lib
+    make
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir"
+}

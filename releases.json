@@ -62,6 +62,19 @@
         }
       },
       "latest_version": "0.2.0"
+    },
+
+    {
+      "name": "musl",
+      "versions": {
+        "0.1.0": {
+          "path": "musl/musl-1.2.6.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.2.6"
     }
   ]
 }
