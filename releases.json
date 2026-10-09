@@ -101,6 +101,19 @@
         }
       },
       "latest_version": "1.5.7"
+    },
+
+    {
+      "name": "pkgconf",
+      "versions": {
+        "1.1.0": {
+          "path": "pkgconf/pkgconf-1.1.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.1.0"
     }
   ]
 }
