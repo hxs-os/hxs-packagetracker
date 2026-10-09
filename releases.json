@@ -106,14 +106,14 @@
     {
       "name": "pkgconf",
       "versions": {
-        "1.1.0": {
-          "path": "pkgconf/pkgconf-1.1.0.ebs",
+        "3.0.8": {
+          "path": "pkgconf/pkgconf-3.0.8.ebs",
           "static": {
             "has_static": false
           }
         }
       },
-      "latest_version": "1.1.0"
+      "latest_version": "3.0.8"
     }
   ]
 }
