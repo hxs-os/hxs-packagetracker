@@ -29,6 +29,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `zstd`    | —                  | fast real-time compression algorithm                 |
 | `pkgconf` | —                  | package compiler and linker metadata toolkit         |
 | `openssl` | —                  | robust, commercial-grade, full-featured, TLS toolkit |
+| `ncurses` | —                  | software emulation of curses                         |
 
 ### how to build
 

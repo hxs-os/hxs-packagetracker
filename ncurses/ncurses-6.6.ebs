@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=ncurses
+pkgver=6.6
+pkgsrc=https://ftp.gnu.org/gnu/ncurses/ncurses-$pkgver.tar.gz
+pkgchecksum=sha256:325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9
+pkgdesc="software emulation of curses"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://invisible-island.net/ncurses/ncurses.html"
+pkgcheck=false
+
+build() {
+    ./configure --prefix=/usr \
+        --mandir=/usr/share/man \
+        --with-shared \
+        --without-normal \
+        --enable-widec \
+        --enable-pc-files \
+        --with-pkg-config-libdir=/usr/lib/pkgconfig \
+        --with-termlib \
+        --disable-stripping
+    make
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir"
+
+    for lib in ncurses ncurses++ form panel menu tinfo; do
+        ln -sf lib${lib}w.so "$pkgdir/usr/lib/lib${lib}.so"
+    done
+}
