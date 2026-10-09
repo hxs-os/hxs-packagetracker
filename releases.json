@@ -156,7 +156,7 @@
     },
 
     {
-      "name": "bzip",
+      "name": "bzip2",
       "versions": {
         "1.0.8": {
           "path": "bzip2/bzip2-1.0.8.ebs",
