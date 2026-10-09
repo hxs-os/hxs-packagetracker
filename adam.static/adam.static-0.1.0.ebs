@@ -16,6 +16,7 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 
 pkglicense="BSD-3-Clause"
 pkghomepage="https://sr.ht/~juanvel400/adam"
+pkgprovides="system:init"
 
 build() {
     meson setup build --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dstatic=true

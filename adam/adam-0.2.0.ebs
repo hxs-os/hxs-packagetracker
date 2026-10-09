@@ -10,12 +10,11 @@ pkgname=adam
 pkgver=0.2.0
 pkgsrc=https://dl.juanvel400.com/adam/adam-$pkgver.tar.xz
 pkgchecksum=sha256:2d45b13c91f9a63543d124885645fd9c05d946415002017b1be566bcb7c1cc3c
-
 pkgdesc="a tiny PID 1 implementation"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
-
 pkglicense="BSD-3-Clause"
 pkghomepage="https://sr.ht/~juanvel400/adam"
+pkgprovides="system:init"
 
 build() {
     meson setup build --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release
