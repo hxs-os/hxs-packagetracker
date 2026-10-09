@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=dash.static
+pkgver=0.5.13.5
+pkgsrc=http://gondor.apana.org.au/~herbert/dash/files/dash-$pkgver.tar.gz
+pkgchecksum=sha256:40090101a2a491f13e901d3d48e90414f26634628b9bfff35ff540363c227a7d
+pkgdesc="a static build of dash"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="http://gondor.apana.org.au/~herbert/dash/"
+pkgcheck=true
+pkgprovides="dash"
+
+build() {
+    ./configure --prefix=/usr --enable-glob --enable-fnmatch --disable-shared --enable-static
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir"
+}

@@ -205,6 +205,20 @@
         }
       },
       "latest_version": "3.8.9"
+    },
+
+    {
+      "name": "dash",
+      "versions": {
+        "0.5.13.5": {
+          "path": "dash/dash-0.5.13.5.ebs",
+          "static": {
+            "has_static": true,
+            "path": "dash.static/dash.static-0.5.13.5.ebs"
+          }
+        }
+      },
+      "latest_version": "0.5.13.5"
     }
   ]
 }
