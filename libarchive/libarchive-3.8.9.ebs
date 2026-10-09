@@ -12,10 +12,10 @@ pkgsrc=https://github.com/libarchive/libarchive/releases/download/v$pkgver/libar
 pkgchecksum=sha256:888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde
 pkgdesc="multi-format archive and compression library"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
-pkglicense="https://www.libarchive.org/"
-pkghomepage="https://github.com/libarchive/libarchive"
-pkgdeps="zstd,bzip2,xz,zlib"
-pkgprovides="bsdtar,unzip,bsdcpio"
+pkglicense="BSD-2-Clause"
+pkghomepage="https://libarchive.org"
+pkgdeps="zstd,bzip2,xz,zlib,openssl"
+pkgprovides="bsdtar,bsdcpio,bsdunzip,cpio,unzip,tar"
 pkgcheck=true
 
 build() {
@@ -39,4 +39,13 @@ check() {
 
 package() {
     fakeroot make install DESTDIR="$pkgdir"
+
+    ln -sf bsdunzip "$pkgdir/usr/bin/unzip"
+    ln -sf bsdunzip.1 "$pkgdir/usr/share/man/man1/unzip.1"
+
+    ln -sf bsdcpio "$pkgdir/usr/bin/cpio"
+    ln -sf bsdcpio.1 "$pkgdir/usr/share/man/man1/cpio.1"
+
+    ln -sf bsdtar "$pkgdir/usr/bin/tar"
+    ln -sf bsdtar.1 "$pkgdir/usr/share/man/man1/tar.1"
 }
