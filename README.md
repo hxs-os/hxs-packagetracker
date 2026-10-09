@@ -6,7 +6,7 @@ the HxS PackageTracker is heavily inspired by FreeBSD Ports and [`void-packages`
 
 ## formulae
 
-further information about each formula is found in the formula metadata and `releases.json`.
+further information about each formula is found in the formula metadata and [`releases.json`](releases.json).
 
 ### first-party formulae
 
@@ -17,6 +17,7 @@ these are formulae for first-party packages, i.e. packages written for HxS.
 | `xpt`   | `xpt.static`       | the xpt package manager      |
 | `shush` | `shush.static`     | the shush shell              |
 | `hbase` | `hbase.static`     | the hbase utility collection |
+| `adam`  | `adam.static`      | the adam init system         |
 
 ### third-party formulae
 
@@ -36,6 +37,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `libedit`    | —                  | autotool- and libtoolized port of the NetBSD editline library |
 | `libarchive` | —                  | multi-format archive and compression library                  |
 | `dash`       | `dash.static`      | debian almquist shell                                         |
+| `man-pages`  | —                  | manual pages for GNU+Linux                                    |
 
 ### how to build
 

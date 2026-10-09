@@ -219,6 +219,19 @@
         }
       },
       "latest_version": "0.5.13.5"
+    },
+
+    {
+      "name": "man-pages",
+      "versions": {
+        "6.19": {
+          "path": "man-pages/man-pages-6.19.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "6.19"
     }
   ]
 }

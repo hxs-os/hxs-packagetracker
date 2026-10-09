@@ -1,0 +1,25 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=man-pages
+pkgver=6.19
+pkgsrc=https://www.kernel.org/pub/linux/docs/man-pages/man-pages-$pkgver.tar.xz
+pkgchecksum=sha256:88a7c42ad2e03d8b96dc72d95e451f2d875ff0f43103a8eb8ac8242133bdcb05
+pkgdesc="manual pages for GNU+Linux"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="Various"
+pkghomepage="https://www.kernel.org/doc/man-pages/"
+pkgcheck=false
+
+build() {
+    rm -v man3/crypt*
+}
+
+package() {
+    make -R GIT=false prefix=/usr install DESTDIR="$pkgdir"
+}
