@@ -179,6 +179,19 @@
         }
       },
       "latest_version": "5.8.4"
+    },
+
+    {
+      "name": "libedit",
+      "versions": {
+        "20260512-3.1": {
+          "path": "libedit/libedit-20260512-3.1.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "20260512-3.1"
     }
   ]
 }

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libedit
+pkgver=20260512-3.1
+pkgsrc=https://www.thrysoee.dk/editline/libedit-$pkgver.tar.gz
+pkgchecksum=sha256:432d5e7ea8b0116dd39f2eca7bc11d0eed77faa6b77ea526ace89907c23ea4a0
+pkgdesc="autotool- and libtoolized port of the NetBSD editline library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://www.thrysoee.dk/editline/"
+pkgdeps="ncurses"
+pkgcheck=true
+
+build() {
+    ./configure --prefix=/usr --enable-shared --disable-static
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir"
+}
