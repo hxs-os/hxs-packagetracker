@@ -140,6 +140,19 @@
         }
       },
       "latest_version": "6.6"
+    },
+
+    {
+      "name": "sqlite3",
+      "versions": {
+        "3.53.4": {
+          "path": "sqlite3/sqlite3-3.53.4.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "3.53.4"
     }
   ]
 }

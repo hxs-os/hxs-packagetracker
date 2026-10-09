@@ -30,6 +30,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `pkgconf` | —                  | package compiler and linker metadata toolkit         |
 | `openssl` | —                  | robust, commercial-grade, full-featured, TLS toolkit |
 | `ncurses` | —                  | software emulation of curses                         |
+| `sqlite3` | —                  | a small, fast, self-contained SQL database engine    |
 
 ### how to build
 
