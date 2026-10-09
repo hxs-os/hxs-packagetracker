@@ -114,6 +114,19 @@
         }
       },
       "latest_version": "3.0.8"
+    },
+
+    {
+      "name": "openssl",
+      "versions": {
+        "4.0.3": {
+          "path": "openssl/openssl-4.0.3.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "40.0.3"
     }
   ]
 }

@@ -22,12 +22,13 @@ these are formulae for first-party packages, i.e. packages written for HxS.
 
 these are formulae for third-party packages, i.e. packages not written for HxS.
 
-| package   | static counterpart | description                                  |
-| --------- | ------------------ | -------------------------------------------- |
-| `musl`    | —                  | implementation of the C standard library     |
-| `zlib`    | —                  | a lossless data-compression library          |
-| `zstd`    | —                  | fast real-time compression algorithm         |
-| `pkgconf` | —                  | package compiler and linker metadata toolkit |
+| package   | static counterpart | description                                          |
+| --------- | ------------------ | ---------------------------------------------------- |
+| `musl`    | —                  | implementation of the C standard library             |
+| `zlib`    | —                  | a lossless data-compression library                  |
+| `zstd`    | —                  | fast real-time compression algorithm                 |
+| `pkgconf` | —                  | package compiler and linker metadata toolkit         |
+| `openssl` | —                  | robust, commercial-grade, full-featured, TLS toolkit |
 
 ### how to build
 
