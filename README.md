@@ -1,10 +1,12 @@
 # HxS PackageTracker
 
-the HxS PackageTracker is a collection of `ebs(5)` formulae used to build the packages that make up a complete HxS system.
+the HxS PackageTracker is a collection of `ebs(5)` formulae used to build packages for HxS.
+
+the HxS PackageTracker is heavily inspired by FreeBSD Ports and [`void-packages`](https://github.com/void-linux/void-packages).
 
 ## formulae
 
-further information about each formula is found in the formula metadata.
+further information about each formula is found in the formula metadata and `releases.json`.
 
 ### first-party formulae
 
@@ -24,6 +26,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | ------- | ------------------ | ---------------------------------------- |
 | `musl`  | —                  | implementation of the C standard library |
 | `zlib`  | —                  | a lossless data-compression library      |
+| `zstd`  | —                  | fast real-time compression algorithm     |
 
 ### how to build
 

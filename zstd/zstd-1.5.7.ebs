@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=zstd
+pkgver=1.5.7
+pkgsrc=https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
+pkgchecksum=sha256:eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3
+pkgdesc="fast real-time compression algorithm"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://www.zstd.net"
+pkgcheck=true
+
+build() {
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir" prefix=/usr
+}
