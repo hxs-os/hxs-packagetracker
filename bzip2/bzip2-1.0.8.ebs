@@ -1,0 +1,41 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=bzip2
+pkgver=1.0.8
+pkgsrc=https://sourceware.org/pub/bzip2/bzip2-$pkgver.tar.gz
+pkgchecksum=sha256:ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+pkgdesc="block-sorting file compression format"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="bzip2-1.0.8"
+pkghomepage="https://sourceware.org/git/?p=bzip2.git;a=summary"
+pkgcheck=false
+
+prepare() {
+    sed -i 's|$(PREFIX)/man|$(PREFIX)/share/man|g' Makefile
+}
+
+build() {
+    make -f Makefile-libbz2_so
+    make
+}
+
+package() {
+    install -Dm755 bzip2 "$pkgdir/usr/bin/bzip2"
+    install -Dm755 bzip2recover "$pkgdir/usr/bin/bzip2recover"
+
+    install -Dm644 libbz2.a "$pkgdir/usr/lib/libbz2.a"
+    install -Dm644 bzlib.h "$pkgdir/usr/include/bzlib.h"
+
+    install -Dm644 bzip2.1 "$pkgdir/usr/share/man/man1/bzip2.1"
+    install -Dm755 libbz2.so.1.0.8 "$pkgdir/usr/lib/libbz2.so.1.0.8"
+
+    ln -sf libbz2.so.1.0.8 "$pkgdir/usr/lib/libbz2.so.1.0"
+    ln -sf libbz2.so.1.0.8 "$pkgdir/usr/lib/libbz2.so.1"
+    ln -sf libbz2.so.1.0.8 "$pkgdir/usr/lib/libbz2.so"
+}

@@ -153,6 +153,19 @@
         }
       },
       "latest_version": "3.53.4"
+    },
+
+    {
+      "name": "bzip",
+      "versions": {
+        "1.0.8": {
+          "path": "bzip2/bzip2-1.0.8.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.0.8"
     }
   ]
 }
