@@ -16,7 +16,6 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/shush"
 pkgcheck=false
 pkgdeps="libedit"
-pkgprovides="system:sh"
 
 build() {
     make WITH_LIBEDIT=true

@@ -35,6 +35,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `xz`         | —                  | C89 implementaton of the .xz file format                      |
 | `libedit`    | —                  | autotool- and libtoolized port of the NetBSD editline library |
 | `libarchive` | —                  | multi-format archive and compression library                  |
+| `dash`       | `dash.static`      | debian almquist shell                                         |
 
 ### how to build
 

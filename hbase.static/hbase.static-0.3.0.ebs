@@ -14,7 +14,7 @@ pkgdesc="a static build of hbase"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/hbase"
-pkgprovides="system:coreutils"
+pkgprovides="system:coreutils,hbase"
 
 build() {
     meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled -Dstatic=true
