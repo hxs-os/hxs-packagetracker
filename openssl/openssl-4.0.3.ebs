@@ -28,5 +28,5 @@ check() {
 }
 
 package() {
-    fakeroot make install MANSUFFIX=ssl DESTDIR="$pkgdir"
+    $1 make install MANSUFFIX=ssl DESTDIR="$pkgdir"
 }

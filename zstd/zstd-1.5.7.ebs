@@ -25,5 +25,5 @@ check() {
 }
 
 package() {
-    fakeroot make install DESTDIR="$pkgdir" prefix=/usr
+    $1 make install DESTDIR="$pkgdir" prefix=/usr
 }

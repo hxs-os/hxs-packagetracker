@@ -21,5 +21,5 @@ build() {
 }
 
 package() {
-    make -R GIT=false prefix=/usr install DESTDIR="$pkgdir"
+    $1 make -R GIT=false prefix=/usr install DESTDIR="$pkgdir"
 }

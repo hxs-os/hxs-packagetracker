@@ -22,5 +22,5 @@ build() {
 }
 
 package() {
-    fakeroot make install DESTDIR="$pkgdir"
+    $1 make install DESTDIR="$pkgdir"
 }
