@@ -67,7 +67,7 @@
     {
       "name": "musl",
       "versions": {
-        "0.1.0": {
+        "1.2.6": {
           "path": "musl/musl-1.2.6.ebs",
           "static": {
             "has_static": false
@@ -75,6 +75,19 @@
         }
       },
       "latest_version": "1.2.6"
+    },
+
+    {
+      "name": "zlib",
+      "versions": {
+        "1.3.2": {
+          "path": "zlib/zlib-1.3.2.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.3.2"
     }
   ]
 }
