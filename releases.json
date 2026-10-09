@@ -166,6 +166,19 @@
         }
       },
       "latest_version": "1.0.8"
+    },
+
+    {
+      "name": "xz",
+      "versions": {
+        "5.8.4": {
+          "path": "xz/xz-5.8.4.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "5.8.4"
     }
   ]
 }

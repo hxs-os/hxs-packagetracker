@@ -32,6 +32,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `ncurses` | —                  | software emulation of curses                         |
 | `sqlite3` | —                  | a small, fast, self-contained SQL database engine    |
 | `bzip2`   | —                  | block-sorting file compression format                |
+| `xz`      | —                  | C89 implementaton of the .xz file format             |
 
 ### how to build
 
