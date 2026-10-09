@@ -1,0 +1,42 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libarchive
+pkgver=3.8.9
+pkgsrc=https://github.com/libarchive/libarchive/releases/download/v$pkgver/libarchive-$pkgver.tar.xz
+pkgchecksum=sha256:888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde
+pkgdesc="multi-format archive and compression library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="https://www.libarchive.org/"
+pkghomepage="https://github.com/libarchive/libarchive"
+pkgdeps="zstd,bzip2,xz,zlib"
+pkgprovides="bsdtar,unzip,bsdcpio"
+pkgcheck=true
+
+build() {
+    ./configure --prefix=/usr \
+        --enable-year2038 \
+        --disable-static \
+        --enable-shared \
+        --without-iconv \
+        --without-xml2 \
+        --with-zlib \
+        --with-bz2lib \
+        --with-liblzma \
+        --with-zstd \
+        --with-openssl
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir"
+}
