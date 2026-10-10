@@ -271,6 +271,19 @@
         }
       },
       "latest_version": "4.20.3"
+    },
+
+    {
+      "name": "linux-headers",
+      "versions": {
+        "7.2.9": {
+          "path": "linux-headers/linux-headers-7.2.9.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "7.2.9"
     }
   ]
 }

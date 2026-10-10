@@ -1,0 +1,25 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=linux-headers
+pkgver=7.2.9
+pkgsrc=https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-$pkgver.tar.xz
+pkgchecksum=sha256:b4c5dfbe51a364a6c7f03869200f88c8e1f77403539005f14b7fc6bc91b8d8ba
+pkgdesc="headers for linux kernel interfaces"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-only WITH Linux-syscall-note"
+pkghomepage="https://kernel.org"
+pkgcheck=false
+
+build() {
+    make headers
+}
+
+package() {
+    "${1:-fakeroot}" make ARCH=x86_64 INSTALL_HDR_PATH="$pkgdir/usr" headers_install
+}

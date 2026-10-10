@@ -23,24 +23,25 @@ these are formulae for first-party packages, i.e. packages written for HxS.
 
 these are formulae for third-party packages, i.e. packages not written for HxS.
 
-| package      | static counterpart | description                                                   |
-| ------------ | ------------------ | ------------------------------------------------------------- |
-| `musl`       | —                  | implementation of the C standard library                      |
-| `zlib`       | —                  | a lossless data-compression library                           |
-| `zstd`       | —                  | fast real-time compression algorithm                          |
-| `pkgconf`    | —                  | package compiler and linker metadata toolkit                  |
-| `openssl`    | —                  | robust, commercial-grade, full-featured, TLS toolkit          |
-| `ncurses`    | —                  | software emulation of curses                                  |
-| `sqlite3`    | —                  | a small, fast, self-contained SQL database engine             |
-| `bzip2`      | —                  | block-sorting file compression format                         |
-| `xz`         | —                  | C89 implementaton of the .xz file format                      |
-| `libedit`    | —                  | autotool- and libtoolized port of the NetBSD editline library |
-| `libarchive` | —                  | multi-format archive and compression library                  |
-| `dash`       | `dash.static`      | debian almquist shell                                         |
-| `man-pages`  | —                  | manual pages for GNU+Linux                                    |
-| `fakeroot`   | —                  | gives a fake root environment for package building            |
-| `util-linux` | —                  | low-level system utilities for a Linux system                 |
-| `shadow`     | —                  | utilities for user and group administration                   |
+| package         | static counterpart | description                                                   |
+| --------------- | ------------------ | ------------------------------------------------------------- |
+| `musl`          | —                  | implementation of the C standard library                      |
+| `zlib`          | —                  | a lossless data-compression library                           |
+| `zstd`          | —                  | fast real-time compression algorithm                          |
+| `pkgconf`       | —                  | package compiler and linker metadata toolkit                  |
+| `openssl`       | —                  | robust, commercial-grade, full-featured, TLS toolkit          |
+| `ncurses`       | —                  | software emulation of curses                                  |
+| `sqlite3`       | —                  | a small, fast, self-contained SQL database engine             |
+| `bzip2`         | —                  | block-sorting file compression format                         |
+| `xz`            | —                  | C89 implementaton of the .xz file format                      |
+| `libedit`       | —                  | autotool- and libtoolized port of the NetBSD editline library |
+| `libarchive`    | —                  | multi-format archive and compression library                  |
+| `dash`          | `dash.static`      | debian almquist shell                                         |
+| `man-pages`     | —                  | manual pages for GNU+Linux                                    |
+| `fakeroot`      | —                  | gives a fake root environment for package building            |
+| `util-linux`    | —                  | low-level system utilities for a Linux system                 |
+| `shadow`        | —                  | utilities for user and group administration                   |
+| `linux-headers` | —                  | headers for linux kernel interfacesn                          |
 
 ### how to build
 
