@@ -26,5 +26,5 @@ check() {
 }
 
 package() {
-    DESTDIR="$pkgdir" $1 meson install -C build --strip
+    DESTDIR="$pkgdir" "${1:-fakeroot}" meson install -C build --strip
 }

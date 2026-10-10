@@ -40,6 +40,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `man-pages`  | —                  | manual pages for GNU+Linux                                    |
 | `fakeroot`   | —                  | gives a fake root environment for package building            |
 | `util-linux` | —                  | low-level system utilities for a Linux system                 |
+| `shadow`     | —                  | utilities for user and group administration                   |
 
 ### how to build
 

@@ -22,5 +22,5 @@ build() {
 }
 
 package() {
-    $1 make install DESTDIR="$pkgdir" PREFIX="/usr" INSTALL_MAN=false INSTALL_API=false
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX="/usr" INSTALL_MAN=false INSTALL_API=false
 }

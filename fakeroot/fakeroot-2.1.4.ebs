@@ -30,5 +30,5 @@ check() {
 }
 
 package() {
-    $1 make install DESTDIR="$pkgdir"
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 }

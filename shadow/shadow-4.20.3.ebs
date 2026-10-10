@@ -1,0 +1,39 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=shadow
+pkgver=4.20.3
+pkgsrc=https://github.com/shadow-maint/shadow/releases/download/$pkgver/shadow-$pkgver.tar.xz
+pkgchecksum=sha256:623be9429f64fa2165bfc5957c6a642ec309c5cf23c0d53855c99f7591922297
+pkgdesc="utilities for user and group administration"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://github.com/shadow-maint/shadow"
+pkgcheck=false
+
+prepare() {
+    find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \;
+    find man -name Makefile.in -exec sed -i 's/passwd\.5 / /' {} \;
+}
+
+build() {
+    ./configure --prefix=/usr --sysconfdir=/etc \
+        --disable-static --with-bcrypt \
+        --without-libbsd --disable-logind \
+        --with-group-name-max-length=32 \
+        --without-libpam --without-selinux \
+        --without-audit --without-acl \
+        --without-attr
+
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    "${1:-fakeroot}" make -C man install-man DESTDIR="$pkgdir"
+}
