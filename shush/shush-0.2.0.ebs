@@ -16,6 +16,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/shush"
 pkgcheck=false
 pkgdeps="libedit"
+pkgtriggers="shells"
 
 build() {
     make WITH_LIBEDIT=true
@@ -23,4 +24,8 @@ build() {
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX="/usr" INSTALL_MAN=true
+
+    "${1:-fakeroot}" mkdir -p "$pkgdir/usr/share/shells.d"
+    "${1:-fakeroot}" echo "/usr/bin/shush" >"$pkgdir/usr/share/shells.d/shush"
+    "${1:-fakeroot}" echo "/bin/shush" >>"$pkgdir/usr/share/shells.d/shush"
 }

@@ -16,9 +16,10 @@ pkglicense="BSD-3-Clause"
 pkghomepage="http://gondor.apana.org.au/~herbert/dash/"
 pkgcheck=true
 pkgprovides="dash"
+pkgtriggers="shells"
 
 build() {
-    ./configure --prefix=/usr --enable-glob --enable-fnmatch --disable-shared --enable-static
+    ./configure --prefix=/usr --disable-glob --enable-fnmatch --disable-shared --enable-static
     make
 }
 
@@ -28,4 +29,8 @@ check() {
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+
+    "${1:-fakeroot}" mkdir -p "$pkgdir/usr/share/shells.d"
+    "${1:-fakeroot}" echo "/usr/bin/dash" >"$pkgdir/usr/share/shells.d/dash"
+    "${1:-fakeroot}" echo "/bin/dash" >>"$pkgdir/usr/share/shells.d/dash"
 }
