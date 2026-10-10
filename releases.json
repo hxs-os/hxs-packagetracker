@@ -245,6 +245,19 @@
         }
       },
       "latest_version": "2.1.4"
+    },
+
+    {
+      "name": "util-linux",
+      "versions": {
+        "2.42.4": {
+          "path": "util-linux/util-linux-2.42.4.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "2.42.4"
     }
   ]
 }

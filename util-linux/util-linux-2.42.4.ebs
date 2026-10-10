@@ -1,0 +1,39 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=util-linux
+pkgver=2.42.4
+pkgsrc=https://www.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-$pkgver.tar.xz
+pkgchecksum=sha256:fbd62a100ab7bb8746ba0661255c3c48185b1e9021507c624da01fbc696330ec
+pkgdesc="low-level system utilities for a Linux system"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkghomepage="https://github.com/util-linux/util-linux"
+pkgcheck=false
+pkglicense="GPL-2.0-or-later"
+pkgdeps="ncurses"
+
+build() {
+    ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --disable-static --enable-shared --disable-nls \
+        --without-python --without-systemd \
+        --disable-rpath --disable-all-programs \
+        --enable-libsmartcols --enable-libblkid \
+        --enable-libuuid --enable-libmount --enable-libfdisk \
+        --enable-whereis --enable-mkfs --enable-mount \
+        --enable-blkid --enable-losetup --enable-fdisks \
+        --enable-agetty --enable-dmesg --enable-nologin \
+        --enable-unshare --enable-uuidgen --enable-hwclock \
+        --enable-lsblk --enable-swapon --enable-lscpu \
+        --enable-switch_root --enable-pivot_root \
+        --disable-bash-completion
+    make
+}
+
+package() {
+    fakeroot make install DESTDIR="$pkgdir"
+}
