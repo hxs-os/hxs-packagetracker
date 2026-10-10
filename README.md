@@ -34,7 +34,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `ncurses`       | —                  | software emulation of curses                                  |
 | `sqlite3`       | —                  | a small, fast, self-contained SQL database engine             |
 | `bzip2`         | —                  | block-sorting file compression format                         |
-| `xz`            | —                  | C89 implementaton of the .xz file format                      |
+| `xz`            | —                  | C89 implementation of the .xz file format                     |
 | `libedit`       | —                  | autotool- and libtoolized port of the NetBSD editline library |
 | `libarchive`    | —                  | multi-format archive and compression library                  |
 | `dash`          | `dash.static`      | debian almquist shell                                         |
@@ -42,7 +42,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `fakeroot`      | —                  | gives a fake root environment for package building            |
 | `util-linux`    | —                  | low-level system utilities for a Linux system                 |
 | `shadow`        | —                  | utilities for user and group administration                   |
-| `linux-headers` | —                  | headers for linux kernel interfacesn                          |
+| `linux-headers` | —                  | headers for linux kernel interfaces                           |
 
 ### how to build
 
