@@ -454,6 +454,19 @@
         }
       },
       "latest_version": "5.48"
+    },
+
+    {
+      "name": "ca-certificates",
+      "versions": {
+        "2026.09.25": {
+          "path": "ca-certificates/ca-certificates-2026.09.25.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "2026.09.25"
     }
   ]
 }

@@ -17,6 +17,7 @@ pkglicense="blessing"
 pkghomepage="https://www.sqlite.org"
 pkgcheck=false
 pkgdeps="musl"
+pkgprovides="libsqlite3"
 
 build() {
     CXX=false ./configure ${CONFIGUREFLAGS:-} \

@@ -17,6 +17,7 @@ pkglicense="BSD-2-Clause-Darwin"
 pkghomepage="https://www.darwinsys.com/file/"
 pkgcheck=true
 pkgdeps="musl"
+pkgprovides="libmagic"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr

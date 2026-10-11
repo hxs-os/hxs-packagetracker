@@ -17,6 +17,7 @@ pkglicense="GPL-2.0-or-later"
 pkghomepage="https://tukaani.org/xz"
 pkgcheck=true
 pkgdeps="musl"
+pkgprovides="liblzma"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --enable-year2038 --disable-rpath --disable-static

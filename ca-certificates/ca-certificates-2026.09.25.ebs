@@ -1,0 +1,30 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=ca-certificates
+pkgver=2026.09.25
+pkgsrc=https://curl.se/ca/cacert-2026-09-25.pem
+pkgsrcformat=raw
+pkgchecksum=sha256:a41b5d356aea97a529fe27e0f7316d2f9d946d75927476cf9cf1b90637d00505
+pkgdesc="Mozilla CA certificate bundle"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MPL-2.0"
+pkghomepage="https://curl.se/docs/caextract.html"
+pkgcheck=false
+pkgprovides="ssl-certificates"
+
+build() {
+    :
+}
+
+package() {
+    "${1:-fakeroot}" install -Dm644 \
+        "$(basename "${pkgsrc:-cacert.pem}")" \
+        "$pkgdir/etc/ssl/certs/ca-certificates.crt"
+}

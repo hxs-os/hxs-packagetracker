@@ -17,7 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/xpt"
 pkgcheck=false
 pkgdeps="musl,openssl,libarchive,zstd,sqlite3,pkgconf"
-pkgprovides="system:xpt"
+pkgprovides="system:xpt,libxpt"
 
 build() {
     meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled

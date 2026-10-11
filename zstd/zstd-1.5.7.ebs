@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://www.zstd.net"
 pkgcheck=true
 pkgdeps="musl"
+pkgprovides="libzstd"
 
 build() {
     make

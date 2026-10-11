@@ -17,6 +17,7 @@ pkglicense="curl"
 pkghomepage="https://curl.se"
 pkgcheck=true
 pkgdeps="musl,openssl"
+pkgprovides="libcurl"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --without-libuv --without-zsh-functions-dir --with-openssl

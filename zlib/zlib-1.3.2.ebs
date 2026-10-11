@@ -17,6 +17,7 @@ pkglicense="Zlib"
 pkghomepage="https://zlib.net"
 pkgcheck=true
 pkgdeps="musl"
+pkgprovides="libz"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
