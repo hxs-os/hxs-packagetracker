@@ -389,6 +389,45 @@
         }
       },
       "latest_version": "4.11.0"
+    },
+
+    {
+      "name": "gawk",
+      "versions": {
+        "5.4.1": {
+          "path": "gawk/gawk-5.4.1.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "5.4.1"
+    },
+
+    {
+      "name": "gzip",
+      "versions": {
+        "1.15": {
+          "path": "gzip/gzip-1.15.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.15"
+    },
+
+    {
+      "name": "patch",
+      "versions": {
+        "2.8": {
+          "path": "patch/patch-2.8.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "2.8"
     }
   ]
 }

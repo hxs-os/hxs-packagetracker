@@ -8,7 +8,7 @@
 ebsver=1
 
 pkgname=grep
-pkgver=4.10
+pkgver=3.12
 pkgsrc=https://ftp.gnu.org/gnu/grep/grep-$pkgver.tar.xz
 pkgchecksum=sha256:2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9
 pkgdesc="searches one or more files for patterns"

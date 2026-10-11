@@ -49,6 +49,9 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `grep`          | —                  | searches one or more files for patterns                       |
 | `sed`           | —                  | non-interactive command line editor                           |
 | `findutils`     | —                  | basic directory searching utilities                           |
+| `gawk`          | —                  | GNU implementation of the awk programming language            |
+| `gzip`          | —                  | GNU data compression utility                                  |
+| `patch`         | —                  | applies textual changes to files                              |
 
 ### how to build
 

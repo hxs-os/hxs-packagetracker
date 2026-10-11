@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=gzip
+pkgver=1.15
+pkgsrc=https://ftp.gnu.org/gnu/gzip/gzip-$pkgver.tar.xz
+pkgchecksum=sha256:9aa0cc780dec156b8282844833b342ab7cb08c25d2cd9a1869cdd0df31deff48
+pkgdesc="GNU data compression utility"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/gzip"
+pkgcheck=true
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
