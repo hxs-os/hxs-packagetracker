@@ -27,4 +27,6 @@ package() {
     "${1:-fakeroot}" install -Dm644 \
         "$(basename "${pkgsrc:-cacert.pem}")" \
         "$pkgdir/etc/ssl/certs/ca-certificates.crt"
+
+    ln -sf "$pkgdir/etc/ssl/certs/ca-certificates.crt" "$pkgdir/etc/ssl/cert.pem"
 }
