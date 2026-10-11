@@ -15,7 +15,7 @@ pkgdesc="autotool- and libtoolized port of the NetBSD editline library"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://www.thrysoee.dk/editline/"
-pkgdeps="ncurses"
+pkgdeps="ncurses,musl"
 pkgcheck=true
 
 build() {

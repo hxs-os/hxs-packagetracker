@@ -16,8 +16,8 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="Apache-2.0"
 pkghomepage="https://openssl-library.org/"
 pkgcheck=true
-pkgdeps="zlib"
 pkgprovides="system:ssl"
+pkgdeps="musl,zlib"
 
 build() {
     ./Configure ${SSLCONFIGUREFLAGS:-} --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic

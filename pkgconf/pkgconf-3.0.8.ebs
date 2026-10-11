@@ -17,6 +17,7 @@ pkglicense="pkgconf"
 pkghomepage="https://github.com/pkgconf/pkgconf"
 pkgcheck=false
 pkgprovides="pkg-config"
+pkgdeps="musl"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr

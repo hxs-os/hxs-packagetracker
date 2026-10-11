@@ -15,7 +15,7 @@ pkgdesc="multi-format archive and compression library"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-2-Clause"
 pkghomepage="https://libarchive.org"
-pkgdeps="zstd,bzip2,xz,zlib,openssl"
+pkgdeps="musl,zstd,bzip2,xz,zlib,openssl"
 pkgprovides="bsdtar,bsdcpio,bsdunzip,cpio,unzip,tar"
 pkgcheck=true
 

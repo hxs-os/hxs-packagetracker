@@ -17,6 +17,7 @@ pkglicense="MIT"
 pkghomepage="https://musl.libc.org"
 pkgcheck=false
 pkgprovides="system:libc"
+pkgdeps="linux-headers"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --syslibdir=/usr/lib

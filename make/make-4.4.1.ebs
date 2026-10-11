@@ -16,6 +16,7 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/make"
 pkgcheck=true
+pkgdeps="musl"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038

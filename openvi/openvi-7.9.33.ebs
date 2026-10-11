@@ -16,8 +16,8 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://github.com/johnsonjh/OpenVi"
 pkgcheck=false
-pkgdeps="ncurses"
-pkgprovides="vi"
+pkgdeps="musl,ncurses"
+pkgprovides="vi,ex"
 
 build() {
     make

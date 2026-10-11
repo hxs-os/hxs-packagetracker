@@ -16,6 +16,7 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://github.com/shadow-maint/shadow"
 pkgcheck=false
+pkgdeps="musl"
 
 prepare() {
     find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \;

@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="http://gondor.apana.org.au/~herbert/dash/"
 pkgcheck=true
 pkgtriggers="shells"
+pkgdeps="musl"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-glob --enable-fnmatch --disable-static --enable-shared
