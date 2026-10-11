@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=mpfr
+pkgver=4.2.2
+pkgsrc=https://ftp.gnu.org/gnu/mpfr/mpfr-$pkgver.tar.xz
+pkgchecksum=sha256:b67ba0383ef7e8a8563734e2e889ef5ec3c3b898a01d00fa0a6869ad81c6ce01
+pkgdesc="multiple-precision floating-point computations library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://mpfr.org"
+pkgcheck=true
+pkgdeps="musl,gmp"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

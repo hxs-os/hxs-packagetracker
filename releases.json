@@ -519,6 +519,45 @@
         }
       },
       "latest_version": "2.6.4"
+    },
+
+    {
+      "name": "gmp",
+      "versions": {
+        "6.3.0": {
+          "path": "gmp/gmp-6.3.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "6.3.0"
+    },
+
+    {
+      "name": "mpc",
+      "versions": {
+        "1.4.1": {
+          "path": "mpc/mpc-1.4.1.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.4.1"
+    },
+
+    {
+      "name": "mpfr",
+      "versions": {
+        "4.2.2": {
+          "path": "mpfr/mpfr-4.2.2.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "4.2.2"
     }
   ]
 }

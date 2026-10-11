@@ -59,6 +59,9 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `m4`              | —                  | GNU m4 macro processor                                        |
 | `bison`           | —                  | general-purpose parser generator                              |
 | `flex`            | —                  | the fast lexical analyzer                                     |
+| `gmp`             | —                  | gnu multiple precision arithmetic library                     |
+| `mpc`             | —                  | multiple precision complex arithmetic library                 |
+| `mpfr`            | —                  | multiple-precision floating-point computations library        |
 
 ### how to build
 
