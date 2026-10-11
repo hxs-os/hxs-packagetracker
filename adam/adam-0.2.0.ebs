@@ -15,6 +15,7 @@ pkgdesc="a tiny PID 1 implementation"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://sr.ht/~juanvel400/adam"
+pkgcheck=false
 pkgprovides="system:init"
 pkgdeps="musl"
 

@@ -15,6 +15,7 @@ pkgdesc="a minimal posix core user utils implementation"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/hbase"
+pkgcheck=true
 pkgprovides="system:coreutils"
 pkgdeps="musl"
 
