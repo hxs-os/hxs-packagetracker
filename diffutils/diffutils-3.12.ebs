@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=diffutils
+pkgver=3.12
+pkgsrc=https://ftp.gnu.org/gnu/diffutils/diffutils-$pkgver.tar.xz
+pkgchecksum=sha256:7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd
+pkgdesc="utilities to compare files"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/diffutils"
+pkgcheck=true
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

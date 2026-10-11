@@ -317,13 +317,26 @@
       "name": "openvi",
       "versions": {
         "7.9.33": {
-          "path": "openvi/openvi-7.9.33",
+          "path": "openvi/openvi-7.9.33.ebs",
           "static": {
             "has_static": false
           }
         }
       },
       "latest_version": "7.9.33"
+    },
+
+    {
+      "name": "diffutils",
+      "versions": {
+        "3.12": {
+          "path": "diffutils/diffutils-3.12.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "3.12"
     }
   ]
 }

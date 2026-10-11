@@ -16,7 +16,6 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="http://gondor.apana.org.au/~herbert/dash/"
 pkgcheck=true
-pkgprovides=""
 pkgtriggers="shells"
 
 build() {

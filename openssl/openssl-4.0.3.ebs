@@ -15,7 +15,7 @@ pkgdesc="robust, commercial-grade, full-featured, TLS toolkit"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="Apache-2.0"
 pkghomepage="https://openssl-library.org/"
-#pkgcheck=true
+pkgcheck=true
 pkgdeps="zlib"
 pkgprovides="system:ssl"
 
@@ -24,9 +24,9 @@ build() {
     make
 }
 
-# check() {
-#     make test
-# }
+check() {
+    make test
+}
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"

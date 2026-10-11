@@ -26,5 +26,5 @@ build() {
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 
-    ln -sf pkg-config "$pkgdir/usr/bin/pkgconf"
+    ln -sf pkgconf "$pkgdir/usr/bin/pkg-config"
 }

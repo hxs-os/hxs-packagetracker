@@ -15,7 +15,7 @@ pkgdesc="a package manager utility and library"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/xpt"
-pkgcheck=false
+pkgcheck=true
 pkgdeps="openssl,libarchive,zstd,sqlite3,pkgconf"
 pkgprovides="system:xpt"
 
