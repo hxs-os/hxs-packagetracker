@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause-flex"
 pkghomepage="https://github.com/westes/flex"
 pkgcheck=true
 pkgdeps="musl"
+pkgprovides="lex"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath

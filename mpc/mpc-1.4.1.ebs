@@ -17,6 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.multiprecision.org/"
 pkgcheck=true
 pkgdeps="musl,gmp,mpfr"
+pkgprovides="libmpc"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038

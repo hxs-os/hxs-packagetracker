@@ -17,6 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://gmplib.org/"
 pkgcheck=true
 pkgdeps="musl"
+pkgprovides="libgmp"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
