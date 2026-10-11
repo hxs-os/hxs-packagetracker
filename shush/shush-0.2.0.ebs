@@ -27,5 +27,5 @@ package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX="/usr" INSTALL_MAN=true
 
     "${1:-fakeroot}" mkdir -p "$pkgdir/usr/share/shells.d"
-    "${1:-fakeroot}" printf "/usr/bin/shush\n/bin/shush\n" >"$pkgdir/usr/share/shells.d/shush"
+    printf "/usr/bin/shush\n/bin/shush\n" >"$pkgdir/usr/share/shells.d/shush"
 }
