@@ -53,4 +53,7 @@ package() {
     ln -sf libbz2.so.1.0.8 "$pkgdir/usr/lib/libbz2.so.1.0"
     ln -sf libbz2.so.1.0.8 "$pkgdir/usr/lib/libbz2.so.1"
     ln -sf libbz2.so.1.0.8 "$pkgdir/usr/lib/libbz2.so"
+
+    ln -sf bzip2 "$pkgdir/usr/bin/bunzip2"
+    ln -sf bzip2 "$pkgdir/usr/bin/bzcat"
 }
