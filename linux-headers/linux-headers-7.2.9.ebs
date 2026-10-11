@@ -22,5 +22,5 @@ build() {
 }
 
 package() {
-    "${1:-fakeroot}" make ARCH=x86_64 INSTALL_HDR_PATH="$pkgdir/usr" headers_install
+    "${1:-fakeroot}" make INSTALL_HDR_PATH="$pkgdir/usr" headers_install
 }
