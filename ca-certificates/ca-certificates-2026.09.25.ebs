@@ -28,5 +28,5 @@ package() {
         "$(basename "${pkgsrc:-cacert.pem}")" \
         "$pkgdir/etc/ssl/certs/ca-certificates.crt"
 
-    ln -sf "$pkgdir/etc/ssl/certs/ca-certificates.crt" "$pkgdir/etc/ssl/cert.pem"
+    ln -sf "certs/ca-certificates.crt" "$pkgdir/etc/ssl/cert.pem"
 }
