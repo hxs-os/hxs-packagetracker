@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=bison
+pkgver=3.8.2
+pkgsrc=https://ftp.gnu.org/gnu/bison/bison-$pkgver.tar.xz
+pkgchecksum=sha256:9bba0214ccf7f1079c5d59210045227bcf619519840ebfa80cd3849cff5a5bf2
+pkgdesc="general-purpose parser generator"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/bison"
+pkgcheck=true
+pkgdeps="musl,m4"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

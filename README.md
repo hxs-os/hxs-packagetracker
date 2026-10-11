@@ -54,9 +54,11 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `patch`           | —                  | applies textual changes to files                              |
 | `curl`            | —                  | URL transfer utility and library                              |
 | `file`            | —                  | file type identification utility                              |
-| `ca-certificates` | —                  | Mozilla CA certificate bundle utility                         |
+| `ca-certificates` | —                  | Mozilla CA certificate bundle                                 |
 | `binutils`        | —                  | GNU collection of binary tools                                |
 | `m4`              | —                  | GNU m4 macro processor                                        |
+| `bison`           | —                  | general-purpose parser generator                              |
+| `flex`            | —                  | the fast lexical analyzer                                     |
 
 ### how to build
 

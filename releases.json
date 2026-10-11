@@ -493,6 +493,32 @@
         }
       },
       "latest_version": "1.4.21"
+    },
+
+    {
+      "name": "bison",
+      "versions": {
+        "3.8.2": {
+          "path": "bison/bison-3.8.2.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "3.8.2"
+    },
+
+    {
+      "name": "flex",
+      "versions": {
+        "2.6.4": {
+          "path": "flex/flex-2.6.4.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "2.6.4"
     }
   ]
 }

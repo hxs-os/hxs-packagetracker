@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=flex
+pkgver=2.6.4
+pkgsrc=https://github.com/westes/flex/releases/download/v$pkgver/flex-$pkgver.tar.gz
+pkgchecksum=sha256:e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995
+pkgdesc="the fast lexical analyzer"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause-flex"
+pkghomepage="https://github.com/westes/flex"
+pkgcheck=true
+pkgdeps="musl"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
