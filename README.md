@@ -55,6 +55,8 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `curl`            | —                  | URL transfer utility and library                              |
 | `file`            | —                  | file type identification utility                              |
 | `ca-certificates` | —                  | Mozilla CA certificate bundle utility                         |
+| `binutils`        | —                  | GNU collection of binary tools                                |
+| `m4`              | —                  | GNU m4 macro processor                                        |
 
 ### how to build
 

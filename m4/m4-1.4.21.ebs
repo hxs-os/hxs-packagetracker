@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=m4
+pkgver=1.4.21
+pkgsrc=https://ftp.gnu.org/gnu/m4/m4-$pkgver.tar.xz
+pkgchecksum=sha256:f25c6ab51548a73a75558742fb031e0625d6485fe5f9155949d6486a2408ab66
+pkgdesc="GNU m4 macro processor"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/m4"
+pkgcheck=true
+pkgdeps="musl"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

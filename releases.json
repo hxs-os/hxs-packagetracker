@@ -467,6 +467,32 @@
         }
       },
       "latest_version": "2026.09.25"
+    },
+
+    {
+      "name": "binutils",
+      "versions": {
+        "2.47": {
+          "path": "binutils/binutils-2.47.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "2.47"
+    },
+
+    {
+      "name": "m4",
+      "versions": {
+        "1.4.21": {
+          "path": "m4/m4-1.4.21.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.4.21"
     }
   ]
 }
