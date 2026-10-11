@@ -428,6 +428,32 @@
         }
       },
       "latest_version": "2.8"
+    },
+
+    {
+      "name": "curl",
+      "versions": {
+        "8.22.0": {
+          "path": "curl/curl-8.22.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "8.22.0"
+    },
+
+    {
+      "name": "file",
+      "versions": {
+        "5.48": {
+          "path": "file/file-5.48.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "5.48"
     }
   ]
 }

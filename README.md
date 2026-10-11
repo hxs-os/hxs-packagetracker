@@ -52,6 +52,8 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `gawk`          | —                  | GNU implementation of the awk programming language            |
 | `gzip`          | —                  | GNU data compression utility                                  |
 | `patch`         | —                  | applies textual changes to files                              |
+| `curl`          | —                  | URL transfer utility and library                              |
+| `file`          | —                  | file type identification utility                              |
 
 ### how to build
 

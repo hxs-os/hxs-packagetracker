@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=curl
+pkgver=8.22.0
+pkgsrc=https://curl.se/download/curl-$pkgver.tar.xz
+pkgchecksum=sha256:f7ef3ae8a22e521f289803fe93543eb64c329b58aa73a9e224dfd915a2a5f4f7
+pkgdesc="URL transfer utility and library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="curl"
+pkghomepage="https://curl.se"
+pkgcheck=true
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --without-libuv --without-zsh-functions-dir --with-openssl
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

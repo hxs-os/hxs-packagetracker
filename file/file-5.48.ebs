@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=file
+pkgver=5.48
+pkgsrc=https://astron.com/pub/file/file-$pkgver.tar.gz
+pkgchecksum=sha256:ed14656883b23a364b4057c05595d93252da9bc473d30106519519d0da141283
+pkgdesc="file type identification utility"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-2-Clause-Darwin"
+pkghomepage="https://www.darwinsys.com/file/"
+pkgcheck=true
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
