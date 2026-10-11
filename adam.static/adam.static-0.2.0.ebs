@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -17,7 +18,7 @@ pkghomepage="https://sr.ht/~juanvel400/adam"
 pkgprovides="system:init,adam"
 
 build() {
-    meson setup build --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dstatic=true
+    meson setup build ${MESONFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dstatic=true
     meson compile -C build
 }
 

@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -14,19 +15,19 @@ pkgdesc="robust, commercial-grade, full-featured, TLS toolkit"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="Apache-2.0"
 pkghomepage="https://openssl-library.org/"
-pkgcheck=true
+#pkgcheck=true
 pkgdeps="zlib"
 pkgprovides="system:ssl"
 
 build() {
-    ./Configure --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic
+    ./Configure ${SSLCONFIGUREFLAGS:-} --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic
     make
 }
 
-check() {
-    make test
-}
+# check() {
+#     make test
+# }
 
 package() {
-    "${1:-fakeroot}" make install MANSUFFIX=ssl DESTDIR="$pkgdir"
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 }

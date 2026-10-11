@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -17,11 +18,11 @@ pkghomepage="https://wiki.debian.org/FakeRoot"
 pkgcheck=false
 
 prepare() {
-    ./bootstrap
+    ./bootstrap ${BOOTSTRAPFLAGS:-}
 }
 
 build() {
-    ./configure --prefix=/usr
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
     make
 }
 

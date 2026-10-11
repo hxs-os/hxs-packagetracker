@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -17,7 +18,7 @@ pkghomepage="https://zlib.net"
 pkgcheck=true
 
 build() {
-    ./configure --prefix=/usr
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
     make
 }
 

@@ -2,6 +2,8 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -19,7 +21,8 @@ pkgprovides="bsdtar,bsdcpio,bsdunzip,cpio,unzip,tar"
 pkgcheck=true
 
 build() {
-    ./configure --prefix=/usr \
+    ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr \
         --enable-year2038 \
         --disable-static \
         --enable-shared \
@@ -27,9 +30,16 @@ build() {
         --without-xml2 \
         --with-zlib \
         --with-bz2lib \
-        --with-liblzma \
+        --with-lzma \
         --with-zstd \
-        --with-openssl
+        --with-openssl \
+        --without-lz4 \
+        --without-expat \
+        --without-libb2 \
+        --without-nettle \
+        --disable-acl \
+        --disable-xattr
+
     make
 }
 

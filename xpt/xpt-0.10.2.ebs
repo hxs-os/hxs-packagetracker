@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=xpt
+pkgver=0.10.2
+pkgsrc=https://dl.juanvel400.com/xpt/xpt-$pkgver.tar.xz
+pkgchecksum=sha256:f1ac2232fe19279a6d66c3f39d31bed4a1bb2d42bcdca38f34a494743931bf2a
+pkgdesc="a package manager utility and library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://git.sr.ht/~juanvel400/xpt"
+pkgcheck=false
+pkgdeps="openssl,libarchive,zstd,sqlite3,pkgconf"
+pkgprovides="system:xpt"
+
+build() {
+    meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
+}
+
+package() {
+    DESTDIR="$pkgdir" "${1:-fakeroot}" meson install -C build --strip
+}

@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -17,7 +18,7 @@ pkghomepage="https://git.sr.ht/~juanvel400/hbase"
 pkgprovides="system:coreutils"
 
 build() {
-    meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
+    meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
 }
 
 check() {

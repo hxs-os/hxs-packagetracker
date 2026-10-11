@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -18,11 +19,23 @@ pkgcheck=false
 
 prepare() {
     sed -i 's|$(PREFIX)/man|$(PREFIX)/share/man|g' Makefile
+    sed -i 's/gcc/$(CC)/g' Makefile-libbz2_so Makefile
+    sed -i 's/CFLAGS=-Wall/CFLAGS=-Wall -fPIC/' Makefile-libbz2_so
 }
 
 build() {
-    make -f Makefile-libbz2_so
-    make
+    make -f Makefile-libbz2_so \
+        CC="${CC:-cc}" \
+        AR="${AR:-ar}" \
+        RANLIB="${RANLIB:-ranlib}" \
+        CFLAGS="${CFLAGS:--O2} -fPIC" \
+        LDFLAGS="${LDFLAGS:-}"
+    make \
+        CC="${CC:-cc}" \
+        AR="${AR:-ar}" \
+        RANLIB="${RANLIB:-ranlib}" \
+        CFLAGS="${CFLAGS:--O2}" \
+        LDFLAGS="${LDFLAGS:-}"
 }
 
 package() {

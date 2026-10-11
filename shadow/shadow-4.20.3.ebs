@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -22,13 +23,13 @@ prepare() {
 }
 
 build() {
-    ./configure --prefix=/usr --sysconfdir=/etc \
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --without-attr \
         --disable-static --with-bcrypt \
         --without-libbsd --disable-logind \
         --with-group-name-max-length=32 \
         --without-libpam --without-selinux \
-        --without-audit --without-acl \
-        --without-attr
+        --without-audit --without-acl
 
     make
 }

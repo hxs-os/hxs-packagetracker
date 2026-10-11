@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -18,7 +19,7 @@ pkgcheck=false
 pkgprovides="system:xpt"
 
 build() {
-    meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=disabled -Dtests=enabled -Dstatic=true -Ddefault_library=static
+    meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=disabled -Dtests=enabled -Dstatic=true -Ddefault_library=static
 }
 
 check() {

@@ -18,7 +18,8 @@ pkglicense="GPL-2.0-or-later"
 pkgdeps="ncurses"
 
 build() {
-    ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var \
         --disable-static --enable-shared --disable-nls \
         --without-python --without-systemd \
         --disable-rpath --disable-all-programs \
@@ -30,10 +31,11 @@ build() {
         --enable-unshare --enable-uuidgen --enable-hwclock \
         --enable-lsblk --enable-swapon --enable-lscpu \
         --enable-switch_root --enable-pivot_root \
-        --disable-bash-completion
+        --disable-bash-completion --sbindir=/usr/sbin \
+        --bindir=/usr/bin --libdir=/usr/lib
     make
 }
 
 package() {
-    fakeroot make install DESTDIR="$pkgdir"
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 }

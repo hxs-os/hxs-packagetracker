@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -15,12 +16,15 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="pkgconf"
 pkghomepage="https://github.com/pkgconf/pkgconf"
 pkgcheck=false
+pkgprovides="pkg-config"
 
 build() {
-    ./configure --prefix=/usr
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
     make
 }
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+
+    ln -sf pkg-config "$pkgdir/usr/bin/pkgconf"
 }

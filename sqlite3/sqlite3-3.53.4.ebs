@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -17,10 +18,12 @@ pkghomepage="https://www.sqlite.org"
 pkgcheck=false
 
 build() {
-    ./configure \
+    CXX=false ./configure ${CONFIGUREFLAGS:-} \
         --prefix=/usr \
         --disable-static \
         --enable-shared \
+        --disable-rpath \
+        --soname=legacy \
         --fts5
     make
 }

@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -19,7 +20,7 @@ pkgprovides="dash"
 pkgtriggers="shells"
 
 build() {
-    ./configure --prefix=/usr --disable-glob --enable-fnmatch --disable-shared --enable-static
+    LDFLAGS="-static" ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-glob --enable-fnmatch
     make
 }
 

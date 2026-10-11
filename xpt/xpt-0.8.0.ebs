@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -15,11 +16,11 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/xpt"
 pkgcheck=false
-pkgdeps="openssl,libarchive,zstd,sqlite3,pkg-config"
+pkgdeps="openssl,libarchive,zstd,sqlite3,pkgconf"
 pkgprovides="system:xpt"
 
 build() {
-    meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
+    meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
 }
 
 package() {

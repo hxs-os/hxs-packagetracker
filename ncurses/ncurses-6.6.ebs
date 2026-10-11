@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -17,7 +18,8 @@ pkghomepage="https://invisible-island.net/ncurses/ncurses.html"
 pkgcheck=false
 
 build() {
-    ./configure --prefix=/usr \
+    ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr \
         --mandir=/usr/share/man \
         --with-shared \
         --without-normal \
@@ -26,6 +28,7 @@ build() {
         --with-pkg-config-libdir=/usr/lib/pkgconfig \
         --with-termlib \
         --disable-stripping
+
     make
 }
 

@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -18,7 +19,7 @@ pkgcheck=false
 pkgprovides="system:libc"
 
 build() {
-    ./configure --prefix=/usr --syslibdir=/lib
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --syslibdir=/usr/lib
     make
 }
 

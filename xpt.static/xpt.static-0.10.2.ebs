@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=xpt.static
+pkgver=0.10.2
+pkgsrc=https://dl.juanvel400.com/xpt/xpt-$pkgver.tar.xz
+pkgchecksum=sha256:f1ac2232fe19279a6d66c3f39d31bed4a1bb2d42bcdca38f34a494743931bf2a
+pkgdesc="a static build of xpt, lacking the networking subsystem"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://git.sr.ht/~juanvel400/xpt"
+pkgcheck=false
+pkgprovides="system:xpt"
+
+build() {
+    meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=disabled -Dtests=enabled -Dstatic=true -Ddefault_library=static
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    DESTDIR="$pkgdir" "${1:-fakeroot}" meson install -C build --strip
+}
