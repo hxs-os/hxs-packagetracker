@@ -60,18 +60,18 @@
     {
       "name": "adam",
       "versions": {
-        "0.2.0": {
-          "path": "adam/adam-0.2.0.ebs",
-          "static": {
-            "has_static": true,
-            "path": "adam.static/adam.static-0.2.0.ebs"
-          }
-        },
         "0.1.0": {
           "path": "adam/adam-0.1.0.ebs",
           "static": {
             "has_static": true,
             "path": "adam.static/adam.static-0.1.0.ebs"
+          }
+        },
+        "0.2.0": {
+          "path": "adam/adam-0.2.0.ebs",
+          "static": {
+            "has_static": true,
+            "path": "adam.static/adam.static-0.2.0.ebs"
           }
         }
       },
