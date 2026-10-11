@@ -62,6 +62,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `gmp`             | —                  | gnu multiple precision arithmetic library                     |
 | `mpc`             | —                  | multiple precision complex arithmetic library                 |
 | `mpfr`            | —                  | multiple-precision floating-point computations library        |
+| `libisl`          | —                  | integer set library                                           |
 
 ### how to build
 

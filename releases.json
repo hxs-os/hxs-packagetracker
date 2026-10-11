@@ -558,6 +558,19 @@
         }
       },
       "latest_version": "4.2.2"
+    },
+
+    {
+      "name": "libisl",
+      "versions": {
+        "0.28": {
+          "path": "libisl/libisl-0.28.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "0.28"
     }
   ]
 }
