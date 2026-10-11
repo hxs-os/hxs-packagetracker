@@ -10,9 +10,16 @@
             "has_static": true,
             "path": "hbase.static/hbase.static-0.3.0.ebs"
           }
+        },
+        "0.4.0": {
+          "path": "hbase/hbase-0.4.0.ebs",
+          "static": {
+            "has_static": true,
+            "path": "hbase.static/hbase.static-0.4.0.ebs"
+          }
         }
       },
-      "latest_version": "0.3.0"
+      "latest_version": "0.4.0"
     },
 
     {

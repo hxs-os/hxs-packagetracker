@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=hbase
+pkgver=0.4.0
+pkgsrc=https://dl.juanvel400.com/hbase/hbase-$pkgver.tar.xz
+pkgchecksum=sha256:d68c70286643e83553b3e81a94c7f48d627bb119dc3ef5b0438dd8ef2a4cfc16
+pkgdesc="a minimal posix core user utils implementation"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://git.sr.ht/~juanvel400/hbase"
+pkgprovides="system:coreutils"
+
+build() {
+    meson setup build -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    DESTDIR="$pkgdir" "${1:-fakeroot}" meson install -C build --strip
+}
