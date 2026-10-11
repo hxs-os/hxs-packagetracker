@@ -337,6 +337,58 @@
         }
       },
       "latest_version": "3.12"
+    },
+
+    {
+      "name": "make",
+      "versions": {
+        "4.4.1": {
+          "path": "make/make-4.4.1.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "4.4.1"
+    },
+
+    {
+      "name": "grep",
+      "versions": {
+        "3.12": {
+          "path": "grep/grep-3.12.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "3.12"
+    },
+
+    {
+      "name": "sed",
+      "versions": {
+        "4.10": {
+          "path": "sed/sed-4.10.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "4.10"
+    },
+
+    {
+      "name": "findutils",
+      "versions": {
+        "4.11.0": {
+          "path": "findutils/findutils-4.11.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "4.11.0"
     }
   ]
 }

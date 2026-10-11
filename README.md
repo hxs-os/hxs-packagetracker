@@ -45,6 +45,10 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `linux-headers` | —                  | headers for linux kernel interfaces                           |
 | `openvi`        | —                  | portable implementation of vi, derived from openbsd           |
 | `diffutils`     | —                  | utilities to compare files                                    |
+| `make`          | —                  | GNU make                                                      |
+| `grep`          | —                  | searches one or more files for patterns                       |
+| `sed`           | —                  | non-interactive command line editor                           |
+| `findutils`     | —                  | basic directory searching utilities                           |
 
 ### how to build
 
