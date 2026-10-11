@@ -15,7 +15,7 @@ pkgdesc="a static build of xpt, lacking the networking subsystem"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/xpt"
-pkgcheck=false
+pkgcheck=true
 pkgprovides="system:xpt"
 
 build() {

@@ -23,6 +23,10 @@ build() {
     meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled
 }
 
+check() {
+    meson test -C build
+}
+
 package() {
     DESTDIR="$pkgdir" "${1:-fakeroot}" meson install -C build --strip
 }
