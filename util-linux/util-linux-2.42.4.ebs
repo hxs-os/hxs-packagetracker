@@ -2,6 +2,7 @@
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
+#shellcheck disable=SC2086
 
 #ebs.formulae
 ebsver=1
@@ -13,8 +14,8 @@ pkgchecksum=sha256:fbd62a100ab7bb8746ba0661255c3c48185b1e9021507c624da01fbc69633
 pkgdesc="low-level system utilities for a Linux system"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkghomepage="https://github.com/util-linux/util-linux"
-pkgcheck=false
 pkglicense="GPL-2.0-or-later"
+pkgcheck=false
 pkgdeps="ncurses,musl"
 
 build() {
