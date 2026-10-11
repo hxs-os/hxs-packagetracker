@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+
+#ebs.formulae
+ebsver=1
+
+pkgname=openvi
+pkgver=7.9.33
+pkgsrc=https://github.com/johnsonjh/OpenVi/archive/refs/tags/$pkgver.tar.gz
+pkgchecksum=sha256:3b807837b8458609b37e107fa063160298ee3655998dd8df590885c297af1fd3
+pkgdesc="portable implementation of vi, derived from openbsd"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://github.com/johnsonjh/OpenVi"
+pkgcheck=false
+pkgdeps="ncurses"
+pkgprovides="vi"
+
+build() {
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX=/usr
+
+    ln -sf "ovi" "$pkgdir/usr/bin/vi"
+    ln -sf "oex" "$pkgdir/usr/bin/ex"
+    ln -sf "oview" "$pkgdir/usr/bin/view"
+}

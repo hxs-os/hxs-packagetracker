@@ -43,6 +43,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `util-linux`    | —                  | low-level system utilities for a Linux system                 |
 | `shadow`        | —                  | utilities for user and group administration                   |
 | `linux-headers` | —                  | headers for linux kernel interfaces                           |
+| `openvi`        | —                  | portable implementation of vi, derived from openbsd           |
 
 ### how to build
 
