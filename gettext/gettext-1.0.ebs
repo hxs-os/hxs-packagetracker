@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=gettext
+pkgver=1.0
+pkgsrc=https://ftp.gnu.org/pub/gnu/gettext/gettext-$pkgver.tar.xz
+pkgchecksum=sha256:71132a3fb71e68245b8f2ac4e9e97137d3e5c02f415636eb508ae607bc01add7
+pkgdesc="utilities for internalization and localization"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/gettext"
+pkgcheck=true
+pkgdeps="musl"
+
+build() {
+    ./configure ${CONFIGUREARGS:-} --prefix=/usr --disable-static --enable-shared
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

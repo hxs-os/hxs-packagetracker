@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=texinfo
+pkgver=7.3
+pkgsrc=https://ftp.gnu.org/pub/gnu/texinfo/texinfo-$pkgver.tar.xz
+pkgchecksum=sha256:51f74eb0f51cfa9873b85264dfdd5d46e8957ec95b88f0fb762f63d9e164c72e
+pkgdesc="the GNU documentation format"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/texinfo"
+pkgcheck=true
+pkgdeps="musl"
+
+build() {
+    ./configure ${CONFIGUREARGS:-} --prefix=/usr
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

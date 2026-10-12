@@ -67,7 +67,10 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `autoconf`        | —                  | m4 macros to generate configure scripts                       |
 | `automake`        | —                  | m4 macros to generate Makefile.in files                       |
 | `libtool`         | —                  | generic library support script                                |
-| `perl`            | —                  | perl programming language                                     |
+| `perl`            | —                  | Perl programming language                                     |
+| `gettext`         | —                  | utilities for internalization and localization                |
+| `texinfo`         | —                  | the GNU documentation format                                  |
+| `python`          | —                  | Python programming language                                   |
 
 ### how to build
 

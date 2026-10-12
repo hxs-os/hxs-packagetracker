@@ -636,6 +636,45 @@
         }
       },
       "latest_version": "2.6.2"
+    },
+
+    {
+      "name": "gettext",
+      "versions": {
+        "1.0": {
+          "path": "gettext/gettext-1.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "1.0"
+    },
+
+    {
+      "name": "texinfo",
+      "versions": {
+        "7.3": {
+          "path": "texinfo/texinfo-7.3.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "7.3"
+    },
+
+    {
+      "name": "python",
+      "versions": {
+        "3.15.0": {
+          "path": "python/python-3.15.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "3.15.0"
     }
   ]
 }
