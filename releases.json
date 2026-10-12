@@ -571,6 +571,32 @@
         }
       },
       "latest_version": "0.28"
+    },
+
+    {
+      "name": "gcc",
+      "versions": {
+        "16.2.0": {
+          "path": "gcc/gcc-16.2.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "16.2.0"
+    },
+
+    {
+      "name": "autoconf",
+      "versions": {
+        "2.73": {
+          "path": "autoconf/autoconf-2.73.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "2.73"
     }
   ]
 }

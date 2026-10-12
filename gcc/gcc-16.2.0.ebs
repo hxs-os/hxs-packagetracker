@@ -1,0 +1,46 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=gcc
+pkgver=16.2.0
+pkgsrc=https://ftp.gnu.org/gnu/gcc/gcc-$pkgver/gcc-$pkgver.tar.xz
+pkgchecksum=sha256:e6738e29597f733270731aa90600f37ffdc045079dfc27ec7e8192cc81085c3e
+pkgdesc="GNU compiler collection"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later WITH GCC-exception-3.1"
+pkgcheck=false
+pkgdeps="musl,gmp,mpfr,mpc,libisl,zlib,binutils"
+pkgprovides="cc"
+
+prepare() {
+    case $(uname -m) in
+    x86_64)
+        sed -e '/m64=/s/lib64/lib/' \
+            -i.orig gcc/config/i386/t-linux64
+        ;;
+    esac
+}
+
+build() {
+    mkdir -p build
+    cd build || return 1
+    ../configure ${CONFIGUREFLAGS:-} --prefix=/usr --enable-languages=c,c++ \
+        --disable-multilib --disable-nls --with-system-zlib --enable-shared \
+        --enable-threads=posix --enable-default-pie --disable-libquadmath \
+        --disable-libatomic --disable-libsanitizer --disable-libssp \
+        --disable-libvtv --disable-libitm --disable-bootstrap \
+        --disable-libgomp --disable-fixincludes --enable-default-ssp
+    make
+    cd .. || return 1
+}
+
+package() {
+    "${1:-fakeroot}" make -C build install DESTDIR="$pkgdir"
+    ln -sf gcc "$pkgdir/usr/bin/cc"
+}

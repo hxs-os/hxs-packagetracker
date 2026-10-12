@@ -18,6 +18,11 @@ pkghomepage="https://www.gnu.org/software/make"
 pkgcheck=true
 pkgdeps="musl"
 
+prepare() {
+    sed -i 's/extern char \*getenv ();/extern char *getenv (const char *);/' \
+        lib/fnmatch.c
+}
+
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
     make

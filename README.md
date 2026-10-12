@@ -63,6 +63,8 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `mpc`             | —                  | multiple precision complex arithmetic library                 |
 | `mpfr`            | —                  | multiple-precision floating-point computations library        |
 | `libisl`          | —                  | integer set library                                           |
+| `gcc`             | —                  | GNU compiler collection                                       |
+| `autoconf`        | —                  | m4 macros to generate configure scripts                       |
 
 ### how to build
 

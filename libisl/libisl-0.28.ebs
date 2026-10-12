@@ -30,3 +30,7 @@ check() {
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 }
+
+install_to_toolchain() {
+    make install DESTDIR="${TOOLCHAIN_DIR}"
+}

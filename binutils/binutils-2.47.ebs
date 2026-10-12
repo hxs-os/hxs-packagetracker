@@ -16,10 +16,10 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/binutils"
 pkgcheck=true
-pkgdeps="musl"
+pkgdeps="musl,zlib"
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038 --with-system-zlib
     make
 }
 

@@ -16,11 +16,11 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="curl"
 pkghomepage="https://curl.se"
 pkgcheck=true
-pkgdeps="musl,openssl"
+pkgdeps="musl,openssl,ca-certificates"
 pkgprovides="libcurl"
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --without-libuv --without-zsh-functions-dir --with-openssl
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --without-libuv --without-zsh-functions-dir --with-openssl --with-ca-bundle=/etc/ssl/cert.pem
     make
 }
 

@@ -20,7 +20,7 @@ pkgdeps="musl,gmp,mpfr"
 pkgprovides="libmpc"
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
     make
 }
 
@@ -30,4 +30,8 @@ check() {
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
+
+install_to_toolchain() {
+    make install DESTDIR="${TOOLCHAIN_DIR}"
 }
