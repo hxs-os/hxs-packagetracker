@@ -19,7 +19,10 @@ pkgcheck=true
 pkgdeps="musl,zlib"
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038 --with-system-zlib
+    mkdir build
+    cd build || return 1
+
+    ../configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038 --with-system-zlib
     make
 }
 
