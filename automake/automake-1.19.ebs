@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=automake
+pkgver=1.19
+pkgsrc=https://ftp.gnu.org/gnu/automake/automake-$pkgver.tar.xz
+pkgchecksum=sha256:e3e2c2e3abf37898138db5b6c1d1dc35c9160c5978be7947d2c741705251d445
+pkgdesc="m4 macros to generate Makefile.in files"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/automake"
+pkgcheck=true
+pkgdeps="musl,m4"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

@@ -65,6 +65,8 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `libisl`          | —                  | integer set library                                           |
 | `gcc`             | —                  | GNU compiler collection                                       |
 | `autoconf`        | —                  | m4 macros to generate configure scripts                       |
+| `automake`        | —                  | m4 macros to generate Makefile.in files                       |
+| `libtool`         | —                  | generic library support script                                |
 
 ### how to build
 
