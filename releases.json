@@ -623,6 +623,19 @@
         }
       },
       "latest_version": "2.6.2"
+    },
+
+    {
+      "name": "perl",
+      "versions": {
+        "5.44.0": {
+          "path": "perl/perl-5.44.0.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "2.6.2"
     }
   ]
 }
