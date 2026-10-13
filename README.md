@@ -2,7 +2,7 @@
 
 the HxS PackageTracker is a collection of `ebs(5)` formulae used to build packages for HxS.
 
-the HxS PackageTracker is heavily inspired by FreeBSD Ports and [`void-packages`](https://github.com/void-linux/void-packages).
+the HxS PackageTracker is heavily inspired by [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
 
 ## formulae
 

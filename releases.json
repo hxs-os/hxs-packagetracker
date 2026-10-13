@@ -38,9 +38,16 @@
             "has_static": true,
             "path": "xpt.static/xpt.static-0.10.2.ebs"
           }
+        },
+        "0.11.0": {
+          "path": "xpt/xpt-0.11.0.ebs",
+          "static": {
+            "has_static": true,
+            "path": "xpt.static/xpt.static-0.11.0.ebs"
+          }
         }
       },
-      "latest_version": "0.10.2"
+      "latest_version": "0.11.0"
     },
 
     {
