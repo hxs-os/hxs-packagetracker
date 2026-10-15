@@ -682,6 +682,19 @@
         }
       },
       "latest_version": "3.15.0"
+    },
+
+    {
+      "name": "iana-etc",
+      "versions": {
+        "20261009": {
+          "path": "iana-etc/iana-etc-20261009.ebs",
+          "static": {
+            "has_static": false
+          }
+        }
+      },
+      "latest_version": "20261009"
     }
   ]
 }

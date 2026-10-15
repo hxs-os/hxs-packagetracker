@@ -71,6 +71,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `gettext`         | —                  | utilities for internalization and localization                |
 | `texinfo`         | —                  | the GNU documentation format                                  |
 | `python`          | —                  | Python programming language                                   |
+| `iana-etc`        | —                  | `/etc/protocols` and `/etc/services` provided by IANA         |
 
 ### how to build
 
