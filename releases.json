@@ -2,706 +2,605 @@
   "packagetracker": 1,
   "packages": [
     {
-      "name": "hbase",
-      "versions": {
-        "0.3.0": {
-          "path": "hbase/hbase-0.3.0.ebs",
-          "static": {
-            "has_static": true,
-            "path": "hbase.static/hbase.static-0.3.0.ebs"
-          }
-        },
-        "0.4.0": {
-          "path": "hbase/hbase-0.4.0.ebs",
-          "static": {
-            "has_static": true,
-            "path": "hbase.static/hbase.static-0.4.0.ebs"
-          }
-        }
-      },
-      "latest_version": "0.4.0"
-    },
-
-    {
-      "name": "xpt",
-      "versions": {
-        "0.8.0": {
-          "path": "xpt/xpt-0.8.0.ebs",
-          "static": {
-            "has_static": true,
-            "path": "xpt.static/xpt.static-0.8.0.ebs"
-          }
-        },
-        "0.10.2": {
-          "path": "xpt/xpt-0.10.2.ebs",
-          "static": {
-            "has_static": true,
-            "path": "xpt.static/xpt.static-0.10.2.ebs"
-          }
-        },
-        "0.11.0": {
-          "path": "xpt/xpt-0.11.0.ebs",
-          "static": {
-            "has_static": true,
-            "path": "xpt.static/xpt.static-0.11.0.ebs"
-          }
-        },
-        "0.12.0": {
-          "path": "xpt/xpt-0.12.0.ebs",
-          "static": {
-            "has_static": true,
-            "path": "xpt.static/xpt.static-0.12.0.ebs"
-          }
-        }
-      },
-      "latest_version": "0.12.0"
-    },
-
-    {
-      "name": "shush",
-      "versions": {
-        "0.2.0": {
-          "path": "shush/shush-0.2.0.ebs",
-          "static": {
-            "has_static": true,
-            "path": "shush.static/shush.static-0.2.0.ebs"
-          }
-        }
-      },
-      "latest_version": "0.2.0"
-    },
-
-    {
       "name": "adam",
       "versions": {
         "0.1.0": {
-          "path": "adam/adam-0.1.0.ebs",
           "static": {
             "has_static": true,
             "path": "adam.static/adam.static-0.1.0.ebs"
-          }
+          },
+          "path": "adam.static/adam.static-0.1.0.ebs"
         },
         "0.2.0": {
-          "path": "adam/adam-0.2.0.ebs",
           "static": {
             "has_static": true,
             "path": "adam.static/adam.static-0.2.0.ebs"
-          }
+          },
+          "path": "adam.static/adam.static-0.2.0.ebs"
         }
-      },
-      "latest_version": "0.2.0"
+      }
     },
-
-    {
-      "name": "musl",
-      "versions": {
-        "1.2.6": {
-          "path": "musl/musl-1.2.6.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "1.2.6"
-    },
-
-    {
-      "name": "zlib",
-      "versions": {
-        "1.3.2": {
-          "path": "zlib/zlib-1.3.2.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "1.3.2"
-    },
-
-    {
-      "name": "zstd",
-      "versions": {
-        "1.5.7": {
-          "path": "zstd/zstd-1.5.7.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "1.5.7"
-    },
-
-    {
-      "name": "pkgconf",
-      "versions": {
-        "3.0.8": {
-          "path": "pkgconf/pkgconf-3.0.8.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "3.0.8"
-    },
-
-    {
-      "name": "openssl",
-      "versions": {
-        "4.0.3": {
-          "path": "openssl/openssl-4.0.3.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "4.0.3"
-    },
-
-    {
-      "name": "ncurses",
-      "versions": {
-        "6.6": {
-          "path": "ncurses/ncurses-6.6.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "6.6"
-    },
-
-    {
-      "name": "sqlite3",
-      "versions": {
-        "3.53.4": {
-          "path": "sqlite3/sqlite3-3.53.4.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "3.53.4"
-    },
-
-    {
-      "name": "bzip2",
-      "versions": {
-        "1.0.8": {
-          "path": "bzip2/bzip2-1.0.8.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "1.0.8"
-    },
-
-    {
-      "name": "xz",
-      "versions": {
-        "5.8.4": {
-          "path": "xz/xz-5.8.4.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "5.8.4"
-    },
-
-    {
-      "name": "libedit",
-      "versions": {
-        "20260512-3.1": {
-          "path": "libedit/libedit-20260512-3.1.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "20260512-3.1"
-    },
-
-    {
-      "name": "libarchive",
-      "versions": {
-        "3.8.9": {
-          "path": "libarchive/libarchive-3.8.9.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "3.8.9"
-    },
-
-    {
-      "name": "dash",
-      "versions": {
-        "0.5.13.5": {
-          "path": "dash/dash-0.5.13.5.ebs",
-          "static": {
-            "has_static": true,
-            "path": "dash.static/dash.static-0.5.13.5.ebs"
-          }
-        }
-      },
-      "latest_version": "0.5.13.5"
-    },
-
-    {
-      "name": "man-pages",
-      "versions": {
-        "6.19": {
-          "path": "man-pages/man-pages-6.19.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "6.19"
-    },
-
-    {
-      "name": "fakeroot",
-      "versions": {
-        "2.1.4": {
-          "path": "fakeroot/fakeroot-2.1.4.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "2.1.4"
-    },
-
-    {
-      "name": "util-linux",
-      "versions": {
-        "2.42.4": {
-          "path": "util-linux/util-linux-2.42.4.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "2.42.4"
-    },
-
-    {
-      "name": "shadow",
-      "versions": {
-        "4.20.3": {
-          "path": "shadow/shadow-4.20.3.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "4.20.3"
-    },
-
-    {
-      "name": "linux-headers",
-      "versions": {
-        "7.2.9": {
-          "path": "linux-headers/linux-headers-7.2.9.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "7.2.9"
-    },
-
-    {
-      "name": "hello",
-      "versions": {
-        "0.1.3": {
-          "path": "hello/hello-0.1.3.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "0.1.3"
-    },
-
-    {
-      "name": "openvi",
-      "versions": {
-        "7.9.33": {
-          "path": "openvi/openvi-7.9.33.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "7.9.33"
-    },
-
-    {
-      "name": "diffutils",
-      "versions": {
-        "3.12": {
-          "path": "diffutils/diffutils-3.12.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "3.12"
-    },
-
-    {
-      "name": "make",
-      "versions": {
-        "4.4.1": {
-          "path": "make/make-4.4.1.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "4.4.1"
-    },
-
-    {
-      "name": "grep",
-      "versions": {
-        "3.12": {
-          "path": "grep/grep-3.12.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "3.12"
-    },
-
-    {
-      "name": "sed",
-      "versions": {
-        "4.10": {
-          "path": "sed/sed-4.10.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "4.10"
-    },
-
-    {
-      "name": "findutils",
-      "versions": {
-        "4.11.0": {
-          "path": "findutils/findutils-4.11.0.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "4.11.0"
-    },
-
-    {
-      "name": "gawk",
-      "versions": {
-        "5.4.1": {
-          "path": "gawk/gawk-5.4.1.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "5.4.1"
-    },
-
-    {
-      "name": "gzip",
-      "versions": {
-        "1.15": {
-          "path": "gzip/gzip-1.15.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "1.15"
-    },
-
-    {
-      "name": "patch",
-      "versions": {
-        "2.8": {
-          "path": "patch/patch-2.8.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "2.8"
-    },
-
-    {
-      "name": "curl",
-      "versions": {
-        "8.22.0": {
-          "path": "curl/curl-8.22.0.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "8.22.0"
-    },
-
-    {
-      "name": "file",
-      "versions": {
-        "5.48": {
-          "path": "file/file-5.48.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "5.48"
-    },
-
-    {
-      "name": "ca-certificates",
-      "versions": {
-        "2026.09.25": {
-          "path": "ca-certificates/ca-certificates-2026.09.25.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "2026.09.25"
-    },
-
-    {
-      "name": "binutils",
-      "versions": {
-        "2.47": {
-          "path": "binutils/binutils-2.47.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "2.47"
-    },
-
-    {
-      "name": "m4",
-      "versions": {
-        "1.4.21": {
-          "path": "m4/m4-1.4.21.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "1.4.21"
-    },
-
-    {
-      "name": "bison",
-      "versions": {
-        "3.8.2": {
-          "path": "bison/bison-3.8.2.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "3.8.2"
-    },
-
-    {
-      "name": "flex",
-      "versions": {
-        "2.6.4": {
-          "path": "flex/flex-2.6.4.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "2.6.4"
-    },
-
-    {
-      "name": "gmp",
-      "versions": {
-        "6.3.0": {
-          "path": "gmp/gmp-6.3.0.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "6.3.0"
-    },
-
-    {
-      "name": "mpc",
-      "versions": {
-        "1.4.1": {
-          "path": "mpc/mpc-1.4.1.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "1.4.1"
-    },
-
-    {
-      "name": "mpfr",
-      "versions": {
-        "4.2.2": {
-          "path": "mpfr/mpfr-4.2.2.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "4.2.2"
-    },
-
-    {
-      "name": "libisl",
-      "versions": {
-        "0.28": {
-          "path": "libisl/libisl-0.28.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "0.28"
-    },
-
-    {
-      "name": "gcc",
-      "versions": {
-        "16.2.0": {
-          "path": "gcc/gcc-16.2.0.ebs",
-          "static": {
-            "has_static": false
-          }
-        }
-      },
-      "latest_version": "16.2.0"
-    },
-
     {
       "name": "autoconf",
       "versions": {
         "2.73": {
-          "path": "autoconf/autoconf-2.73.ebs",
           "static": {
             "has_static": false
-          }
+          },
+          "path": "autoconf/autoconf-2.73.ebs"
         }
-      },
-      "latest_version": "2.73"
+      }
     },
-
     {
       "name": "automake",
       "versions": {
         "1.19": {
-          "path": "automake/automake-1.19.ebs",
           "static": {
             "has_static": false
-          }
+          },
+          "path": "automake/automake-1.19.ebs"
         }
-      },
-      "latest_version": "1.19"
+      }
     },
-
     {
-      "name": "libtool",
+      "name": "binutils",
       "versions": {
-        "2.6.2": {
-          "path": "libtool/libtool-2.6.2.ebs",
+        "2.47": {
           "static": {
             "has_static": false
-          }
+          },
+          "path": "binutils/binutils-2.47.ebs"
         }
-      },
-      "latest_version": "2.6.2"
+      }
     },
-
     {
-      "name": "perl",
+      "name": "bison",
       "versions": {
-        "5.44.0": {
-          "path": "perl/perl-5.44.0.ebs",
+        "3.8.2": {
           "static": {
             "has_static": false
-          }
+          },
+          "path": "bison/bison-3.8.2.ebs"
         }
-      },
-      "latest_version": "5.44.0"
+      }
     },
-
+    {
+      "name": "bzip2",
+      "versions": {
+        "1.0.8": {
+          "static": {
+            "has_static": false
+          },
+          "path": "bzip2/bzip2-1.0.8.ebs"
+        }
+      }
+    },
+    {
+      "name": "ca-certificates",
+      "versions": {
+        "2026.09.25": {
+          "static": {
+            "has_static": false
+          },
+          "path": "ca-certificates/ca-certificates-2026.09.25.ebs"
+        }
+      }
+    },
+    {
+      "name": "curl",
+      "versions": {
+        "8.22.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "curl/curl-8.22.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "dash",
+      "versions": {
+        "0.5.13.5": {
+          "static": {
+            "has_static": true,
+            "path": "dash.static/dash.static-0.5.13.5.ebs"
+          },
+          "path": "dash.static/dash.static-0.5.13.5.ebs"
+        }
+      }
+    },
+    {
+      "name": "diffutils",
+      "versions": {
+        "3.12": {
+          "static": {
+            "has_static": false
+          },
+          "path": "diffutils/diffutils-3.12.ebs"
+        }
+      }
+    },
+    {
+      "name": "fakeroot",
+      "versions": {
+        "2.1.4": {
+          "static": {
+            "has_static": false
+          },
+          "path": "fakeroot/fakeroot-2.1.4.ebs"
+        }
+      }
+    },
+    {
+      "name": "file",
+      "versions": {
+        "5.48": {
+          "static": {
+            "has_static": false
+          },
+          "path": "file/file-5.48.ebs"
+        }
+      }
+    },
+    {
+      "name": "findutils",
+      "versions": {
+        "4.11.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "findutils/findutils-4.11.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "flex",
+      "versions": {
+        "2.6.4": {
+          "static": {
+            "has_static": false
+          },
+          "path": "flex/flex-2.6.4.ebs"
+        }
+      }
+    },
+    {
+      "name": "gawk",
+      "versions": {
+        "5.4.1": {
+          "static": {
+            "has_static": false
+          },
+          "path": "gawk/gawk-5.4.1.ebs"
+        }
+      }
+    },
+    {
+      "name": "gcc",
+      "versions": {
+        "16.2.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "gcc/gcc-16.2.0.ebs"
+        }
+      }
+    },
     {
       "name": "gettext",
       "versions": {
         "1.0": {
-          "path": "gettext/gettext-1.0.ebs",
           "static": {
             "has_static": false
-          }
+          },
+          "path": "gettext/gettext-1.0.ebs"
         }
-      },
-      "latest_version": "1.0"
+      }
     },
-
     {
-      "name": "texinfo",
+      "name": "gmp",
       "versions": {
-        "7.3": {
-          "path": "texinfo/texinfo-7.3.ebs",
+        "6.3.0": {
           "static": {
             "has_static": false
-          }
+          },
+          "path": "gmp/gmp-6.3.0.ebs"
         }
-      },
-      "latest_version": "7.3"
+      }
     },
-
     {
-      "name": "python",
+      "name": "grep",
       "versions": {
-        "3.15.0": {
-          "path": "python/python-3.15.0.ebs",
+        "3.12": {
           "static": {
             "has_static": false
-          }
+          },
+          "path": "grep/grep-3.12.ebs"
         }
-      },
-      "latest_version": "3.15.0"
+      }
     },
-
+    {
+      "name": "gzip",
+      "versions": {
+        "1.15": {
+          "static": {
+            "has_static": false
+          },
+          "path": "gzip/gzip-1.15.ebs"
+        }
+      }
+    },
+    {
+      "name": "hbase",
+      "versions": {
+        "0.3.0": {
+          "static": {
+            "has_static": true,
+            "path": "hbase.static/hbase.static-0.3.0.ebs"
+          },
+          "path": "hbase.static/hbase.static-0.3.0.ebs"
+        },
+        "0.4.0": {
+          "static": {
+            "has_static": true,
+            "path": "hbase.static/hbase.static-0.4.0.ebs"
+          },
+          "path": "hbase.static/hbase.static-0.4.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "hello",
+      "versions": {
+        "0.1.3": {
+          "static": {
+            "has_static": false
+          },
+          "path": "hello/hello-0.1.3.ebs"
+        }
+      }
+    },
     {
       "name": "iana-etc",
       "versions": {
         "20261009": {
-          "path": "iana-etc/iana-etc-20261009.ebs",
           "static": {
             "has_static": false
-          }
+          },
+          "path": "iana-etc/iana-etc-20261009.ebs"
         }
-      },
-      "latest_version": "20261009"
+      }
+    },
+    {
+      "name": "libarchive",
+      "versions": {
+        "3.8.9": {
+          "static": {
+            "has_static": false
+          },
+          "path": "libarchive/libarchive-3.8.9.ebs"
+        }
+      }
+    },
+    {
+      "name": "libedit",
+      "versions": {
+        "3.1": {
+          "static": {
+            "has_static": false
+          },
+          "path": "libedit/libedit-20260512-3.1.ebs"
+        }
+      }
+    },
+    {
+      "name": "libisl",
+      "versions": {
+        "0.28": {
+          "static": {
+            "has_static": false
+          },
+          "path": "libisl/libisl-0.28.ebs"
+        }
+      }
+    },
+    {
+      "name": "libtool",
+      "versions": {
+        "2.6.2": {
+          "static": {
+            "has_static": false
+          },
+          "path": "libtool/libtool-2.6.2.ebs"
+        }
+      }
+    },
+    {
+      "name": "linux-headers",
+      "versions": {
+        "7.2.9": {
+          "static": {
+            "has_static": false
+          },
+          "path": "linux-headers/linux-headers-7.2.9.ebs"
+        }
+      }
+    },
+    {
+      "name": "m4",
+      "versions": {
+        "1.4.21": {
+          "static": {
+            "has_static": false
+          },
+          "path": "m4/m4-1.4.21.ebs"
+        }
+      }
+    },
+    {
+      "name": "make",
+      "versions": {
+        "4.4.1": {
+          "static": {
+            "has_static": false
+          },
+          "path": "make/make-4.4.1.ebs"
+        }
+      }
+    },
+    {
+      "name": "man-pages",
+      "versions": {
+        "6.19": {
+          "static": {
+            "has_static": false
+          },
+          "path": "man-pages/man-pages-6.19.ebs"
+        }
+      }
+    },
+    {
+      "name": "mpc",
+      "versions": {
+        "1.4.1": {
+          "static": {
+            "has_static": false
+          },
+          "path": "mpc/mpc-1.4.1.ebs"
+        }
+      }
+    },
+    {
+      "name": "mpfr",
+      "versions": {
+        "4.2.2": {
+          "static": {
+            "has_static": false
+          },
+          "path": "mpfr/mpfr-4.2.2.ebs"
+        }
+      }
+    },
+    {
+      "name": "musl",
+      "versions": {
+        "1.2.6": {
+          "static": {
+            "has_static": false
+          },
+          "path": "musl/musl-1.2.6.ebs"
+        }
+      }
+    },
+    {
+      "name": "ncurses",
+      "versions": {
+        "6.6": {
+          "static": {
+            "has_static": false
+          },
+          "path": "ncurses/ncurses-6.6.ebs"
+        }
+      }
+    },
+    {
+      "name": "openssl",
+      "versions": {
+        "4.0.3": {
+          "static": {
+            "has_static": false
+          },
+          "path": "openssl/openssl-4.0.3.ebs"
+        }
+      }
+    },
+    {
+      "name": "openvi",
+      "versions": {
+        "7.9.33": {
+          "static": {
+            "has_static": false
+          },
+          "path": "openvi/openvi-7.9.33.ebs"
+        }
+      }
+    },
+    {
+      "name": "patch",
+      "versions": {
+        "2.8": {
+          "static": {
+            "has_static": false
+          },
+          "path": "patch/patch-2.8.ebs"
+        }
+      }
+    },
+    {
+      "name": "perl",
+      "versions": {
+        "5.44.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "perl/perl-5.44.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "pkgconf",
+      "versions": {
+        "3.0.8": {
+          "static": {
+            "has_static": false
+          },
+          "path": "pkgconf/pkgconf-3.0.8.ebs"
+        }
+      }
+    },
+    {
+      "name": "python",
+      "versions": {
+        "3.15.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "python/python-3.15.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "sed",
+      "versions": {
+        "4.10": {
+          "static": {
+            "has_static": false
+          },
+          "path": "sed/sed-4.10.ebs"
+        }
+      }
+    },
+    {
+      "name": "shadow",
+      "versions": {
+        "4.20.3": {
+          "static": {
+            "has_static": false
+          },
+          "path": "shadow/shadow-4.20.3.ebs"
+        }
+      }
+    },
+    {
+      "name": "shush",
+      "versions": {
+        "0.2.0": {
+          "static": {
+            "has_static": true,
+            "path": "shush.static/shush.static-0.2.0.ebs"
+          },
+          "path": "shush.static/shush.static-0.2.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "sqlite3",
+      "versions": {
+        "3.53.4": {
+          "static": {
+            "has_static": false
+          },
+          "path": "sqlite3/sqlite3-3.53.4.ebs"
+        }
+      }
+    },
+    {
+      "name": "texinfo",
+      "versions": {
+        "7.3": {
+          "static": {
+            "has_static": false
+          },
+          "path": "texinfo/texinfo-7.3.ebs"
+        }
+      }
+    },
+    {
+      "name": "util-linux",
+      "versions": {
+        "2.42.4": {
+          "static": {
+            "has_static": false
+          },
+          "path": "util-linux/util-linux-2.42.4.ebs"
+        }
+      }
+    },
+    {
+      "name": "xpt",
+      "versions": {
+        "0.10.2": {
+          "static": {
+            "has_static": true,
+            "path": "xpt.static/xpt.static-0.10.2.ebs"
+          },
+          "path": "xpt.static/xpt.static-0.10.2.ebs"
+        },
+        "0.11.0": {
+          "static": {
+            "has_static": true,
+            "path": "xpt.static/xpt.static-0.11.0.ebs"
+          },
+          "path": "xpt.static/xpt.static-0.11.0.ebs"
+        },
+        "0.12.0": {
+          "static": {
+            "has_static": true,
+            "path": "xpt.static/xpt.static-0.12.0.ebs"
+          },
+          "path": "xpt.static/xpt.static-0.12.0.ebs"
+        },
+        "0.8.0": {
+          "static": {
+            "has_static": true,
+            "path": "xpt.static/xpt.static-0.8.0.ebs"
+          },
+          "path": "xpt.static/xpt.static-0.8.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "xz",
+      "versions": {
+        "5.8.4": {
+          "static": {
+            "has_static": false
+          },
+          "path": "xz/xz-5.8.4.ebs"
+        }
+      }
+    },
+    {
+      "name": "zlib",
+      "versions": {
+        "1.3.2": {
+          "static": {
+            "has_static": false
+          },
+          "path": "zlib/zlib-1.3.2.ebs"
+        }
+      }
+    },
+    {
+      "name": "zstd",
+      "versions": {
+        "1.5.7": {
+          "static": {
+            "has_static": false
+          },
+          "path": "zstd/zstd-1.5.7.ebs"
+        }
+      }
     }
   ]
 }
