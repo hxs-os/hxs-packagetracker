@@ -459,6 +459,18 @@
       }
     },
     {
+      "name": "pxbase",
+      "versions": {
+        "0.5.0": {
+          "static": {
+            "has_static": true,
+            "path": "pxbase.static/pxbase.static-0.5.0.ebs"
+          },
+          "path": "pxbase.static/pxbase.static-0.5.0.ebs"
+        }
+      }
+    },
+    {
       "name": "python",
       "versions": {
         "3.15.0": {
