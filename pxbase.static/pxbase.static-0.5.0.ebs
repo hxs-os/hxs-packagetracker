@@ -9,8 +9,8 @@ ebsver=1
 
 pkgname=pxbase.static
 pkgver=0.5.0
-pkgsrc=https://dl.juanvel400.com/hbase/hbase-$pkgver.tar.xz
-pkgchecksum=sha256:d68c70286643e83553b3e81a94c7f48d627bb119dc3ef5b0438dd8ef2a4cfc16
+pkgsrc=https://dl.juanvel400.com/pxbase/pxbase-$pkgver.tar.xz
+pkgchecksum=sha256:ce8a5da79de1bb881eba348443ad557839f10b104d15f4769f22ed9fa8f0e4f8
 pkgdesc="(f.k.a hbase) a static and multicall build of pxbase"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"

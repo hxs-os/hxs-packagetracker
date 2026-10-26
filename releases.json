@@ -572,6 +572,13 @@
           },
           "path": "xpt.static/xpt.static-0.12.0.ebs"
         },
+        "0.13.2": {
+          "static": {
+            "has_static": true,
+            "path": "xpt.static/xpt.static-0.13.2.ebs"
+          },
+          "path": "xpt.static/xpt.static-0.13.2.ebs"
+        },
         "0.8.0": {
           "static": {
             "has_static": true,
