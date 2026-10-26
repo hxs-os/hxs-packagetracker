@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=adam
+pkgver=0.3.0
+pkgsrc=https://dl.juanvel400.com/adam/adam-$pkgver.tar.xz
+pkgchecksum=sha256:82a51115ccd01cc644c0f13ccb58dadadee016c27148ddef3334431589ae5803
+pkgdesc="a tiny PID 1 implementation"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/adam"
+pkgcheck=false
+pkgprovides="system:init"
+pkgdeps="musl"
+
+build() {
+    meson setup build ${MESONFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release
+    meson compile -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}

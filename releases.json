@@ -17,6 +17,13 @@
             "path": "adam.static/adam.static-0.2.0.ebs"
           },
           "path": "adam.static/adam.static-0.2.0.ebs"
+        },
+        "0.3.0": {
+          "static": {
+            "has_static": true,
+            "path": "adam.static/adam.static-0.3.0.ebs"
+          },
+          "path": "adam.static/adam.static-0.3.0.ebs"
         }
       }
     },
@@ -312,6 +319,17 @@
             "has_static": false
           },
           "path": "libtool/libtool-2.6.2.ebs"
+        }
+      }
+    },
+    {
+      "name": "linux",
+      "versions": {
+        "7.3": {
+          "static": {
+            "has_static": false
+          },
+          "path": "linux/linux-7.3.ebs"
         }
       }
     },
