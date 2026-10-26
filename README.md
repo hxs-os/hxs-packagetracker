@@ -73,6 +73,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `texinfo`         | —                  | the GNU documentation format                                  |
 | `python`          | —                  | Python programming language                                   |
 | `iana-etc`        | —                  | `/etc/protocols` and `/etc/services` provided by IANA         |
+| `dhcpcd`          | —                  | dhcp / ipv4ll / ipv6ra / dhcpv6 client                        |
 
 ### how to build
 

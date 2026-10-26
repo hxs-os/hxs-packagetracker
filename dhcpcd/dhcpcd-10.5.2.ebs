@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=dhcpcd
+pkgver=10.5.2
+pkgsrc=https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$pkgver/dhcpcd-$pkgver.tar.xz
+pkgchecksum=sha256:3e476657fdb6eeb38b277da3a48d0ac0113ecce5858ebdcddff2b629faed52b4
+pkgdesc="dhcp / ipv4ll / ipv6ra / dhcpv6 client"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-2-Clause"
+pkghomepage="https://roy.marples.name/projects/dhcpcd"
+pkgcheck=true
+pkgprovides="system:dhcp"
+
+build() {
+    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+    make
+}
+
+check() {
+    make test
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
