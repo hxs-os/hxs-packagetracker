@@ -75,6 +75,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `iana-etc`        | —                  | `/etc/protocols` and `/etc/services` provided by IANA         |
 | `dhcpcd`          | —                  | dhcp / ipv4ll / ipv6ra / dhcpv6 client                        |
 | `kmod`            | —                  | utilities to load Linux kernel modules                        |
+| `procps-ng`       | —                  | utilities to monitor system resources                         |
 
 ### how to build
 

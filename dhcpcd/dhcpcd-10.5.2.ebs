@@ -17,6 +17,7 @@ pkglicense="BSD-2-Clause"
 pkghomepage="https://roy.marples.name/projects/dhcpcd"
 pkgcheck=true
 pkgprovides="system:dhcp"
+pkgdeps="musl"
 
 build() {
     ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var

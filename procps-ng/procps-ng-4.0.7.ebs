@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=procps-ng
+pkgver=4.0.7
+pkgsrc=https://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-$pkgver.tar.xz
+pkgchecksum=sha256:9d2021f47a4501c667862c9942a92d1953694b21d11bcd1702e83eb594e3d67d
+pkgdesc="utilities to monitor system resources"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/pxbase"
+pkgcheck=true
+pkgdeps="musl"
+
+build() {
+    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-year2038
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
