@@ -117,6 +117,17 @@
       }
     },
     {
+      "name": "dhcpcd",
+      "versions": {
+        "10.5.2": {
+          "static": {
+            "has_static": false
+          },
+          "path": "dhcpcd/dhcpcd-10.5.2.ebs"
+        }
+      }
+    },
+    {
       "name": "diffutils",
       "versions": {
         "3.12": {
@@ -279,6 +290,17 @@
       }
     },
     {
+      "name": "kmod",
+      "versions": {
+        "34.2": {
+          "static": {
+            "has_static": false
+          },
+          "path": "kmod/kmod-34.2.ebs"
+        }
+      }
+    },
+    {
       "name": "libarchive",
       "versions": {
         "3.8.9": {
@@ -319,17 +341,6 @@
             "has_static": false
           },
           "path": "libtool/libtool-2.6.2.ebs"
-        }
-      }
-    },
-    {
-      "name": "linux",
-      "versions": {
-        "7.3": {
-          "static": {
-            "has_static": false
-          },
-          "path": "linux/linux-7.3.ebs"
         }
       }
     },

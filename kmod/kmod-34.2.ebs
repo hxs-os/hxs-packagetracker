@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=kmod
+pkgver=34.2
+pkgsrc=https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-$pkgver.tar.xz
+pkgchecksum=sha256:5a5d5073070cc7e0c7a7a3c6ec2a0e1780850c8b47b3e3892226b93ffcb9cb54
+pkgdesc="utilities to load and manage Linux kernel modules"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://github.com/Mic92/iana-etc"
+pkgcheck=true
+
+build() {
+    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-manpages --enable-year2038
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
