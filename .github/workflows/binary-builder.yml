@@ -45,7 +45,7 @@ jobs:
         run: |
           sudo .tools/xpt/ebt/mkfhs.sh /tmp/hxs-sysroot x86_64
 
-          curl -fL https://main.hxs.juanvel400.com/x86_64/h/hxs-base-0.1.0.xpt | \
+          curl -fL https://main.hxs.juanvel400.com/x86_64/h/hxs-base/hxs-base-0.1.0.xpt | \
             sudo tar -I zstd -xf - -C /tmp/hxs-sysroot
 
       - name: Detect Changed Packages
@@ -94,3 +94,24 @@ jobs:
         with:
           name: hxs-packages
           path: output/
+
+      - name: Configure SSH Key
+        if: steps.detect.outputs.targets != ''
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p ${{ secrets.SERVER_SSH_PORT || 22 }} -H "${{ secrets.SERVER_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy Packages to Server via rsync
+        if: steps.detect.outputs.targets != ''
+        run: |
+          PORT="${{ secrets.SERVER_SSH_PORT || 22 }}"
+          DEST="${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_DEST_PATH }}"
+
+          echo "* Syncing newly built .xpt packages and updated xpt.index..."
+          rsync -avz --progress \
+            -e "ssh -p $PORT -i ~/.ssh/id_ed25519" \
+            output/ "$DEST/"
+
+          echo "Deployment to $DEST finished successfully."
