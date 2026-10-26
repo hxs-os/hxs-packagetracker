@@ -1,0 +1,96 @@
+name: Build HxS Packages
+
+on:
+  push:
+    paths:
+      - "**/*.ebs"
+  workflow_dispatch:
+    inputs:
+      package:
+        description: "Package directory to build (e.g. zlib, sqlite3)"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout HxS-PackageTracker
+        uses: actions/checkout@v4
+
+      - name: Checkout xpt & build tools
+        uses: actions/checkout@v4
+        with:
+          repository: juanvel4000/xpt
+          path: .tools/xpt
+
+      - name: Install Host Prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zstd libarchive-tools fakeroot bubblewrap
+
+      - name: Restore or Initialize HxS Sysroot
+        uses: actions/cache@v4
+        id: sysroot-cache
+        with:
+          path: /tmp/hxs-sysroot
+          key: hxs-sysroot-${{ hashFiles('musl/**', 'linux-headers/**', 'hxs-base/**') }}
+          restore-keys: |
+            hxs-sysroot-
+
+      - name: Bootstrap Sysroot (if cache miss)
+        if: steps.sysroot-cache.outputs.cache-hit != 'true'
+        run: |
+          sudo .tools/xpt/ebt/mkfhs.sh /tmp/hxs-sysroot x86_64
+
+          curl -fL https://main.hxs.juanvel400.com/x86_64/h/hxs-base-0.1.0.xpt | \
+            sudo tar -I zstd -xf - -C /tmp/hxs-sysroot
+
+      - name: Detect Changed Packages
+        id: detect
+        run: |
+          if [ -n "${{ github.event.inputs.package }}" ]; then
+            echo "targets=${{ github.event.inputs.package }}" >> "$GITHUB_OUTPUT"
+          else
+            # Find changed directories containing .ebs files
+            CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.ebs$' | xargs -n1 dirname | sort -u | tr '\n' ' ')
+            echo "targets=$CHANGED" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build Packages in Clean Chroot
+        run: |
+          mkdir -p output/
+
+          # Pass host workspace into chroot safely
+          sudo cp -r . /tmp/hxs-sysroot/build_workspace
+
+          for target in ${{ steps.detect.outputs.targets }}; do
+            echo "::group::Building $target"
+
+            # Find the formula file
+            formula=$(ls $target/*.ebs | head -n1)
+
+            # Build inside chroot using ecw
+            sudo .tools/xpt/ebt/ecw.sh /tmp/hxs-sysroot /bin/sh -c "
+              cd /build_workspace
+              export PATH=/usr/bin:/bin:/usr/sbin:/sbin
+              ebs.sh build $formula
+            "
+
+            # Move produced .xpt to host output
+            sudo mv /tmp/hxs-sysroot/build_workspace/*.xpt output/
+            echo "::endgroup::"
+          done
+
+      - name: Generate Repository Index (rig)
+        run: |
+          cd output
+          .tools/xpt/ebt/rig.sh -d . -u https://main.hxs.juanvel400.com/x86_64 -o xpt.index
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hxs-packages
+          path: output/
