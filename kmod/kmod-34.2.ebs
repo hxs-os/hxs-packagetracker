@@ -14,7 +14,7 @@ pkgchecksum=sha256:5a5d5073070cc7e0c7a7a3c6ec2a0e1780850c8b47b3e3892226b93ffcb9c
 pkgdesc="utilities to load and manage Linux kernel modules"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="MIT"
-pkghomepage="https://github.com/Mic92/iana-etc"
+pkghomepage="https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git"
 pkgcheck=true
 pkgdeps="musl"
 
