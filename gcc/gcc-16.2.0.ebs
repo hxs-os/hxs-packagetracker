@@ -34,9 +34,9 @@ build() {
     ../configure ${CONFIGUREFLAGS:-} --prefix=/usr --enable-languages=c,c++ \
         --disable-multilib --disable-nls --with-system-zlib --enable-shared \
         --enable-threads=posix --enable-default-pie --disable-libquadmath \
-        --disable-libatomic --disable-libsanitizer --disable-libssp \
+        --disable-libgomp --disable-libsanitizer --disable-libssp \
         --disable-libvtv --disable-libitm --disable-bootstrap \
-        --disable-libgomp --disable-fixincludes --enable-default-ssp
+        --disable-fixincludes --enable-default-ssp
     make
     cd .. || return 1
 }

@@ -28,7 +28,7 @@ build() {
         --enable-libuuid --enable-libmount --enable-libfdisk \
         --enable-whereis --enable-mkfs --enable-mount \
         --enable-blkid --enable-losetup --enable-fdisks \
-        --enable-agetty --enable-dmesg --enable-nologin \
+        --enable-agetty --enable-dmesg --disable-nologin \
         --enable-unshare --enable-uuidgen --enable-hwclock \
         --enable-lsblk --enable-swapon --enable-lscpu \
         --enable-switch_root --enable-pivot_root \

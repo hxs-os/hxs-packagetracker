@@ -18,11 +18,19 @@ pkghomepage="https://www.gnu.org/software/binutils"
 pkgcheck=true
 pkgdeps="musl,zlib"
 
+prepare() {
+    sed '6031s/$add_dir//' -i ltmain.sh
+}
+
 build() {
     mkdir build
     cd build || return 1
 
-    ../configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038 --with-system-zlib
+    ../configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --disable-rpath --enable-year2038 \
+        --with-system-zlib --disable-werror \
+        --with-system-getopt --enable-shared \
+        --enable-static
     make
 }
 

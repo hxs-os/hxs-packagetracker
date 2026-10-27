@@ -25,12 +25,14 @@ prepare() {
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
-        --sysconfdir=/etc --without-attr \
-        --disable-static --with-bcrypt \
-        --without-libbsd --disable-logind \
-        --with-group-name-max-length=32 \
+        --sysconfdir=/etc --disable-static \
+	--with-bcrypt --without-libbsd \
+	--disable-logind \
+	--with-group-name-max-length=32 \
         --without-libpam --without-selinux \
-        --without-audit --without-acl
+        --without-audit --without-acl \
+	--disable-rpath --bindir=/usr/bin \
+	--sbindir=/usr/sbin --libdir=/usr/lib
 
     make
 }

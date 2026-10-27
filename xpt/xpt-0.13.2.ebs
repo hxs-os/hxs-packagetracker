@@ -8,7 +8,7 @@
 ebsver=1
 
 pkgname=xpt
-pkgver=0.13.0
+pkgver=0.13.2
 pkgsrc=https://dl.juanvel400.com/xpt/xpt-$pkgver.tar.xz
 pkgchecksum=sha256:f5eccb12539183021fb90b94ca55d3a6f6a604df16fa043e54333e6e176f156c
 pkgdesc="a package manager utility and library"
