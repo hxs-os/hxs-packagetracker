@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=python-setuptools
+pkgver=84.0.0
+pkgsrc=https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-$pkgver.tar.gz
+pkgchecksum=sha256:f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73
+pkgdesc="Python package build system and distribution utilities"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://pypi.org/project/setuptools/"
+pkgcheck=false
+pkgdeps="python"
+
+build() {
+    pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+}
+
+package() {
+    "${1:-fakeroot}" pip3 install --no-index --find-links dist setuptools --prefix=/usr --root "$pkgdir"
+}

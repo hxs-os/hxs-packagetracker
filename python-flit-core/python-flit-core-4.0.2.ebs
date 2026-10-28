@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=python-wheel
+pkgver=0.48.0
+pkgsrc=https://pypi.org/packages/source/f/flit-core/flit_core-$pkgver.tar.gz
+pkgchecksum=sha256:b6929defd93884b584d7c87829e0e7b5c26ed6be17b0b873979019314aa841c8
+pkgdesc="a minimal PEP 517 build backend"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://pypi.org/project/flit-core/"
+pkgcheck=false
+pkgdeps="python"
+
+build() {
+    pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+}
+
+package() {
+    "${1:-fakeroot}" pip3 install --no-index --find-links dist flit_core --prefix=/usr --root "$pkgdir"
+}

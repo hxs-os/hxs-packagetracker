@@ -522,6 +522,50 @@
       }
     },
     {
+      "name": "python-flit-core",
+      "versions": {
+        "4.0.2": {
+          "static": {
+            "has_static": false
+          },
+          "path": "python-flit-core/python-flit-core-4.0.2.ebs"
+        }
+      }
+    },
+    {
+      "name": "python-packaging",
+      "versions": {
+        "26.3": {
+          "static": {
+            "has_static": false
+          },
+          "path": "python-packaging/python-packaging-26.3.ebs"
+        }
+      }
+    },
+    {
+      "name": "python-setuptools",
+      "versions": {
+        "84.0.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "python-setuptools/python-setuptools-84.0.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "python-wheel",
+      "versions": {
+        "0.48.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "python-wheel/python-wheel-0.48.0.ebs"
+        }
+      }
+    },
+    {
       "name": "sed",
       "versions": {
         "4.10": {
