@@ -80,6 +80,8 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `python-packaging`  | —                  | core utilities for Python package metadata and version handling |
 | `python-setuptools` | —                  | built-package format for Python distributions                   |
 | `python-wheel`      | —                  | Python package build system and distribution utilities          |
+| `meson`             | —                  | the meson build system                                          |
+| `git`               | —                  | distributed version control system                              |
 
 ### how to build
 

@@ -216,6 +216,17 @@
       }
     },
     {
+      "name": "git",
+      "versions": {
+        "2.56.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "git/git-2.56.0.ebs"
+        }
+      }
+    },
+    {
       "name": "gmp",
       "versions": {
         "6.3.0": {
@@ -385,6 +396,17 @@
             "has_static": false
           },
           "path": "man-pages/man-pages-6.19.ebs"
+        }
+      }
+    },
+    {
+      "name": "meson",
+      "versions": {
+        "1.12.1": {
+          "static": {
+            "has_static": false
+          },
+          "path": "meson/meson-1.12.1.ebs"
         }
       }
     },
@@ -562,6 +584,17 @@
             "has_static": false
           },
           "path": "python-wheel/python-wheel-0.48.0.ebs"
+        }
+      }
+    },
+    {
+      "name": "samurai",
+      "versions": {
+        "1.3": {
+          "static": {
+            "has_static": false
+          },
+          "path": "samurai/samurai-1.3.ebs"
         }
       }
     },

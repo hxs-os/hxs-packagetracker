@@ -1,0 +1,30 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=meson
+pkgver=1.12.1
+pkgsrc=https://github.com/mesonbuild/meson/releases/download/$pkgver/meson-$pkgver.tar.gz
+pkgchecksum=sha256:ab0a6ca09f8ef70c564c8241fb5a23957886a0b53fb58412b5e07eaf07dba743
+pkgdesc="the meson build system"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="Apache-2.0"
+pkghomepage="https://mesonbuild.com/"
+pkgcheck=false
+pkgdeps="python"
+
+build() {
+    pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+}
+
+package() {
+    "${1:-fakeroot}" pip3 install --no-index --find-links dist meson --prefix=/usr --root "$pkgdir"
+
+    install -vDm644 data/shell-completions/bash/meson "$pkgdir/usr/share/bash-completion/completions/meson"
+    install -vDm644 data/shell-completions/zsh/_meson "$pkgdir/usr/share/zsh/site-functions/_meson"
+}

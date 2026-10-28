@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=samurai
+pkgver=1.3
+pkgsrc=https://git.sr.ht/~mcf/samurai/refs/download/$pkgver/samurai-$pkgver.tar.gz
+pkgchecksum=sha256:1bc020a9e133432df51911ac71cc34322f828934d9a2282ba2916d88c15976af
+pkgdesc="ninja-compatible build tool written in C99"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="ISC AND Apache-2.0 AND MIT"
+pkghomepage="https://git.sr.ht/~mcf/samurai"
+pkgcheck=false
+pkgdeps="musl"
+
+build() {
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX="/usr"
+}

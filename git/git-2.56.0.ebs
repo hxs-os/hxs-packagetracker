@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=git
+pkgver=2.56.0
+pkgsrc=https://www.kernel.org/pub/software/scm/git/git-$pkgver.tar.xz
+pkgchecksum=sha256:26c56c296b38c0695b26fa95f475f1d01704d2d38e73465ca30b0b2f5dc789d3
+pkgdesc="distributed version control system"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-only"
+pkghomepage="https://git-scm.com/"
+pkgcheck=true
+pkgdeps="musl,zlib,curl,openssl"
+
+build() {
+    ./configure --prefix=/usr --with-curl --with-openssl
+    make
+}
+
+check() {
+    make test
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
