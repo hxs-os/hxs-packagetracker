@@ -18,6 +18,8 @@ pkghomepage="https://sr.ht/~juanvel400/pxbase"
 pkgcheck=false
 pkgprovides="system:coreutils"
 pkgdeps="musl"
+pkgtriggers="man"
+
 
 build() {
     meson setup build ${MESONFLAGS:-} --buildtype=release --prefix=/usr -Ddoc=enabled

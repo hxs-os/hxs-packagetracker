@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://github.com/shadow-maint/shadow"
 pkgcheck=false
 pkgdeps="musl"
+pkgtriggers="man"
 
 prepare() {
     find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \;

@@ -16,6 +16,7 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="ISC"
 pkghomepage="https://mandoc.bsd.lv/"
 pkgcheck=true
+pkgtriggers="man"
 
 build() {
     echo "PREFIX=/usr" > ./configure.local

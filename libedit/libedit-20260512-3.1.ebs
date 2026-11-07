@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://www.thrysoee.dk/editline/"
 pkgdeps="ncurses,musl"
 pkgcheck=true
+pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --enable-shared --disable-static

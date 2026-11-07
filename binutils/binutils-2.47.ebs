@@ -17,6 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/binutils"
 pkgcheck=true
 pkgdeps="musl,zlib"
+pkgtriggers="man"
 
 prepare() {
     sed '6031s/$add_dir//' -i ltmain.sh

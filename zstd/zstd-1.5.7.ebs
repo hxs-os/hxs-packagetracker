@@ -18,6 +18,7 @@ pkghomepage="https://facebook.github.io/zstd"
 pkgcheck=true
 pkgdeps="musl"
 pkgprovides="libzstd"
+pkgtriggers="man"
 
 build() {
     make

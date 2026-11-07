@@ -18,6 +18,7 @@ pkghomepage="https://openssl-library.org/"
 pkgcheck=true
 pkgprovides="system:ssl"
 pkgdeps="musl,zlib"
+pkgtriggers="man"
 
 build() {
     perl ./Configure ${SSLCONFIGUREFLAGS:-} --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic

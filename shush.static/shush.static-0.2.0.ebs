@@ -17,7 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/shush"
 pkgcheck=false
 pkgprovides="shush"
-pkgtriggers="shells"
+pkgtriggers="shells,man"
 
 build() {
     CFLAGS="-static -O2" LDFLAGS="-static" make WITH_LIBEDIT=false

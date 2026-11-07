@@ -18,6 +18,7 @@ pkghomepage="https://www.gnu.org/software/gcc"
 pkgcheck=false
 pkgdeps="musl,gmp,mpfr,mpc,libisl,zlib,binutils"
 pkgprovides="cc"
+pkgtriggers="man"
 
 prepare() {
     case $(uname -m) in

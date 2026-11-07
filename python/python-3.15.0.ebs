@@ -17,6 +17,7 @@ pkglicense="PSF-2.0"
 pkghomepage="https://www.python.org"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \

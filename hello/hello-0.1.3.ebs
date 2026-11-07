@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://sr.ht/~juanvel400/hello"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     make

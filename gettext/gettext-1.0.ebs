@@ -17,6 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/gettext"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREARGS:-} --prefix=/usr --disable-static --enable-shared

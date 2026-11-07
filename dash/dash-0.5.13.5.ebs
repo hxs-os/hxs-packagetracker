@@ -18,6 +18,7 @@ pkghomepage="http://gondor.apana.org.au/~herbert/dash/"
 pkgcheck=true
 pkgtriggers="shells"
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} \

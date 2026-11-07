@@ -17,6 +17,7 @@ pkglicense="GPL-2.0-only"
 pkghomepage="https://git-scm.com/"
 pkgcheck=true
 pkgdeps="musl,zlib,curl,openssl"
+pkgtriggers="man"
 
 build() {
     ./configure --prefix=/usr --with-curl --with-openssl

@@ -17,6 +17,8 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://sr.ht/~juanvel400/pxbase"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
+
 
 build() {
     ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-year2038

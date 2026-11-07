@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://sr.ht/~juanvel400/sharbase"
 pkgcheck=false
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     meson setup build ${MESONFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release

@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://wiki.debian.org/FakeRoot"
 pkgcheck=false
 pkgdeps="musl"
+pkgtriggers="man"
 
 prepare() {
     ./bootstrap ${BOOTSTRAPFLAGS:-}

@@ -17,6 +17,7 @@ pkglicense="MIT"
 pkghomepage="https://invisible-island.net/ncurses/ncurses.html"
 pkgcheck=false
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} \

@@ -17,6 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/make"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
 
 prepare() {
     sed -i 's/extern char \*getenv ();/extern char *getenv (const char *);/' \

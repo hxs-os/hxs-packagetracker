@@ -17,6 +17,7 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://git.sr.ht/~juanvel400/hbase"
 pkgcheck=true
 pkgprovides="system:coreutils,hbase"
+pkgtriggers="man"
 
 build() {
     meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=enabled -Dtests=enabled -Dstatic=true

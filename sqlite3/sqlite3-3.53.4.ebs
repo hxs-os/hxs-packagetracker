@@ -18,6 +18,7 @@ pkghomepage="https://www.sqlite.org"
 pkgcheck=false
 pkgdeps="musl"
 pkgprovides="libsqlite3"
+pkgtriggers="man"
 
 build() {
     CXX=false ./configure ${CONFIGUREFLAGS:-} \

@@ -17,6 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/m4"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038

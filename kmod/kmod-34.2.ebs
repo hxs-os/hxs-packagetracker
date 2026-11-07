@@ -17,6 +17,7 @@ pkglicense="MIT"
 pkghomepage="https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-manpages --enable-year2038

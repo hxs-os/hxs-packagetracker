@@ -18,6 +18,8 @@ pkghomepage="https://github.com/pkgconf/pkgconf"
 pkgcheck=false
 pkgprovides="pkg-config"
 pkgdeps="musl"
+pkgtriggers="man"
+
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr

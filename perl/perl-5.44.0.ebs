@@ -17,6 +17,8 @@ pkglicense="GPL-1.0-or-later"
 pkghomepage="https://www.perl.org"
 pkgcheck=true
 pkgdeps="musl"
+pkgtriggers="man"
+
 
 build() {
     sh Configure -des \

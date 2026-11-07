@@ -18,6 +18,7 @@ pkghomepage="https://github.com/johnsonjh/OpenVi"
 pkgcheck=false
 pkgdeps="musl,ncurses"
 pkgprovides="vi,ex"
+pkgtriggers="man"
 
 build() {
     make

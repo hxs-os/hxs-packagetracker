@@ -18,6 +18,7 @@ pkghomepage="http://gondor.apana.org.au/~herbert/dash/"
 pkgcheck=true
 pkgprovides="dash"
 pkgtriggers="shells"
+pkgtriggers="man"
 
 build() {
     LDFLAGS="-static" ./configure ${CONFIGUREFLAGS:-} \

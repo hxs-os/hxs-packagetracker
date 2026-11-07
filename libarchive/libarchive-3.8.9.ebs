@@ -18,6 +18,7 @@ pkghomepage="https://libarchive.org"
 pkgdeps="musl,zstd,bzip2,xz,zlib,openssl"
 pkgprovides="bsdtar,bsdcpio,bsdunzip,cpio,unzip,tar"
 pkgcheck=true
+pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} \

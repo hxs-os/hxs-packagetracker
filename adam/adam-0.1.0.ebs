@@ -18,6 +18,7 @@ pkghomepage="https://sr.ht/~juanvel400/adam"
 pkgcheck=false
 pkgprovides="system:init"
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     meson setup build ${MESONFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release

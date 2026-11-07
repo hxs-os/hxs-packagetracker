@@ -18,6 +18,7 @@ pkghomepage="https://roy.marples.name/projects/dhcpcd"
 pkgcheck=true
 pkgprovides="system:dhcp"
 pkgdeps="musl"
+pkgtriggers="man"
 
 build() {
     ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var
