@@ -20,7 +20,7 @@ pkgprovides="system:ssl"
 pkgdeps="musl,zlib"
 
 build() {
-    ./Configure ${SSLCONFIGUREFLAGS:-} --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic
+    perl ./Configure ${SSLCONFIGUREFLAGS:-} --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic
     make
 }
 
