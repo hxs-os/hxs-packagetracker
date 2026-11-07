@@ -84,6 +84,8 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `python-wheel`      | —                  | Python package build system and distribution utilities          |
 | `meson`             | —                  | the meson build system                                          |
 | `git`               | —                  | distributed version control system                              |
+| `samurai`           | —                  | ninja-compatible build tool written in C99                      |
+| `mandoc`            | —                  | a suite of tools for manual pages                               |
 
 ### how to build
 

@@ -400,6 +400,17 @@
       }
     },
     {
+      "name": "mandoc",
+      "versions": {
+        "1.14.6": {
+          "static": {
+            "has_static": false
+          },
+          "path": "mandoc/mandoc-1.14.6.ebs"
+        }
+      }
+    },
+    {
       "name": "meson",
       "versions": {
         "1.12.1": {
@@ -640,6 +651,13 @@
             "path": "sharbase.static/sharbase.static-0.1.0.ebs"
           },
           "path": "sharbase.static/sharbase.static-0.1.0.ebs"
+        },
+        "0.2.0": {
+          "static": {
+            "has_static": true,
+            "path": "sharbase.static/sharbase.static-0.2.0.ebs"
+          },
+          "path": "sharbase.static/sharbase.static-0.2.0.ebs"
         }
       }
     },

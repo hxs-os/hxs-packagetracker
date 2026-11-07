@@ -1,0 +1,48 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=mandoc
+pkgver=1.14.6
+pkgsrc=https://mandoc.bsd.lv/snapshots/mandoc-$pkgver.tar.gz
+pkgchecksum=sha256:8bf0d570f01e70a6e124884088870cbed7537f36328d512909eb10cd53179d9c
+pkgdesc="a suite of tools for manual pages"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="ISC"
+pkghomepage="https://mandoc.bsd.lv/"
+pkgcheck=true
+
+build() {
+    echo "PREFIX=/usr" > ./configure.local
+    echo "MANDIR=/usr/share/man" >> ./configure.local
+    echo "BINDIR=/usr/bin" >> ./configure.local
+    echo "SBINDIR=/usr/sbin" >> ./configure.local
+    echo "OSNAME=\"HxS\"" >> ./configure.local
+    echo "OSENUM=MANDOC_OS_OTHER" >> ./configure.local
+    ./configure
+    make
+}
+
+check() {
+    make regress
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+
+    mkdir -p "$pkgdir/usr/share/xpt/triggers"
+    echo "#!/bin/sh" >"$pkgdir/usr/share/xpt/triggers/man"
+    echo "\nset -e" >>"$pkgdir/usr/share/xpt/triggers/man"
+    echo "\n# xpt: man trigger" >>"$pkgdir/usr/share/xpt/triggers/man"
+    echo "# refreshes the manual page database" >>"$pkgdir/usr/share/xpt/triggers/man"
+    echo "makewhatis" >>"$pkgdir/usr/share/xpt/triggers/man"
+    echo "exit" >>"$pkgdir/usr/share/xpt/triggers/man"
+
+    chmod +x "$pkgdir/usr/share/xpt/triggers/man"
+
+}
