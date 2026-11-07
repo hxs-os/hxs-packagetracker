@@ -16,6 +16,7 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="ISC"
 pkghomepage="https://mandoc.bsd.lv/"
 pkgcheck=true
+pkgprovides="man,triggers:man"
 pkgtriggers="man"
 
 build() {
@@ -37,12 +38,17 @@ package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 
     mkdir -p "$pkgdir/usr/share/xpt/triggers"
-    echo "#!/bin/sh" >"$pkgdir/usr/share/xpt/triggers/man"
-    echo "\nset -e" >>"$pkgdir/usr/share/xpt/triggers/man"
-    echo "\n# xpt: man trigger" >>"$pkgdir/usr/share/xpt/triggers/man"
-    echo "# refreshes the manual page database" >>"$pkgdir/usr/share/xpt/triggers/man"
-    echo "makewhatis" >>"$pkgdir/usr/share/xpt/triggers/man"
-    echo "exit" >>"$pkgdir/usr/share/xpt/triggers/man"
+
+    cat >"$pkgdir/usr/share/xpt/triggers/man" <<'EOF'
+#!/bin/sh
+
+set -e
+
+# xpt: man trigger
+# refreshes the manual page database
+command -v makewhatis >/dev/null || exit 0
+makewhatis "${XPT_ROOT:-}/usr/share/man"
+EOF
 
     chmod +x "$pkgdir/usr/share/xpt/triggers/man"
 
