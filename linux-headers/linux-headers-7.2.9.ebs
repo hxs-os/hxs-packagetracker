@@ -22,5 +22,7 @@ build() {
 }
 
 package() {
-    "${1:-fakeroot}" make INSTALL_HDR_PATH="$pkgdir/usr" headers_install
+    find usr/include -type f ! -name '*.h' -delete
+    mkdir -p "$pkgdir/usr"
+    cp -rv usr/include "$pkgdir/usr"
 }
