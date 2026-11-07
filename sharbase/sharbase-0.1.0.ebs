@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=sharbase
+pkgver=0.1.0
+pkgsrc=https://dl.juanvel400.com/sharbase/sharbase-$pkgver.tar.xz
+pkgchecksum=sha256:7f2316329d6d90add72bf60ea922f69aa72f0ad6be099ec780b7ea57bcbd8e0f
+pkgdesc="a suite of shar(1)-related utilities"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/sharbase"
+pkgcheck=false
+pkgdeps="musl"
+
+build() {
+    meson setup build ${MESONFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release
+    meson compile -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}

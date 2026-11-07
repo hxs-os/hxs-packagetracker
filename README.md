@@ -12,14 +12,16 @@ further information about each formula is found in the formula metadata and [`re
 
 these are formulae for first-party packages, i.e. packages written for HxS.
 
-| package  | static counterpart | description                                          |
-| -------- | ------------------ | ---------------------------------------------------- |
-| `xpt`    | `xpt.static`       | the xpt package manager                              |
-| `shush`  | `shush.static`     | the shush shell                                      |
-| `hbase`  | `hbase.static`     | the hbase utility collection                         |
-| `adam`   | `adam.static`      | the adam init system                                 |
-| `hello`  | —                  | a hello world program, doubles as an example formula |
-| `pxbase` | `pxbase.static`    | (f.k.a hbase) the pxbase utility collection          |
+| package    | static counterpart | description                                          |
+| ---------- | ------------------ | ---------------------------------------------------- |
+| `xpt`      | `xpt.static`       | the xpt package manager                              |
+| `shush`    | `shush.static`     | the shush shell                                      |
+| `hbase`    | `hbase.static`     | the hbase utility collection                         |
+| `adam`     | `adam.static`      | the adam init system                                 |
+| `hello`    | —                  | a hello world program, doubles as an example formula |
+| `pxbase`   | `pxbase.static`    | (f.k.a hbase) the pxbase utility collection          |
+| `sharbase` | `sharbase.static`  | a suite of `shar(1)`-related utilities               |
+| `rswc`     | —                  | a tiny utility to download files from the network    |
 
 ### third-party formulae
 
