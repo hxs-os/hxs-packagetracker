@@ -1,16 +1,14 @@
-# HxS PackageTracker
+# packagetracker
 
-the HxS PackageTracker is a collection of `ebs(5)` formulae used to build packages for HxS.
+this is the HxS packagetracker, a collection of `ebs(5)` formulae inspired in [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
 
-the HxS PackageTracker is heavily inspired by [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
+each formulae can be built using the `ebs(1)` build system, found in the `xpt` / `xpt.static` package.
 
 ## formulae
 
-further information about each formula is found in the formula metadata and [`releases.json`](releases.json).
-
 ### first-party formulae
 
-these are formulae for first-party packages, i.e. packages written for HxS.
+these formulae build packages from first-class HxS projects.
 
 | package    | static counterpart | description                                          |
 | ---------- | ------------------ | ---------------------------------------------------- |
@@ -26,7 +24,7 @@ these are formulae for first-party packages, i.e. packages written for HxS.
 
 ### third-party formulae
 
-these are formulae for third-party packages, i.e. packages not written for HxS.
+these formulae build packages from third-party projects, regardless of their origin.
 
 | package             | static counterpart | description                                                     |
 | ------------------- | ------------------ | --------------------------------------------------------------- |
@@ -88,13 +86,3 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `samurai`           | —                  | ninja-compatible build tool written in C99                      |
 | `mandoc`            | —                  | a suite of tools for manual pages                               |
 | `toybox`            | `toybox.static`    | common Linux command-line utilities bundled in a single binary  |
-
-### how to build
-
-each formula can be built with:
-
-```sh
-ebs build package/package-version.ebs
-```
-
-> the `ebs(1)` build system can be found as a shell script in the `xpt` package, as part of the `ebt` subsystem.
