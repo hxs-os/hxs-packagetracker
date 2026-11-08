@@ -19,7 +19,9 @@ pkgcheck=true
 pkgprovides="system:xpt"
 
 build() {
-    meson setup build ${MESONFLAGS:-} -Dbuildtype=release -Dprefix=/usr -Ddoc=disabled -Dtests=enabled -Dstatic=true -Ddefault_library=static
+    meson setup build ${MESONFLAGS:-} -Dbuildtype=release \
+        -Dprefix=/usr -Ddoc=disabled -Dtests=enabled \
+        -Dstatic=true -Ddefault_library=static
 }
 
 check() {

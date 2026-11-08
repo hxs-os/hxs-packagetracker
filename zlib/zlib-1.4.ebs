@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=zlib
+pkgver=1.4
+pkgsrc=https://zlib.net/zlib-$pkgver.tar.xz
+pkgchecksum=sha256:4f11c512053d7bab8d9e9b89bde3575add3e4c50a383b42ef6cb837035fc5a7c
+pkgdesc="a lossless data-compression library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="Zlib"
+pkghomepage="https://zlib.net"
+pkgcheck=true
+pkgdeps="musl"
+pkgprovides="libz"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
