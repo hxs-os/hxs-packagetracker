@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=toybox.static
+pkgver=0.8.15
+pkgsrc=https://landley.net/toybox/downloads/toybox-$pkgver.tar.gz
+pkgchecksum=sha256:44e2bab43dfe2c171743297631ce558c6d9ed38b87a66fd751cef617574b375e
+pkgdesc="a static build of toybox"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkghomepage="https://landley.net/toybox/"
+pkglicense="0BSD"
+pkgcheck=true
+
+prepare() {
+    cp -v "$filesdir/config-$pkgver" ".config"
+}
+
+build() {
+    LDFLAGS="${LDFLAGS:-} -static" make
+}
+
+check() {
+    make test
+}
+
+package() {
+    mkdir -p "$pkgdir/usr/bin"
+    install -m755 toybox "$pkgdir/usr/bin/toybox"
+}

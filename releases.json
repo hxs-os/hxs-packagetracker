@@ -290,6 +290,17 @@
       }
     },
     {
+      "name": "hxs-base",
+      "versions": {
+        "0.2.0": {
+          "static": {
+            "has_static": false
+          },
+          "path": "hxs-base/hxs-base-0.2.0.ebs"
+        }
+      }
+    },
+    {
       "name": "iana-etc",
       "versions": {
         "20261009": {
@@ -692,6 +703,18 @@
             "has_static": false
           },
           "path": "texinfo/texinfo-7.3.ebs"
+        }
+      }
+    },
+    {
+      "name": "toybox",
+      "versions": {
+        "0.8.15": {
+          "static": {
+            "has_static": true,
+            "path": "toybox.static/toybox.static-0.8.15.ebs"
+          },
+          "path": "toybox.static/toybox.static-0.8.15.ebs"
         }
       }
     },

@@ -22,6 +22,7 @@ these are formulae for first-party packages, i.e. packages written for HxS.
 | `pxbase`   | `pxbase.static`    | (f.k.a hbase) the pxbase utility collection          |
 | `sharbase` | `sharbase.static`  | a suite of `shar(1)`-related utilities               |
 | `rswc`     | —                  | a tiny utility to download files from the network    |
+| `hxs-base` | —                  | base files for an HxS system                         |
 
 ### third-party formulae
 
@@ -86,6 +87,7 @@ these are formulae for third-party packages, i.e. packages not written for HxS.
 | `git`               | —                  | distributed version control system                              |
 | `samurai`           | —                  | ninja-compatible build tool written in C99                      |
 | `mandoc`            | —                  | a suite of tools for manual pages                               |
+| `toybox`            | `toybox.static`    | common Linux command-line utilities bundled in a single binary  |
 
 ### how to build
 
