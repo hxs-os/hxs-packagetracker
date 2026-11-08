@@ -39,11 +39,12 @@ build() {
         --disable-libvtv --disable-libitm --disable-bootstrap \
         --disable-fixincludes --enable-default-ssp --disable-libstdcxx-pch \
         --disable-symvers --enable-libstdcxx-time
-    make
+    make || return 1
     cd .. || return 1
 }
 
 package() {
     "${1:-fakeroot}" make -C build install DESTDIR="$pkgdir"
     ln -sf gcc "$pkgdir/usr/bin/cc"
+    rm -f "$pkgdir/usr/share/info/dir"
 }
