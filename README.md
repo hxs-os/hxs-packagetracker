@@ -21,7 +21,7 @@ these are formulae for first-party packages, i.e. packages written for HxS.
 | `hello`    | —                  | a hello world program, doubles as an example formula |
 | `pxbase`   | `pxbase.static`    | (f.k.a hbase) the pxbase utility collection          |
 | `sharbase` | `sharbase.static`  | a suite of `shar(1)`-related utilities               |
-| `rswc`     | —                  | a tiny utility to download files from the network    |
+| `rswc`     | `rswc.static`      | a tiny utility to download files from the network    |
 | `hxs-base` | —                  | base files for an HxS system                         |
 
 ### third-party formulae

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=rswc.static
+pkgver=0.1.0
+pkgsrc=https://dl.juanvel400.com/rswc/rswc-$pkgver.tar.xz
+pkgchecksum=sha256:2cf3bedc2659bda6c6aacebfc13eca94f4bc5eb07e4112d35471431c367e51a1
+pkgdesc="a static build of rswc"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/rswc"
+pkgcheck=false
+pkgtriggers="man"
+
+build() {
+    LDFLAGS="${LDFLAGS:-} -static" meson setup build ${MESONFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dprefer_static=true -Ddefault_library=static
+    meson compile -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
