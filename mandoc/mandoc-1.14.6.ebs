@@ -26,6 +26,8 @@ build() {
     echo "SBINDIR=/usr/sbin" >> ./configure.local
     echo "OSNAME=\"HxS\"" >> ./configure.local
     echo "OSENUM=MANDOC_OS_OTHER" >> ./configure.local
+    echo "CFLAGS=\"${CFLAGS:--O2}\"" >> ./configure.local
+    echo "LDFLAGS=\"${LDFLAGS:-}\"" >> ./configure.local
     ./configure
     make
 }
