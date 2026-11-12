@@ -19,7 +19,7 @@ pkgcheck=true
 pkgdeps="musl"
 
 prepare() {
-    cp -v "$filesdir/config-$pkgver" ".config"
+    cp "$filesdir/config-$pkgver" ".config"
 }
 
 build() {
