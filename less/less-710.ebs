@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=less
+pkgver=710
+pkgsrc=https://ftp.gnu.org/gnu/less/less-$pkgver.tar.gz
+pkgchecksum="sha256:d1008fb78dcae1323ddab664bcb352a61f022b1b131bd8018548e021d975ec7a"
+pkgdesc="free and open-source file pager"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later OR Less"
+pkghomepage="https://www.greenwoodsoftware.com/less/"
+pkgcheck=true
+pkgtriggers="man"
+
+build() {
+    ./configure --prefix=/usr --enable-year2038 --with-regex=posix
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

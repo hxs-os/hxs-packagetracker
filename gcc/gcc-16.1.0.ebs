@@ -1,0 +1,50 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=gcc
+pkgver=16.1.0
+pkgsrc=https://ftp.gnu.org/gnu/gcc/gcc-$pkgver/gcc-$pkgver.tar.xz
+pkgchecksum=sha256:50efb4d94c3397aff3b0d61a5abd748b4dd31d9d3f2ab7be05b171d36a510f79
+pkgdesc="GNU compiler collection"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later WITH GCC-exception-3.1"
+pkghomepage="https://www.gnu.org/software/gcc"
+pkgcheck=false
+pkgdeps="musl,gmp,mpfr,mpc,libisl,zlib,binutils"
+pkgprovides="cc"
+pkgtriggers="man"
+
+prepare() {
+    case $(uname -m) in
+    x86_64)
+        sed -e '/m64=/s/lib64/lib/' \
+            -i.orig gcc/config/i386/t-linux64
+        ;;
+    esac
+}
+
+build() {
+    mkdir -p build
+    cd build || return 1
+    ../configure ${CONFIGUREFLAGS:-} --prefix=/usr --enable-languages=c,c++ \
+        --disable-multilib --disable-nls --with-system-zlib --enable-shared \
+        --enable-threads=posix --enable-default-pie --disable-libquadmath \
+        --disable-libgomp --disable-libsanitizer --disable-libssp \
+        --disable-libvtv --disable-libitm --disable-bootstrap \
+        --disable-fixincludes --enable-default-ssp --disable-libstdcxx-pch \
+        --disable-symvers --enable-libstdcxx-time
+    make || return 1
+    cd .. || return 1
+}
+
+package() {
+    "${1:-fakeroot}" make -C build install DESTDIR="$pkgdir"
+    ln -sf gcc "$pkgdir/usr/bin/cc"
+    rm -f "$pkgdir/usr/share/info/dir"
+}

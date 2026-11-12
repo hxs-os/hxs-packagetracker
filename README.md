@@ -86,3 +86,4 @@ these formulae build packages from third-party projects, regardless of their ori
 | `samurai`           | —                  | ninja-compatible build tool written in C99                      |
 | `mandoc`            | —                  | a suite of tools for manual pages                               |
 | `toybox`            | `toybox.static`    | common Linux command-line utilities bundled in a single binary  |
+| `less`              | —                  | free and open-source file pager                                 |
