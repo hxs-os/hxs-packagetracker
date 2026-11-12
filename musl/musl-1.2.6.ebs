@@ -17,7 +17,6 @@ pkglicense="MIT"
 pkghomepage="https://musl.libc.org"
 pkgcheck=false
 pkgprovides="system:libc"
-pkgdeps="linux-headers"
 
 prepare() {
     patch -Np1 < "$filesdir/cve-2026-40200.patch"
@@ -31,4 +30,6 @@ build() {
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    strip --strip-all "$pkgdir/usr/lib/libc.so"
+    strip --strip-debug "$pkgdir/usr/lib/libc.a"
 }
