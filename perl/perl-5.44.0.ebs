@@ -30,7 +30,8 @@ build() {
         -D sitelib=/usr/lib/perl5/$pkgver/site_perl \
         -D sitearch=/usr/lib/perl5/$pkgver/site_perl \
         -D vendorlib=/usr/lib/perl5/$pkgver/vendor_perl \
-        -D vendorarch=/usr/lib/perl5/$pkgver/vendor_perl
+        -D vendorarch=/usr/lib/perl5/$pkgver/vendor_perl \
+        -Ud_eaccess
     make
 }
 
