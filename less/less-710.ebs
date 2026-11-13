@@ -17,6 +17,8 @@ pkglicense="GPL-3.0-or-later OR Less"
 pkghomepage="https://www.greenwoodsoftware.com/less/"
 pkgcheck=true
 pkgtriggers="man"
+pkgprovides="more"
+pkgdeps="ncurses"
 
 build() {
     ./configure --prefix=/usr --enable-year2038 --with-regex=posix
@@ -29,4 +31,5 @@ check() {
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    ln -sf less "$pkgdir/usr/bin/more"
 }
