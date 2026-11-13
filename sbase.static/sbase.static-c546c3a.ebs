@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=sbase.static
+pkgver=c546c3a
+pkgsrc=https://main.hxs.juanvel400.com/source/s/sbase/sbase-$pkgver.tar.gz
+pkgchecksum=sha256:da9b7ce12c0e773c9885d52be118e94dd0075b4b2676bd9b536645351a4a6405
+pkgdesc="a static build of sbase, using the sbase-box multicall binary"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://core.suckless.org/sbase/"
+pkgcheck=false
+pkgprovides="system:coreutils,sbase"
+pkgtriggers="man"
+
+build() {
+    sed -i 's|^PREFIX = /usr/local$|PREFIX = /usr|' config.mk
+    LDFLAGS="${LDFLAGS:-} -static" make sbase-box
+}
+
+package() {
+    "${1:-fakeroot}" make sbase-box-install DESTDIR="$pkgdir"
+}

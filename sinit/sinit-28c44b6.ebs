@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=sinit
+pkgver=28c44b6
+pkgsrc=https://main.hxs.juanvel400.com/source/s/sinit/sinit-$pkgver.tar.gz
+pkgchecksum=sha256:6797842bed5baf979c6cabe96b1af5a3eacdd4fe948c3075d601094f5081105d
+pkgdesc="suckless init"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://core.suckless.org/sinit/"
+pkgcheck=false
+pkgprovides="system:init"
+pkgtriggers="man"
+
+build() {
+    sed -i 's|^PREFIX = /usr/local$|PREFIX = /usr|' config.mk
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

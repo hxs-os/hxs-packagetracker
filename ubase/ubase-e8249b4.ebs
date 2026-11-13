@@ -1,0 +1,31 @@
+
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=ubase
+pkgver=e8249b4
+pkgsrc=https://main.hxs.juanvel400.com/source/u/ubase/ubase-$pkgver.tar.gz
+pkgchecksum=sha256:32b21897cd6fe0ceeee731cbb10040e0b2285fa756a4fe5dd1572adb47ca4f62
+pkgdesc="collection of unportable tools, similar in spirit to util-linux"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://core.suckless.org/ubase/"
+pkgcheck=false
+pkgdeps="musl"
+pkgprovides="system:baseutils"
+pkgtriggers="man"
+
+build() {
+    sed -i 's|^PREFIX = /usr/local$|PREFIX = /usr|' config.mk
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

@@ -87,3 +87,6 @@ these formulae build packages from third-party projects, regardless of their ori
 | `mandoc`            | —                  | a suite of tools for manual pages                               |
 | `toybox`            | `toybox.static`    | common Linux command-line utilities bundled in a single binary  |
 | `less`              | —                  | free and open-source file pager                                 |
+| `sinit`             | `sinit`            | suckless init                                                   |
+| `sbase`             | `sbase.static`     | collection of unix tools                                        |
+| `ubase`             | `ubase.static`     | collection of unportable tools, similar in spirit to util-linux |
