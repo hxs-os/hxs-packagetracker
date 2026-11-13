@@ -17,6 +17,7 @@ pkglicense="ISC AND Apache-2.0 AND MIT"
 pkghomepage="https://git.sr.ht/~mcf/samurai"
 pkgcheck=false
 pkgdeps="musl"
+pkgprovides="ninja"
 pkgtriggers="man"
 
 build() {
