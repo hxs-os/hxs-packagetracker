@@ -21,16 +21,13 @@ pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} \
-        --prefix=/usr \
-        --mandir=/usr/share/man \
-        --with-shared \
-        --without-normal \
-        --enable-widec \
-        --enable-pc-files \
+        --prefix=/usr --mandir=/usr/share/man --with-shared \
         --with-pkg-config-libdir=/usr/lib/pkgconfig \
-        --with-termlib \
-        --disable-stripping
-
+        --with-default-terminfo-dir=/usr/share/terminfo \
+        --with-terminfo-dirs=/usr/share/terminfo \
+        --without-normal --enable-widec --enable-pc-files \
+        --with-termlib --without-debug --without-tests \
+        --enable-overwrite
     make
 }
 
@@ -40,4 +37,6 @@ package() {
     for lib in ncurses ncurses++ form panel menu tinfo; do
         ln -sf lib${lib}w.so "$pkgdir/usr/lib/lib${lib}.so"
     done
+
+    ln -sf libcurses.so "$pkgdir/usr/lib/libncursesw.so"
 }
