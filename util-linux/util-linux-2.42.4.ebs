@@ -17,6 +17,7 @@ pkghomepage="https://github.com/util-linux/util-linux"
 pkglicense="GPL-2.0-or-later"
 pkgcheck=false
 pkgdeps="ncurses,musl"
+pkgprovides="system:baseutils"
 pkgtriggers="man"
 
 build() {
