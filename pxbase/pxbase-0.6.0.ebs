@@ -1,0 +1,30 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=pxbase
+pkgver=0.6.0
+pkgsrc=https://dl.juanvel400.com/pxbase/pxbase-$pkgver.tar.xz
+pkgchecksum=sha256:6ec0df5a461be34817dfce6b95aa6578daa17c6b8cb841f7f0c899b680ee94c6
+pkgdesc="posix core user utilities implementation"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/pxbase"
+pkgcheck=false
+pkgprovides="system:coreutils"
+pkgdeps="musl"
+pkgtriggers="man"
+
+
+build() {
+    meson setup build ${MESONFLAGS:-} --buildtype=release --prefix=/usr -Ddoc=enabled
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
