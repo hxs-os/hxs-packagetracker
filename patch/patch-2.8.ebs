@@ -17,7 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/patch"
 pkgcheck=true
 pkgdeps="musl"
-pkgtriggers="man"
+pkgtriggers="man,info"
 
 
 build() {

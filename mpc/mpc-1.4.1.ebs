@@ -18,6 +18,7 @@ pkghomepage="https://www.multiprecision.org/"
 pkgcheck=true
 pkgdeps="musl,gmp,mpfr"
 pkgprovides="libmpc"
+pkgtriggers="info"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr

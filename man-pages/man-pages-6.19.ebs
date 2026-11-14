@@ -19,7 +19,7 @@ pkgcheck=false
 pkgtriggers="man"
 
 build() {
-    rm -v man3/crypt*
+    rm -v man3/crypt* man7/man.7
 }
 
 package() {

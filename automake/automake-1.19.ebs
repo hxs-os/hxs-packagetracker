@@ -17,7 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/automake"
 pkgcheck=true
 pkgdeps="musl,m4"
-pkgtriggers="man"
+pkgtriggers="man,info"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr

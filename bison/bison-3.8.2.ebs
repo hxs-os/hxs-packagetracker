@@ -18,7 +18,7 @@ pkghomepage="https://www.gnu.org/software/bison"
 pkgcheck=true
 pkgdeps="musl,m4"
 pkgprovides="yacc"
-pkgtriggers="man"
+pkgtriggers="man,info"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038

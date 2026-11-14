@@ -16,7 +16,8 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/texinfo"
 pkgcheck=true
-pkgdeps="musl"
+pkgdeps="musl,ncurses"
+pkgtriggers="info"
 
 build() {
     ./configure ${CONFIGUREARGS:-} --prefix=/usr
@@ -30,4 +31,25 @@ check() {
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
     rm -f "$pkgdir/usr/share/info/dir"
+
+    mkdir -p "$pkgdir/usr/share/xpt/triggers"
+    cat << EOF > "$pkgdir/usr/share/xpt/triggers/info"
+#!/bin/sh
+
+set -e
+
+# xpt: info trigger
+# refreshes the texinfo database
+infodir="\${XPT_ROOT:-}/usr/share/info"
+infodir="\${infodir%/}"
+
+[ -d "\$infodir" ] || exit 0
+
+for doc in "\$infodir"/*.info "\$infodir"/*.info.gz; do
+    [ -f "\$doc" ] || continue
+    install-info "\$doc" "\$infodir/dir"
+done
+EOF
+
+    chmod +x "$pkgdir/usr/share/xpt/triggers/info"
 }

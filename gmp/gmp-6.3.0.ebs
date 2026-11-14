@@ -18,7 +18,7 @@ pkghomepage="https://gmplib.org/"
 pkgcheck=true
 pkgdeps="musl"
 pkgprovides="libgmp"
-pkgtriggers="man"
+pkgtriggers="man,info"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr

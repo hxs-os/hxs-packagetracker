@@ -18,6 +18,7 @@ pkghomepage="https://mpfr.org"
 pkgcheck=true
 pkgdeps="musl,gmp"
 pkgprovides="libmpfr"
+pkgtriggers="info"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
