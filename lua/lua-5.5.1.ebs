@@ -1,0 +1,53 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=lua
+pkgver=5.5.1
+pkgsrc=https://lua.org/ftp/lua-$pkgver.tar.gz
+pkgchecksum=sha256:1c4b4068d67061f2a2231ad2b5422e77acea1487ea9890f6320af614f4373dce
+pkgdesc="a powerful, efficient, lightweight, embeddable scripting language"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://lua.org/"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man"
+
+prepare() {
+    sed 's/\/usr\/local/\/usr/g' src/luaconf.h > src/luaconf.h.tmp
+    mv src/luaconf.h.tmp src/luaconf.h
+}
+build() {
+    make INSTALL_TOP=/usr
+}
+
+check() {
+    make test
+}
+
+package() {
+    install -d "$pkgdir/usr/bin" "$pkgdir/usr/share/man/man1" "$pkgdir/usr/share/doc/lua" \
+        "$pkgdir/usr/lib" "$pkgdir/usr/include" "$pkgdir/usr/lib/pkgconfig"
+
+    install -m 755 src/lua src/luac "$pkgdir/usr/bin"
+    install -m 644 src/lauxlib.h src/luaconf.h src/lua.h \
+        src/lua.hpp src/lualib.h "$pkgdir/usr/include"
+    install -m 644 src/liblua.a "$pkgdir/usr/lib"
+    install -m 644 doc/lua.1 doc/luac.1 "$pkgdir/usr/share/man/man1"
+    install -m 644 doc/contents.html doc/index.css doc/logo.png \
+        doc/lua.css doc/manual.css doc/manual.html \
+        doc/OSIApproved.png doc/readme.html "$pkgdir/usr/share/doc/lua"
+    make pc INSTALL_TOP=/usr >"$pkgdir/usr/lib/pkgconfig/lua.pc"
+
+    ln -s lua "$pkgdir/usr/bin/lua5.5"
+    ln -s luac "$pkgdir/usr/bin/luac5.5"
+
+    strip -s "$pkgdir/usr/bin/lua"
+    strip -s "$pkgdir/usr/bin/luac"
+}
