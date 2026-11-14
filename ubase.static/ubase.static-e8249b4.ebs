@@ -28,4 +28,8 @@ build() {
 
 package() {
     "${1:-fakeroot}" make ubase-box-install DESTDIR="$pkgdir"
+
+    # overlapping with sbase
+    rm -f "$pkgdir/usr/share/man/man1/mknod.1" "$pkgdir/usr/share/man/man1/dd.1" \
+         "$pkgdir/usr/bin/mknod" "$pkgdir/usr/bin/dd"
 }

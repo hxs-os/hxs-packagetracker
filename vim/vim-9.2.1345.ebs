@@ -1,0 +1,42 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=vim
+pkgver=9.2.1345
+pkgsrc=https://github.com/vim/vim/archive/refs/tags/v$pkgver.tar.gz
+pkgchecksum=sha256:ddae84ef8d9e8fcca1ec6e501a41235a2466e935a27d6a95e3a84677f84b8fb4
+pkgdesc="vi improved"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="Vim"
+pkghomepage="https://www.vim.org/"
+pkgcheck=true
+pkgdeps="musl,ncurses"
+pkgtriggers="man"
+pkgprovides="vi"
+
+prepare() {
+    echo "#define SYS_VIMRC_FILE /etc/vimrc" >> src/feature.h
+}
+
+build() {
+    ./configure --prefix=/usr
+    make
+}
+
+check() {
+    make test
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    ln -sv vim "$pkgdir/usr/bin/vi"
+    for lang in "$pkgdir/usr/share/man/{,*/}man1/vim.1"; do
+        ln -sv vim.1 $(dirname $lang)/vi.1
+    done
+}

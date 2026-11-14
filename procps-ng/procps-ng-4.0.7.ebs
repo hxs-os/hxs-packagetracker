@@ -21,7 +21,7 @@ pkgtriggers="man"
 
 
 build() {
-    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-year2038
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-year2038
     make
 }
 

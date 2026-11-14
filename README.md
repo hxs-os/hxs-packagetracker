@@ -10,17 +10,18 @@ each formulae can be built using the `ebs(1)` build system, found in the `xpt` /
 
 these formulae build packages from first-class HxS projects.
 
-| package    | static counterpart | description                                          |
-| ---------- | ------------------ | ---------------------------------------------------- |
-| `xpt`      | `xpt.static`       | the xpt package manager                              |
-| `shush`    | `shush.static`     | the shush shell                                      |
-| `hbase`    | `hbase.static`     | the hbase utility collection                         |
-| `adam`     | `adam.static`      | the adam init system                                 |
-| `hello`    | —                  | a hello world program, doubles as an example formula |
-| `pxbase`   | `pxbase.static`    | (f.k.a hbase) the pxbase utility collection          |
-| `sharbase` | `sharbase.static`  | a suite of `shar(1)`-related utilities               |
-| `rswc`     | `rswc.static`      | a tiny utility to download files from the network    |
-| `hxs-base` | —                  | base files for an HxS system                         |
+| package        | static counterpart | description                                          |
+| -------------- | ------------------ | ---------------------------------------------------- |
+| `xpt`          | `xpt.static`       | the xpt package manager                              |
+| `shush`        | `shush.static`     | the shush shell                                      |
+| `hbase`        | `hbase.static`     | the hbase utility collection                         |
+| `adam`         | `adam.static`      | the adam init system                                 |
+| `hello`        | —                  | a hello world program, doubles as an example formula |
+| `pxbase`       | `pxbase.static`    | (f.k.a hbase) the pxbase utility collection          |
+| `sharbase`     | `sharbase.static`  | a suite of `shar(1)`-related utilities               |
+| `rswc`         | `rswc.static`      | a tiny utility to download files from the network    |
+| `hxs-base`     | —                  | base files for an HxS system                         |
+| `hxsbootstrap` | —                  | a simple set of scripts to bootstrap an HxS system   |
 
 ### third-party formulae
 
@@ -90,3 +91,8 @@ these formulae build packages from third-party projects, regardless of their ori
 | `sinit`             | `sinit`            | suckless init                                                   |
 | `sbase`             | `sbase.static`     | collection of unix tools                                        |
 | `ubase`             | `ubase.static`     | collection of unportable tools, similar in spirit to util-linux |
+| `scdoc`             | —                  | small man page generator                                        |
+| `nano`              | —                  | a free replacement for the Pico text editor                     |
+| `dosfstools`        | —                  | tools to use with FAT filesystems                               |
+| `e2fsprogs`         | —                  | tools to use with ext2/3/4 filesystems                          |
+| `vim`               | —                  | vi improved                                                     |

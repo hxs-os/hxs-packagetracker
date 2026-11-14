@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=nano
+pkgver=9.3
+pkgsrc=https://ftp.gnu.org/gnu/nano/nano-$pkgver.tar.xz
+pkgchecksum=sha256:a9affc52c9596ee0682bcdd4ceb3c0b235eb221d83d733dfd9b0dff45897cb0d
+pkgdesc="a free replacement for the Pico text editor"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.nano-editor.org/"
+pkgcheck=false
+pkgdeps="musl,ncurses"
+pkgtriggers="man"
+
+build() {
+    ./configure --prefix=/usr --sysconfdir=/etc --enable-utf8 --disable-debug --disable-libmagic
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

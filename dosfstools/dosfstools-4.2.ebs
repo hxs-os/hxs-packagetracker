@@ -1,0 +1,33 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=dosfstools
+pkgver=4.2
+pkgsrc=https://github.com/dosfstools/dosfstools/releases/download/v$pkgver/dosfstools-$pkgver.tar.gz
+pkgchecksum=sha256:64926eebf90092dca21b14259a5301b7b98e7b1943e8a201c7d726084809b527
+pkgdesc="tools to use with FAT filesystems"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://github.com/dosfstools/dosfstools/"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --enable-compat-symlinks --mandir=/usr/share/man
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

@@ -20,7 +20,10 @@ pkgdeps="musl"
 pkgtriggers="man"
 
 build() {
-    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-manpages --enable-year2038
+    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --enable-year2038
+    sed 's|--force --relative $(DESTDIR)$(bindir)/kmod|-f ../bin/kmod|' Makefile > Makefile.new
+    mv Makefile.new Makefile
     make
 }
 

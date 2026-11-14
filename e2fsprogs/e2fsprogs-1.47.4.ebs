@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=e2fsprogs
+pkgver=1.47.4
+pkgsrc=https://kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v$pkgver/e2fsprogs-$pkgver.tar.xz
+pkgchecksum=sha256:fd5bf388cbdbe006a3d3b318d983b2948382440acc85a87f1e7d108653e8db0b
+pkgdesc="tools to use with ext2/3/4 filesystems"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later"
+pkghomepage="https://e2fsprogs.sourceforge.net/"
+pkgcheck=true
+pkgdeps="musl,util-linux"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc \
+        --enable-elf-shlibs --disable-libblkid --disable-libuuidd \
+        --disable-uuidd --disable-fsck
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

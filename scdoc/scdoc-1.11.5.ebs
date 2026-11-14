@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=scdoc
+pkgver=1.11.5
+pkgsrc=https://git.sr.ht/~sircmpwn/scdoc/archive/1.11.5.tar.gz
+pkgchecksum=sha256:98780bbdf16c1bce89ef3a8c0f537ac6e4ea77087b609e7698857614488a2a62
+pkgdesc="small man page generator"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://sr.ht/~sircmpwn/scdoc/"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man"
+
+build() {
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX=/usr
+}

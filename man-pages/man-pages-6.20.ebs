@@ -1,0 +1,53 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=man-pages
+pkgver=6.20
+pkgsrc=https://www.kernel.org/pub/linux/docs/man-pages/man-pages-$pkgver.tar.xz
+pkgchecksum=sha256:180f0d16a2142dd9671760ac0afeadcc25e861f695eb420293e1206a87ca083f
+pkgdesc="manual pages for Linux systems"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="Various"
+pkghomepage="https://www.kernel.org/doc/man-pages/"
+pkgcheck=false
+pkgtriggers="man"
+
+build() {
+    rm man3/crypt*
+}
+
+package() {
+    mkdir -p "$pkgdir/usr/share/man/man0" "$pkgdir/usr/share/man/man1" \
+        "$pkgdir/usr/share/man/man2" "$pkgdir/usr/share/man/man2const" \
+        "$pkgdir/usr/share/man/man2type" "$pkgdir/usr/share/man/man3" \
+        "$pkgdir/usr/share/man/man3attr" "$pkgdir/usr/share/man/man3const" \
+        "$pkgdir/usr/share/man/man3head" "$pkgdir/usr/share/man/man3type" \
+        "$pkgdir/usr/share/man/man4" "$pkgdir/usr/share/man/man5" \
+        "$pkgdir/usr/share/man/man6" "$pkgdir/usr/share/man/man7" \
+        "$pkgdir/usr/share/man/man8" "$pkgdir/usr/share/man/man9" \
+        "$pkgdir/usr/share/licenses/man-pages"
+
+    install -m 644 man0/*.0 "$pkgdir/usr/share/man/man0"
+    install -m 644 man1/*.1 "$pkgdir/usr/share/man/man1"
+    install -m 644 man2/*.2 "$pkgdir/usr/share/man/man2"
+    install -m 644 man2const/*.2const "$pkgdir/usr/share/man/man2const"
+    install -m 644 man2type/*.2type "$pkgdir/usr/share/man/man2type"
+    install -m 644 man3/*.3 "$pkgdir/usr/share/man/man3"
+    install -m 644 man3attr/*.3attr "$pkgdir/usr/share/man/man3attr"
+    install -m 644 man3const/*.3const "$pkgdir/usr/share/man/man3const"
+    install -m 644 man3head/*.3head "$pkgdir/usr/share/man/man3head"
+    install -m 644 man3type/*.3type "$pkgdir/usr/share/man/man3type"
+    install -m 644 man4/*.4 "$pkgdir/usr/share/man/man4"
+    install -m 644 man5/*.5 "$pkgdir/usr/share/man/man5"
+    install -m 644 man6/*.6 "$pkgdir/usr/share/man/man6"
+    install -m 644 man7/*.7 "$pkgdir/usr/share/man/man7"
+    install -m 644 man8/*.8 "$pkgdir/usr/share/man/man8"
+    install -m 644 man9/*.9 "$pkgdir/usr/share/man/man9"
+    install -m 644 LICENSES/*.txt "$pkgdir/usr/share/licenses/man-pages"
+}
