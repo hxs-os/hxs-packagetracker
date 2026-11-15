@@ -21,13 +21,20 @@ pkgtriggers="man,info"
 pkgprovides="grub"
 
 prepare() {
-    sed 's/--image-base/--nonexist-linker-option/' -i configure
+    sed 's/--image-base/--nonexist-linker-option/' configure >configure.tmp
+    sed 's/^#if 1$/#if 0/' grub-core/lib/gnulib/getopt-cdefs.h >grub-core/lib/gnulib/getopt-cdefs.h.tmp
+
+    mv grub-core/lib/gnulib/getopt-cdefs.h.tmp grub-core/lib/gnulib/getopt-cdefs.h
+    mv configure.tmp configure
+
+    chmod +x configure
 }
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc \
-        --target=x86_64 --with-platform=efi
-        --disable-werror --disable-efiemu
+    gl_cv_header_sys_cdefs_h=no ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --target=x86_64 --with-platform=efi \
+        --disable-werror --disable-efiemu --disable-nls \
+        --disable-rpath --enable-year2038
     make
 }
 
