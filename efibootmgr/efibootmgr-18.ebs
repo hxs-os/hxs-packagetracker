@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=efibootmgr
+pkgver=18
+pkgsrc=https://github.com/rhboot/efibootmgr/archive/$pkgver/efibootmgr-$pkgver.tar.gz
+pkgchecksum=sha256:442867d12f8525034a404fc8af3036dba8e1fc970998af2486c3b940dfad0874
+pkgdesc="tools to manage EFI boot entries"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later"
+pkghomepage="https://github.com/rhboot/efibootmgr"
+pkgcheck=false
+pkgdeps="musl,popt,efivar"
+pkgtriggers="man"
+
+build() {
+    make EFIDIR=HxS EFI_LOADER=grubx64.efi
+}
+
+package() {
+    "${1:-fakeroot}" make install EFIDIR=HxS DESTDIR="$pkgdir" PREFIX="/usr"
+}

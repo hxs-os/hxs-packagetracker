@@ -97,3 +97,8 @@ these formulae build packages from third-party projects, regardless of their ori
 | `e2fsprogs`         | —                  | tools to use with ext2/3/4 filesystems                            |
 | `vim`               | —                  | vi improved                                                       |
 | `lua`               | —                  | a powerful, efficient, lightweight, embeddable scripting language |
+| `popt`              | —                  | a command-line options parsing library                            |
+| `efibootmgr`        | —                  | tools to manage EFI boot entries                                  |
+| `efivar`            | —                  | tools and libraries to manage EFI ariables                        |
+| `grub`              | —                  | GNU Grand Unified Bootloader                                      |
+| `grub-efi`          | —                  | GNU Grand Unified Bootloader for EFI-based systems                |

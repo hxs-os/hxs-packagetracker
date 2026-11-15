@@ -1,0 +1,41 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=grub-efi
+pkgver=2.14
+pkgsrc=https://ftp.gnu.org/gnu/grub/grub-$pkgver.tar.xz
+pkgchecksum=sha256:bc8d3c73535b8838d8c8e2654d73edc4e6ae8c8acdb45d5df5dc9a1547446d43
+pkgdesc="GNU Grand Unified Bootloader for EFI-based systems"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/grub"
+pkgcheck=true
+pkgdeps="musl,efivar,efibootmgr"
+pkgtriggers="man,info"
+pkgprovides="grub"
+
+prepare() {
+    sed 's/--image-base/--nonexist-linker-option/' -i configure
+}
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc \
+        --target=x86_64 --with-platform=efi
+        --disable-werror --disable-efiemu
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    rm -f "$pkgdir/usr/share/info/dir"
+}

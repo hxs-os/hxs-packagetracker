@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=efivar
+pkgver=39
+pkgsrc=https://github.com/rhboot/efivar/archive/$pkgver/efivar-$pkgver.tar.gz
+pkgchecksum=sha256:bfd19cb06cc71f3352d567e90284d8cdac02ac89774bbeadf0b533b0c11432fd
+pkgdesc="tools and libraries to manipulate EFI variables"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="LGPL-2.1-or-later"
+pkghomepage="https://github.com/rhboot/efivar/"
+pkgcheck=false
+pkgdeps="musl,mandoc"
+pkgtriggers="man"
+
+build() {
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" LIBDIR="/usr/lib"
+}

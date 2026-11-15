@@ -1,0 +1,41 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=kbd
+pkgver=2.10.0
+pkgsrc=https://www.kernel.org/pub/linux/utils/kbd/kbd-$pkgver.tar.xz
+pkgchecksum=sha256:6e5ca4f8d76ee9e3a8db700b667f13e12aac9933828a64e1aaad93d26be9b479
+pkgdesc="tools to manage the Linux console"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later"
+pkghomepage="https://github.com/legionus/kbd"
+pkgcheck=true
+pkgdeps="musl,zstd,xz,bzip2,zlib"
+pkgtriggers="man"
+
+prepare() {
+    sed 's/cp -dPR/cp -PR/' data/Makefile.in >data/Makefile.in.tmp
+    mv data/Makefile.in.tmp data/Makefile.in
+}
+
+build() {
+    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --disable-rpath --with-zlib=true --with-zstd=true --with-xz=true --with-bzip2=true \
+        --enable-xkb --enable-libkeymap --enable-libkfont --enable-optional-progs \
+        --disable-vlock
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
