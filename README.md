@@ -102,3 +102,6 @@ these formulae build packages from third-party projects, regardless of their ori
 | `efivar`            | —                  | tools and libraries to manage EFI ariables                        |
 | `grub-efi`          | —                  | GNU Grand Unified Bootloader for EFI-based systems                |
 | `kbd`               | —                  | tools to manage the Linux console                                 |
+| `iproute2`          | —                  | set of utilities for Linux networking                             |
+| `inetutils`         | —                  | traditional network clients, servers, and utilities               |
+| `tzdata`            | —                  | time zone database                                                |

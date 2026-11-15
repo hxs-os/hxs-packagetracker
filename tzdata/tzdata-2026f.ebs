@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=tzdata
+pkgver=2026f
+pkgsrc=https://data.iana.org/time-zones/releases/tzdata$pkgver.tar.gz
+pkgchecksum=sha256:01b4a91cec5167ed48c11e8ab78f2048cead78ce94b0cafcad0ae8c5a3044d3d
+pkgdesc="time zone database"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="LicenseRef-Public-Domain"
+pkghomepage="https://www.iana.org/time-zones"
+pkgcheck=false
+
+prepare() {
+    # until ebs supports multiple sources
+    rswc -T 60 "https://data.iana.org/time-zones/releases/tzcode$pkgver.tar.gz" -o "tzcode$pkgver.tar.gz"
+    printf '%s  %s\n' "5a18da01393679ef2559214dc687563f7f3d05691f6f58b7fbc0166f3e796cd6" "tzcode$pkgver.tar.gz" | sha256sum -c -
+
+    bsdtar -xf "tzcode$pkgver.tar.gz"
+}
+
+build() {
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX="/usr"
+}
