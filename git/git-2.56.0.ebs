@@ -16,18 +16,20 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="GPL-2.0-only"
 pkghomepage="https://git-scm.com/"
 pkgcheck=true
-pkgdeps="musl,zlib,curl,openssl"
+pkgdeps="musl,zlib,curl,openssl,openssh"
 pkgtriggers="man"
 
 build() {
-    ./configure --prefix=/usr --with-curl --with-openssl
-    make
+    meson setup build ${MESONFLAGS:-} --prefix=/usr --sysconfdir=/etc -Dgitconfig=/etc/gitconfig -Dgit_gui=disabled \
+        -Dpython=disabled -Dperl=disabled -Dpcre2=disabled -Dgitweb=disabled -Dgettext=disabled -Drust=disabled \
+        -Dexpat=disabled -Ddefault_editor=vi -Ddefault_pager=less --buildtype=release
+    meson compile -C build ${MESON_COMPILE_FLAGS}
 }
 
 check() {
-    make test
+    meson test -C build
 }
 
 package() {
-    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    "${1:-fakeroot}" meson install -C build --destdir="$pkgdir"
 }

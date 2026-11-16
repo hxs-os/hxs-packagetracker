@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=xorriso
+pkgver=1.5.9
+pkgsrc=https://www.gnu.org/software/xorriso/xorriso-$pkgver.tar.gz
+pkgchecksum=sha256:dbfb9b8e9f849e4a7a4cdb05a57ea2bf82f52406f090879436938c92f843b4c5
+pkgdesc="creates Rock Ridge ISO 9660 filesystems"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/xorriso/"
+pkgcheck=true
+pkgdeps="musl,libedit"
+pkgtriggers="man,info"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --enable-libedit --disable-debug
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    rm -f "$pkgdir/usr/share/info/dir"
+}

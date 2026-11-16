@@ -17,7 +17,6 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="MIT"
 pkghomepage="https://core.suckless.org/ubase/"
 pkgcheck=false
-pkgdeps="musl"
 pkgprovides="system:baseutils,ubase"
 pkgtriggers="man"
 

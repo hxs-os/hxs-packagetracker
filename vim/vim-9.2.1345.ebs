@@ -21,7 +21,7 @@ pkgtriggers="man"
 pkgprovides="vi"
 
 prepare() {
-    echo "#define SYS_VIMRC_FILE /etc/vimrc" >> src/feature.h
+    echo "#define SYS_VIMRC_FILE \"/etc/vimrc\"" >> src/feature.h
 }
 
 build() {
@@ -35,8 +35,5 @@ check() {
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
-    ln -sv vim "$pkgdir/usr/bin/vi"
-    for lang in "$pkgdir/usr/share/man/{,*/}man1/vim.1"; do
-        ln -sv vim.1 $(dirname $lang)/vi.1
-    done
+    ln -s vim "$pkgdir/usr/bin/vi"
 }

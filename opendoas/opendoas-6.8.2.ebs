@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=opendoas
+pkgver=6.8.2
+pkgsrc=https://github.com/Duncaen/OpenDoas/releases/download/v$pkgver/opendoas-$pkgver.tar.xz
+pkgchecksum=sha256:4e98828056d6266bd8f2c93e6ecf12a63a71dbfd70a5ea99ccd4ab6d0745adf0
+pkgdesc="a portable version of the OpenBSD doas command"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="ISC"
+pkghomepage="https://github.com/Duncaen/OpenDoas/"
+pkgcheck=false
+pkgtriggers="man"
+pkgdeps="shadow,musl"
+
+build() {
+    ./configure --prefix=/usr --sysconfdir=/etc --without-pam --with-timestamp
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

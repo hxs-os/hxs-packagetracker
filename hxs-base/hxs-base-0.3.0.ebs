@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=hxs-base
+pkgver=0.3.0
+pkgsrc=https://main.hxs.juanvel400.com/source/h/hxs-base/hxs-base-$pkgver.tar.gz
+pkgchecksum=sha256:625bb283d2b60e0cfa90e5ade9a9618a1af45398ec8571718238b32c8f1a0bc6
+pkgdesc="base files for an HxS system"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/hxs-base"
+pkgcheck=false
+pkgprovides="triggers:shells,filesystem"
+
+build() {
+    :
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" prefix=/usr sysconfdir=/etc
+}

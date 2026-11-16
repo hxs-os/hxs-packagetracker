@@ -1,0 +1,40 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=bash
+pkgver=5.3
+pkgsrc=https://ftp.gnu.org/gnu/bash/bash-$pkgver.tar.gz
+pkgchecksum=sha256:0d5cd86965f869a26cf64f4b71be7b96f90a3ba8b3d74e27e8e9d9d5550f31ba
+pkgdesc="the GNU Bourne-Again Shell"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/bash/"
+pkgcheck=true
+pkgdeps="musl,ncurses"
+pkgtriggers="man,info,shells"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --with-curses --enable-year2038 --disable-rpath --enable-readline --enable-history \
+        --enable-multibyte --enable-job-control --without-bash-malloc
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+
+    mkdir -p "$pkgdir/usr/share/shells.d"
+    printf "/usr/bin/bash\n/bin/bash\n" >"$pkgdir/usr/share/shells.d/bash"
+
+    rm -f "$pkgdir/usr/share/info/dir"
+}

@@ -19,13 +19,10 @@ pkgcheck=true
 pkgdeps="musl"
 pkgtriggers="man,info"
 
-prepare() {
-    sed -i 's/extern char \*getenv ();/extern char *getenv (const char *);/' \
-        lib/fnmatch.c
-}
-
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
+    CFLAGS="${CFLAGS:--std=gnu17}" ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr --disable-rpath --enable-year2038 \
+        --without-guile
     make
 }
 

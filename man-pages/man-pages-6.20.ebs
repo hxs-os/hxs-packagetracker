@@ -19,7 +19,8 @@ pkgcheck=false
 pkgtriggers="man"
 
 build() {
-    rm man3/crypt* man7/man.7
+    rm man3/crypt* man7/man.7 man5/tzfile.5 \
+        man8/zic.8 man8/zdump.8 man8/tzselect.8
 }
 
 package() {

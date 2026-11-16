@@ -1,0 +1,43 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=linux
+pkgver=7.3.4
+pkgsrc=https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-$pkgver.tar.xz
+pkgchecksum=sha256:b11b6df8295e8e991ff040b71aaa4994a8b55caa23b6b092907f195b5840fd1f
+pkgdesc="A monolithic Unix-like kernel"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-only WITH Linux-syscall-note"
+pkghomepage="https://www.kernel.org"
+pkgcheck=false
+pkgdeps="kmod"
+
+prepare() {
+    cp "$filesdir/config-$pkgver-hxs" "arch/x86/configs/hxs_defconfig"
+}
+
+build() {
+     make hxs_defconfig
+     make
+     make modules
+}
+
+package() {
+    _kernelrelease=$(make -s kernelrelease)
+
+    install -d "$pkgdir/boot" \
+        "$pkgdir/usr/lib/modules/$_kernelrelease"
+
+    install -m644 "arch/x86/boot/bzImage" "$pkgdir/boot/vmlinuz-linux-$_kernelrelease"
+    install -m644 System.map "$pkgdir/boot/System.map-linux-$_kernelrelease"
+    install -m644 .config "$pkgdir/boot/config-linux-$_kernelrelease"
+
+    MAKEFLAGS="${MAKEFLAGS:-} INSTALL_MOD_PATH=$pkgdir/usr" make modules_install
+    rm -f "$pkgdir/usr/lib/modules/$_kernelrelease/build"
+}

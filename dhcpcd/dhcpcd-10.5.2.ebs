@@ -21,7 +21,7 @@ pkgdeps="musl"
 pkgtriggers="man"
 
 build() {
-    ./configure "${CONFIGUREFLAGS:-}" --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var
     make
 }
 

@@ -20,7 +20,9 @@ pkgdeps="musl,openssl,ca-certificates"
 pkgprovides="libcurl"
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --without-libuv --without-zsh-functions-dir --with-openssl --with-ca-bundle=/etc/ssl/cert.pem
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc \
+        --without-libuv --without-zsh-functions-dir --with-openssl \
+        --with-ca-bundle=/etc/ssl/cert.pem --without-libpsl
     make
 }
 
