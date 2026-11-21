@@ -874,6 +874,22 @@
     ]
   },
   {
+    "name": "mksh",
+    "version": "R59c",
+    "homepage": "http://www.mirbsd.org/mksh.htm",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/mksh/mksh-R59c.ebs",
+    "source": "https://mbsd.evolvis.org/MirOS/dist/mir/mksh/mksh-R59c.tgz",
+    "summary": "the MirBSD Korn Shell",
+    "license": "MirOS AND ISC",
+    "license_ids": [
+      "MirOS",
+      "ISC"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "mpc",
     "version": "1.4.1",
     "homepage": "https://www.multiprecision.org/",
