@@ -111,3 +111,4 @@ these formulae build packages from third-party projects, regardless of their ori
 | `linux`             | —                  | A monolithic Unix-like kernel                                             |
 | `coreutils`         | —                  | standard file, shell, and text manipulation utilities of the GNU system   |
 | `bash`              | —                  | the GNU Bourne-Again Shell                                                |
+| `btrfs-progs`       | —                  | programs and libraries to manage btrfs filesystems                        |

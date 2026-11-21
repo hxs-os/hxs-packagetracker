@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=btrfs-progs
+pkgver=7.3
+pkgsrc=https://kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$pkgver.tar.xz
+pkgchecksum=sha256:d37b63403d25fe025704c758e6a3da0979ae50c30c5f02aa78e4410e7b346e3a
+pkgdesc="programs and libraries to manage btrfs filesystems"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later"
+pkghomepage="https://github.com/kdave/btrfs-progs/"
+pkgcheck=true
+pkgdeps="musl,zstd,util-linux"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --disable-libudev --disable-python --disable-lzo \
+        --disable-static --enable-shared --disable-backtrace \
+        --disable-documentation --disable-convert --enable-year2038
+
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
