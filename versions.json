@@ -285,6 +285,21 @@
     ]
   },
   {
+    "name": "eudev",
+    "version": "3.3.0",
+    "homepage": "https://github.com/eudev-project/eudev",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/eudev/eudev-3.3.0.ebs",
+    "source": "https://github.com/eudev-project/eudev/releases/download/v3.3.0/eudev-3.3.0.tar.gz",
+    "summary": "a standalone and dynamic device manager",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "expat",
     "version": "2.10.0",
     "homepage": "https://libexpat.github.io/",
