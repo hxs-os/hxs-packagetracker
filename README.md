@@ -1,6 +1,6 @@
-# packagetracker
+# PackageTracker
 
-this is the HxS packagetracker, a collection of `ebs(5)` formulae inspired in [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
+this is the HxS PackageTracker, a collection of `ebs(5)` formulae inspired in [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
 
 each formulae can be built using the `ebs(1)` build system, found in the `xpt` / `xpt.static` package.
 
