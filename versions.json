@@ -12,9 +12,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "adam"
+    ]
   },
   {
     "name": "adam",
@@ -29,9 +27,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "adam"
+    ]
   },
   {
     "name": "adam",
@@ -46,60 +42,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "adam"
-  },
-  {
-    "name": "adam.static",
-    "version": "0.1.0",
-    "homepage": "https://sr.ht/~juanvel400/adam",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam.static/adam.static-0.1.0.ebs",
-    "source": "https://dl.juanvel400.com/adam/adam-0.1.0.tar.xz",
-    "summary": "a static build of adam",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "adam"
-  },
-  {
-    "name": "adam.static",
-    "version": "0.2.0",
-    "homepage": "https://sr.ht/~juanvel400/adam",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam.static/adam.static-0.2.0.ebs",
-    "source": "https://dl.juanvel400.com/adam/adam-0.2.0.tar.xz",
-    "summary": "a static build of adam",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "adam"
-  },
-  {
-    "name": "adam.static",
-    "version": "0.3.0",
-    "homepage": "https://sr.ht/~juanvel400/adam",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam.static/adam.static-0.3.0.ebs",
-    "source": "https://dl.juanvel400.com/adam/adam-0.3.0.tar.xz",
-    "summary": "a static build of adam",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "adam"
+    ]
   },
   {
     "name": "autoconf",
@@ -114,9 +57,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "autoconf"
+    ]
   },
   {
     "name": "automake",
@@ -131,9 +72,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "automake"
+    ]
   },
   {
     "name": "bash",
@@ -148,9 +87,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "bash"
+    ]
   },
   {
     "name": "binutils",
@@ -165,9 +102,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "binutils"
+    ]
   },
   {
     "name": "bison",
@@ -182,9 +117,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "bison"
+    ]
   },
   {
     "name": "btrfs-progs",
@@ -199,9 +132,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "btrfs-progs"
+    ]
   },
   {
     "name": "bzip2",
@@ -216,9 +147,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "bzip2"
+    ]
   },
   {
     "name": "ca-certificates",
@@ -233,9 +162,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "ca-certificates"
+    ]
   },
   {
     "name": "coreutils",
@@ -250,9 +177,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "coreutils"
+    ]
   },
   {
     "name": "curl",
@@ -267,9 +192,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "curl"
+    ]
   },
   {
     "name": "dash",
@@ -284,26 +207,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "dash"
-  },
-  {
-    "name": "dash.static",
-    "version": "0.5.13.5",
-    "homepage": "http://gondor.apana.org.au/~herbert/dash/",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/dash.static/dash.static-0.5.13.5.ebs",
-    "source": "http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.13.5.tar.gz",
-    "summary": "a static build of dash",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "dash"
+    ]
   },
   {
     "name": "dhcpcd",
@@ -318,9 +222,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "dhcpcd"
+    ]
   },
   {
     "name": "diffutils",
@@ -335,9 +237,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "diffutils"
+    ]
   },
   {
     "name": "dosfstools",
@@ -352,9 +252,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "dosfstools"
+    ]
   },
   {
     "name": "e2fsprogs",
@@ -369,9 +267,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "e2fsprogs"
+    ]
   },
   {
     "name": "efibootmgr",
@@ -386,9 +282,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "efibootmgr"
+    ]
   },
   {
     "name": "efivar",
@@ -403,9 +297,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "efivar"
+    ]
   },
   {
     "name": "fakeroot",
@@ -420,9 +312,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "fakeroot"
+    ]
   },
   {
     "name": "file",
@@ -437,9 +327,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "file"
+    ]
   },
   {
     "name": "findutils",
@@ -454,9 +342,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "findutils"
+    ]
   },
   {
     "name": "flex",
@@ -471,9 +357,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "flex"
+    ]
   },
   {
     "name": "gawk",
@@ -488,9 +372,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "gawk"
+    ]
   },
   {
     "name": "gcc",
@@ -506,9 +388,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "gcc"
+    ]
   },
   {
     "name": "gcc",
@@ -524,9 +404,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "gcc"
+    ]
   },
   {
     "name": "gettext",
@@ -541,9 +419,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "gettext"
+    ]
   },
   {
     "name": "git",
@@ -558,9 +434,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "git"
+    ]
   },
   {
     "name": "gmp",
@@ -575,9 +449,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "gmp"
+    ]
   },
   {
     "name": "grep",
@@ -592,9 +464,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "grep"
+    ]
   },
   {
     "name": "grub-efi",
@@ -609,9 +479,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "grub-efi"
+    ]
   },
   {
     "name": "gzip",
@@ -626,9 +494,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "gzip"
+    ]
   },
   {
     "name": "hbase",
@@ -643,9 +509,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "hbase"
+    ]
   },
   {
     "name": "hbase",
@@ -660,43 +524,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "hbase"
-  },
-  {
-    "name": "hbase.static",
-    "version": "0.3.0",
-    "homepage": "https://git.sr.ht/~juanvel400/hbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase.static/hbase.static-0.3.0.ebs",
-    "source": "https://dl.juanvel400.com/hbase/hbase-0.3.0.tar.xz",
-    "summary": "a static build of hbase",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "hbase"
-  },
-  {
-    "name": "hbase.static",
-    "version": "0.4.0",
-    "homepage": "https://git.sr.ht/~juanvel400/hbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase.static/hbase.static-0.4.0.ebs",
-    "source": "https://dl.juanvel400.com/hbase/hbase-0.4.0.tar.xz",
-    "summary": "a static build of hbase",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "hbase"
+    ]
   },
   {
     "name": "hello",
@@ -711,9 +539,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "hello"
+    ]
   },
   {
     "name": "hxs-base",
@@ -728,9 +554,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "hxs-base"
+    ]
   },
   {
     "name": "hxs-base",
@@ -745,9 +569,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "hxs-base"
+    ]
   },
   {
     "name": "hxsbootstrap",
@@ -762,9 +584,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "hxsbootstrap"
+    ]
   },
   {
     "name": "iana-etc",
@@ -779,9 +599,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "iana-etc"
+    ]
   },
   {
     "name": "inetutils",
@@ -796,9 +614,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "inetutils"
+    ]
   },
   {
     "name": "iproute2",
@@ -813,9 +629,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "iproute2"
+    ]
   },
   {
     "name": "kbd",
@@ -830,9 +644,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "kbd"
+    ]
   },
   {
     "name": "kmod",
@@ -847,9 +659,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "kmod"
+    ]
   },
   {
     "name": "less",
@@ -865,9 +675,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "less"
+    ]
   },
   {
     "name": "libarchive",
@@ -882,9 +690,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "libarchive"
+    ]
   },
   {
     "name": "libedit",
@@ -899,9 +705,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "libedit"
+    ]
   },
   {
     "name": "libisl",
@@ -916,9 +720,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "libisl"
+    ]
   },
   {
     "name": "libtool",
@@ -933,9 +735,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "libtool"
+    ]
   },
   {
     "name": "linux",
@@ -951,9 +751,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "linux"
+    ]
   },
   {
     "name": "linux-headers",
@@ -969,9 +767,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "linux-headers"
+    ]
   },
   {
     "name": "linux-headers",
@@ -987,9 +783,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "linux-headers"
+    ]
   },
   {
     "name": "lua",
@@ -1004,9 +798,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "lua"
+    ]
   },
   {
     "name": "m4",
@@ -1021,9 +813,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "m4"
+    ]
   },
   {
     "name": "make",
@@ -1038,9 +828,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "make"
+    ]
   },
   {
     "name": "man-pages",
@@ -1055,9 +843,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "man-pages"
+    ]
   },
   {
     "name": "man-pages",
@@ -1072,9 +858,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "man-pages"
+    ]
   },
   {
     "name": "mandoc",
@@ -1089,9 +873,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "mandoc"
+    ]
   },
   {
     "name": "meson",
@@ -1106,9 +888,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "meson"
+    ]
   },
   {
     "name": "mpc",
@@ -1123,9 +903,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "mpc"
+    ]
   },
   {
     "name": "mpfr",
@@ -1140,9 +918,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "mpfr"
+    ]
   },
   {
     "name": "musl",
@@ -1157,9 +933,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "musl"
+    ]
   },
   {
     "name": "nano",
@@ -1174,9 +948,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "nano"
+    ]
   },
   {
     "name": "ncurses",
@@ -1191,9 +963,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "ncurses"
+    ]
   },
   {
     "name": "opendoas",
@@ -1208,9 +978,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "opendoas"
+    ]
   },
   {
     "name": "openssh",
@@ -1225,9 +993,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "openssh"
+    ]
   },
   {
     "name": "openssl",
@@ -1242,9 +1008,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "openssl"
+    ]
   },
   {
     "name": "openvi",
@@ -1259,9 +1023,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "openvi"
+    ]
   },
   {
     "name": "patch",
@@ -1276,9 +1038,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "patch"
+    ]
   },
   {
     "name": "perl",
@@ -1293,9 +1053,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "perl"
+    ]
   },
   {
     "name": "pfetch",
@@ -1310,9 +1068,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "pfetch"
+    ]
   },
   {
     "name": "pkgconf",
@@ -1327,9 +1083,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "pkgconf"
+    ]
   },
   {
     "name": "popt",
@@ -1344,9 +1098,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "popt"
+    ]
   },
   {
     "name": "procps-ng",
@@ -1361,9 +1113,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "procps-ng"
+    ]
   },
   {
     "name": "pxbase",
@@ -1378,9 +1128,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "pxbase"
+    ]
   },
   {
     "name": "pxbase",
@@ -1395,43 +1143,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "pxbase"
-  },
-  {
-    "name": "pxbase.static",
-    "version": "0.5.0",
-    "homepage": "https://sr.ht/~juanvel400/pxbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase.static/pxbase.static-0.5.0.ebs",
-    "source": "https://dl.juanvel400.com/pxbase/pxbase-0.5.0.tar.xz",
-    "summary": "(f.k.a hbase) a static and multicall build of pxbase",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "pxbase"
-  },
-  {
-    "name": "pxbase.static",
-    "version": "0.6.0",
-    "homepage": "https://sr.ht/~juanvel400/pxbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase.static/pxbase.static-0.6.0.ebs",
-    "source": "https://dl.juanvel400.com/pxbase/pxbase-0.6.0.tar.xz",
-    "summary": "(f.k.a hbase) a static and multicall build of pxbase",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "pxbase"
+    ]
   },
   {
     "name": "python",
@@ -1446,9 +1158,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "python"
+    ]
   },
   {
     "name": "python-flit-core",
@@ -1463,9 +1173,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "python-flit-core"
+    ]
   },
   {
     "name": "python-packaging",
@@ -1481,9 +1189,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "python-packaging"
+    ]
   },
   {
     "name": "python-setuptools",
@@ -1498,9 +1204,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "python-setuptools"
+    ]
   },
   {
     "name": "python-wheel",
@@ -1515,9 +1219,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "python-wheel"
+    ]
   },
   {
     "name": "rswc",
@@ -1532,26 +1234,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "rswc"
-  },
-  {
-    "name": "rswc.static",
-    "version": "0.1.0",
-    "homepage": "https://sr.ht/~juanvel400/rswc",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/rswc.static/rswc.static-0.1.0.ebs",
-    "source": "https://dl.juanvel400.com/rswc/rswc-0.1.0.tar.xz",
-    "summary": "a static build of rswc",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "rswc"
+    ]
   },
   {
     "name": "samurai",
@@ -1568,9 +1251,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "samurai"
+    ]
   },
   {
     "name": "sbase",
@@ -1585,26 +1266,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "sbase"
-  },
-  {
-    "name": "sbase.static",
-    "version": "c546c3a",
-    "homepage": "https://core.suckless.org/sbase/",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sbase.static/sbase.static-c546c3a.ebs",
-    "source": "https://main.hxs.juanvel400.com/source/s/sbase/sbase-c546c3a.tar.gz",
-    "summary": "a static build of sbase, using the sbase-box multicall binary",
-    "license": "MIT",
-    "license_ids": [
-      "MIT"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "sbase"
+    ]
   },
   {
     "name": "scdoc",
@@ -1619,9 +1281,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "scdoc"
+    ]
   },
   {
     "name": "sed",
@@ -1636,9 +1296,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "sed"
+    ]
   },
   {
     "name": "shadow",
@@ -1653,9 +1311,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "shadow"
+    ]
   },
   {
     "name": "sharbase",
@@ -1670,9 +1326,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "sharbase"
+    ]
   },
   {
     "name": "sharbase",
@@ -1687,43 +1341,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "sharbase"
-  },
-  {
-    "name": "sharbase.static",
-    "version": "0.1.0",
-    "homepage": "https://sr.ht/~juanvel400/sharbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase.static/sharbase.static-0.1.0.ebs",
-    "source": "https://dl.juanvel400.com/sharbase/sharbase-0.1.0.tar.xz",
-    "summary": "a static build of sharbase",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "sharbase"
-  },
-  {
-    "name": "sharbase.static",
-    "version": "0.2.0",
-    "homepage": "https://sr.ht/~juanvel400/sharbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase.static/sharbase.static-0.2.0.ebs",
-    "source": "https://dl.juanvel400.com/sharbase/sharbase-0.2.0.tar.xz",
-    "summary": "a static build of sharbase",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "sharbase"
+    ]
   },
   {
     "name": "shush",
@@ -1738,26 +1356,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "shush"
-  },
-  {
-    "name": "shush.static",
-    "version": "0.2.0",
-    "homepage": "https://git.sr.ht/~juanvel400/shush",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/shush.static/shush.static-0.2.0.ebs",
-    "source": "https://dl.juanvel400.com/shush/shush-0.2.0.tar.xz",
-    "summary": "a static build of shush, lacking libedit support",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "shush"
+    ]
   },
   {
     "name": "sinit",
@@ -1772,9 +1371,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "sinit"
+    ]
   },
   {
     "name": "sqlite3",
@@ -1789,9 +1386,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "sqlite3"
+    ]
   },
   {
     "name": "texinfo",
@@ -1806,9 +1401,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "texinfo"
+    ]
   },
   {
     "name": "toybox",
@@ -1823,26 +1416,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "toybox"
-  },
-  {
-    "name": "toybox.static",
-    "version": "0.8.15",
-    "homepage": "https://landley.net/toybox/",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/toybox.static/toybox.static-0.8.15.ebs",
-    "source": "https://landley.net/toybox/downloads/toybox-0.8.15.tar.gz",
-    "summary": "a static build of toybox",
-    "license": "0BSD",
-    "license_ids": [
-      "0BSD"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "toybox"
+    ]
   },
   {
     "name": "tzdata",
@@ -1857,9 +1431,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "tzdata"
+    ]
   },
   {
     "name": "ubase",
@@ -1874,26 +1446,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "ubase"
-  },
-  {
-    "name": "ubase.static",
-    "version": "e8249b4",
-    "homepage": "https://core.suckless.org/ubase/",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/ubase.static/ubase.static-e8249b4.ebs",
-    "source": "https://main.hxs.juanvel400.com/source/u/ubase/ubase-e8249b4.tar.gz",
-    "summary": "a static build of ubase, using the ubase-box multicall binary",
-    "license": "MIT",
-    "license_ids": [
-      "MIT"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "ubase"
+    ]
   },
   {
     "name": "util-linux",
@@ -1908,9 +1461,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "util-linux"
+    ]
   },
   {
     "name": "vim",
@@ -1925,9 +1476,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "vim"
+    ]
   },
   {
     "name": "xorriso",
@@ -1942,9 +1491,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "xorriso"
+    ]
   },
   {
     "name": "xpt",
@@ -1959,9 +1506,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "xpt"
+    ]
   },
   {
     "name": "xpt",
@@ -1976,9 +1521,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "xpt"
+    ]
   },
   {
     "name": "xpt",
@@ -1993,9 +1536,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "xpt"
+    ]
   },
   {
     "name": "xpt",
@@ -2010,9 +1551,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "xpt"
+    ]
   },
   {
     "name": "xpt",
@@ -2027,94 +1566,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "xpt"
-  },
-  {
-    "name": "xpt.static",
-    "version": "0.10.2",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.10.2.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.10.2.tar.xz",
-    "summary": "a static build of xpt, lacking the networking subsystem",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "xpt"
-  },
-  {
-    "name": "xpt.static",
-    "version": "0.11.0",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.11.0.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.11.0.tar.xz",
-    "summary": "a static build of xpt, lacking the networking subsystem",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "xpt"
-  },
-  {
-    "name": "xpt.static",
-    "version": "0.12.0",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.12.0.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.12.0.tar.xz",
-    "summary": "a static build of xpt, lacking the networking subsystem",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "xpt"
-  },
-  {
-    "name": "xpt.static",
-    "version": "0.13.2",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.13.2.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.13.2.tar.xz",
-    "summary": "a static build of xpt, lacking the networking subsystem",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "xpt"
-  },
-  {
-    "name": "xpt.static",
-    "version": "0.8.0",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.8.0.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.8.0.tar.xz",
-    "summary": "a static build of xpt, lacking the networking subsystem",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ],
-    "variant": "static",
-    "base_package": "xpt"
+    ]
   },
   {
     "name": "xz",
@@ -2129,9 +1581,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "xz"
+    ]
   },
   {
     "name": "zlib",
@@ -2146,9 +1596,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "zlib"
+    ]
   },
   {
     "name": "zlib",
@@ -2163,9 +1611,7 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "zlib"
+    ]
   },
   {
     "name": "zstd",
@@ -2181,8 +1627,6 @@
     ],
     "maintainers": [
       "me@juanvel400.com"
-    ],
-    "variant": null,
-    "base_package": "zstd"
+    ]
   }
 ]
