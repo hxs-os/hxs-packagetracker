@@ -14,11 +14,10 @@ pkgchecksum=sha256:9d2021f47a4501c667862c9942a92d1953694b21d11bcd1702e83eb594e3d
 pkgdesc="utilities to monitor system resources"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-3-Clause"
-pkghomepage="https://sr.ht/~juanvel400/pxbase"
+pkghomepage="https://gitlab.com/procps-ng/procps/"
 pkgcheck=true
 pkgdeps="musl"
 pkgtriggers="man"
-
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-year2038
