@@ -1462,6 +1462,21 @@
     ]
   },
   {
+    "name": "zsh",
+    "version": "5.9.2",
+    "homepage": "https://zsh.sourceforge.io/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/zsh/zsh-5.9.2.ebs",
+    "source": "https://downloads.sourceforge.net/project/zsh/zsh/5.9.2/zsh-5.9.2.tar.xz",
+    "summary": "the Z shell",
+    "license": "LicenseRef-zsh",
+    "license_ids": [
+      "LicenseRef-zsh"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "zstd",
     "version": "1.5.7",
     "homepage": "https://facebook.github.io/zstd",
