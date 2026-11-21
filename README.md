@@ -1,14 +1,30 @@
 # PackageTracker
 
-this is the HxS PackageTracker, a collection of `ebs(5)` formulae inspired in [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
+[![Update versions.json](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/update-versions.yml/badge.svg)](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/update-versions.yml)
 
-each formulae can be built using the `ebs(1)` build system, found in the `xpt` / `xpt.static` package.
+This is the HxS PackageTracker, a collection of `ebs(5)` formulae inspired in [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
+
+> Further information about using PackageTracker can be found in [The HxS Handbook](https://handbook.hxs.juanvel400.com/packagetracker).
+
+## building formula
+
+Use `ebs(1)` from the `xpt` package:
+
+```sh
+ebs build <name>/<name>-<version>.ebs
+```
+
+Packages are built as `.xpt` files, installable using `xpt(8)`:
+
+```sh
+xpt -if <name>-<version>.xpt
+```
 
 ## formulae
 
 ### first-party formulae
 
-these formulae build packages from first-class HxS projects.
+These formulae build packages from first-class HxS projects.
 
 | package        | static counterpart | description                                          |
 | -------------- | ------------------ | ---------------------------------------------------- |
@@ -25,7 +41,7 @@ these formulae build packages from first-class HxS projects.
 
 ### third-party formulae
 
-these formulae build packages from third-party projects, regardless of their origin.
+These formulae build packages from third-party projects, regardless of their origin.
 
 | package             | static counterpart | description                                                               |
 | ------------------- | ------------------ | ------------------------------------------------------------------------- |
@@ -113,3 +129,9 @@ these formulae build packages from third-party projects, regardless of their ori
 | `bash`              | —                  | the GNU Bourne-Again Shell                                                |
 | `btrfs-progs`       | —                  | programs and libraries to manage btrfs filesystems                        |
 | `pfetch`            | —                  | a pretty system information tool written in POSIX sh                      |
+
+## License
+
+Formulae and Scripts are licensed under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html), see [LICENSE](LICENSE).
+
+Patches are subject to the licensing terms of their respective projects, or BSD-3-Clause as a default.
