@@ -60,6 +60,21 @@
     ]
   },
   {
+    "name": "bc",
+    "version": "1.08.1",
+    "homepage": "https://www.gnu.org/software/bc/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/bc/bc-1.08.1.ebs",
+    "source": "https://ftp.gnu.org/gnu/bc/bc-1.08.1.tar.xz",
+    "summary": "an arbitrary precision numeric processing language",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "binutils",
     "version": "2.47",
     "homepage": "https://www.gnu.org/software/binutils",
