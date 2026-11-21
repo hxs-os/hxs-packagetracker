@@ -1351,7 +1351,7 @@
   {
     "name": "procps-ng",
     "version": "4.0.7",
-    "homepage": "https://sr.ht/~juanvel400/pxbase",
+    "homepage": "https://gitlab.com/procps-ng/procps/",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/procps-ng/procps-ng-4.0.7.ebs",
     "source": "https://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-4.0.7.tar.xz",
     "summary": "utilities to monitor system resources",
