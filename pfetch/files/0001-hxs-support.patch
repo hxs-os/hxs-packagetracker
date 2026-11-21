@@ -1,0 +1,27 @@
+--- a/pfetch
++++ b/pfetch
+@@ -472,6 +472,7 @@
+                 has apk        && apk info
+                 has guix       && guix package --list-installed
+                 has opkg       && opkg list-installed
++                has xpt        && xpt -l | awk 'NR > 2 && NF && $1 !~ /^[0-9]+$/ { print $1 }'
+ 
+                 # Directories containing packages.
+                 has kiss       && printf '%s\n' /var/db/kiss/installed/*/
+@@ -1153,6 +1154,16 @@
+ 			EOF
+         ;;
+ 
++        [Hh][Xx][Ss]*)
++			read_ascii <<-EOF
++					${c7} _   _       ____  
++					${c7}| | | |_  __/ ___| 
++					${c7}| |_| \ \/ /\___ \ 
++					${c7}|  _  |>  <  ___) |
++					${c7}|_| |_/_/\_\|____/ 
++			EOF
++        ;;
++
+         [Ii][Rr][Ii][Xx]*)
+             read_ascii 1 <<-EOF
+ 				${c1} __

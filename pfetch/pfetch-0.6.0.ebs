@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=pfetch
+pkgver=0.6.0
+pkgsrc=https://github.com/dylanaraps/pfetch/archive/refs/tags/$pkgver.tar.gz
+pkgchecksum=sha256:d1f611e61c1f8ae55bd14f8f6054d06fcb9a2d973095367c1626842db66b3182
+pkgdesc="a pretty system information tool written in POSIX sh"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://github.com/dylanaraps/pfetch"
+pkgcheck=false
+
+prepare() {
+    patch -p1 <"$filesdir/0001-hxs-support.patch"
+}
+
+build() {
+    :
+}
+
+package() {
+    "${1:-fakeroot}" install -d -m 755 "$pkgdir/usr/bin" \
+        "$pkgdir/usr/share/licenses/pfetch" "$pkgdir/usr/share/doc/pfetch"
+
+    "${1:-fakeroot}" install -m 755 pfetch "$pkgdir/usr/bin/pfetch"
+    "${1:-fakeroot}" install -m 644 LICENSE.md "$pkgdir/usr/share/licenses/pfetch/LICENSE.md"
+    "${1:-fakeroot}" install -m 644 README.md "$filesdir/0001-hxs-support.patch" \
+        "$pkgdir/usr/share/doc/pfetch"
+}

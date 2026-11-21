@@ -112,3 +112,4 @@ these formulae build packages from third-party projects, regardless of their ori
 | `coreutils`         | —                  | standard file, shell, and text manipulation utilities of the GNU system   |
 | `bash`              | —                  | the GNU Bourne-Again Shell                                                |
 | `btrfs-progs`       | —                  | programs and libraries to manage btrfs filesystems                        |
+| `pfetch`            | —                  | a pretty system information tool written in POSIX sh                      |
