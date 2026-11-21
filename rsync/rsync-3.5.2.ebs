@@ -23,7 +23,8 @@ build() {
     ./configure ${CONFIGUREFLAGS:-} \
         --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
         --enable-year2038 --disable-debug --with-rrsync \
-        --without-included-zlib --without-included-popt
+        --without-included-zlib --without-included-popt \
+        --disable-lz4 --disable-xxhash --disable-idn
     make
 }
 
