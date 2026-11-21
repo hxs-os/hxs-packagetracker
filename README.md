@@ -1,8 +1,9 @@
 # The HxS PackageTracker
 
 [![Update versions.json](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/update-versions.yml/badge.svg)](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/update-versions.yml)
+[![Lint Formulae](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/lint-formulae.yml/badge.svg)](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/lint-formulae.yml)
 
-This is the HxS PackageTracker, a collection of `ebs(5)` formulae inspired in [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
+This is the HxS PackageTracker, a collection of `ebs(5)` formulae inspired by [`freebsd-ports`](https://github.com/freebsd/freebsd-ports) and [`void-packages`](https://github.com/void-linux/void-packages).
 
 > Further information about using PackageTracker can be found in [The HxS Handbook](https://handbook.hxs.juanvel400.com/packagetracker).
 
@@ -19,6 +20,20 @@ Packages are built as `.xpt` files, installable using `xpt(8)`:
 ```sh
 xpt -if <name>-<version>.xpt
 ```
+
+## writing formulae
+
+See `ebs(5)` for the full formula format.
+
+To scaffold a formula, use:
+
+```sh
+python3 scripts/scaffolder/scaffold.py <name> <version>
+```
+
+### submitting formulae
+
+View [CONTRIBUTING.md](CONTRIBUTING.md) for instructions on submitting formulae.
 
 ## formulae
 
@@ -104,7 +119,7 @@ These formulae build packages from third-party projects, regardless of their ori
 | `mandoc`            | —                  | a suite of tools for manual pages                                         |
 | `toybox`            | `toybox.static`    | common Linux command-line utilities bundled in a single binary            |
 | `less`              | —                  | free and open-source file pager                                           |
-| `sinit`             | `sinit`            | suckless init                                                             |
+| `sinit`             | —                  | suckless init                                                             |
 | `sbase`             | `sbase.static`     | collection of unix tools                                                  |
 | `ubase`             | `ubase.static`     | collection of unportable tools, similar in spirit to util-linux           |
 | `scdoc`             | —                  | small man page generator                                                  |
