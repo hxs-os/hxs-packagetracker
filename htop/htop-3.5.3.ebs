@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=htop
+pkgver=3.5.3
+pkgsrc=https://github.com/htop-dev/htop/releases/download/$pkgver/htop-$pkgver.tar.xz
+pkgchecksum=sha256:a8b164386494cb85bb255a415a3f5f80afe7a0c4491da5d113b3a0f951087e65
+pkgdesc="an interactive process viewer"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later"
+pkghomepage="https://htop.dev/"
+pkgcheck=false
+pkgdeps="musl,ncurses"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --disable-debug --enable-unicode
+    make
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
