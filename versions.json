@@ -601,6 +601,21 @@
     ]
   },
   {
+    "name": "jq",
+    "version": "1.8.2",
+    "homepage": "https://jqlang.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/jq/jq-1.8.2.ebs",
+    "source": "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-1.8.2.tar.gz",
+    "summary": "command-line JSON processor",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "kbd",
     "version": "2.10.0",
     "homepage": "https://github.com/legionus/kbd",
