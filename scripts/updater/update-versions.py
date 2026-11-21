@@ -51,12 +51,9 @@ def parse_formula(p: Path) -> dict:
 
 def format_entry(d: dict) -> dict:
     name = d["pkgname"]
-    variant = None
-    base_package = d["pkgname"]
 
     if name.endswith(".static"):
-        variant = "static"
-        base_package = name.removesuffix(".static")
+        return {}
 
     emails = [maintainer_email(em) for em in d["pkgmaintainer"].split(",")]
     license = parse_license(d["pkglicense"])
@@ -71,15 +68,17 @@ def format_entry(d: dict) -> dict:
         "license": license["expression"],
         "license_ids": license["identifiers"],
         "maintainers": emails,
-        "variant": variant,
-        "base_package": base_package,
     }
 
 
 def create_tree(tracker_root: Path) -> list:
     l = []
     for formula in sorted(tracker_root.rglob("*.ebs")):
-        l.append(format_entry(parse_formula(formula)))
+        ent = format_entry(parse_formula(formula))
+        if not ent:
+            continue
+
+        l.append(ent)
     return l
 
 
