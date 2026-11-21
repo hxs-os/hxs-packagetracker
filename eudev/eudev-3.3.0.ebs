@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=eudev
+pkgver=3.3.0
+pkgsrc=https://github.com/eudev-project/eudev/releases/download/v$pkgver/eudev-$pkgver.tar.gz
+pkgchecksum=sha256:8fba6e4f49ea4b1938828a3c2e7cc48874816c68621386e527076b6477f5d6ef
+pkgdesc="a standalone and dynamic device manager"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later"
+pkghomepage="https://github.com/eudev-project/eudev"
+pkgdeps="musl,kmod,util-linux"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var --enable-manpages \
+        --enable-year2038 --enable-kmod --disable-systemd-hwdb \
+        --disable-selinux
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
