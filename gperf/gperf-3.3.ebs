@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=gperf
+pkgver=3.3
+pkgsrc=https://ftp.gnu.org/gnu/gperf/gperf-$pkgver.tar.gz
+pkgchecksum=sha256:fd87e0aba7e43ae054837afd6cd4db03a3f2693deb3619085e6ed9d8d9604ad8
+pkgdesc="a tool that generates perfect hash functions and tables"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/gperf/"
+pkgdeps="musl"
+pkgtriggers="man,info"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
