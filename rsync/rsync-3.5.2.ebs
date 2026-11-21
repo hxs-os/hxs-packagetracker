@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=rsync
+pkgver=3.5.2
+pkgsrc=https://github.com/RsyncProject/rsync/releases/download/v$pkgver/rsync-$pkgver.tar.gz
+pkgchecksum=sha256:a10d591825251e070f74c98df3daad195def4ed81b4a2de16169026aea33f6c8
+pkgdesc="a file copying tool for both remote and local files"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://rsync.samba.org/"
+pkgcheck=true
+pkgdeps="musl,openssl,popt,zlib"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --enable-year2038 --disable-debug --with-rrsync \
+        --without-included-zlib --without-included-popt
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
