@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=bc
+pkgver=1.08.1
+pkgsrc=https://ftp.gnu.org/gnu/bc/bc-$pkgver.tar.xz
+pkgchecksum=sha256:515430115b3334c636317503460a0950dff79940aa3259ce2c1aa67c2881d023
+pkgdesc="an arbitrary precision numeric processing language"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://www.gnu.org/software/bc/"
+pkgdeps="musl"
+pkgtriggers="man,info"
+pkgcheck=true
+
+build() {
+    CFLAGS="${CFLAGS:--std=gnu17}" ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr --without-readline --without-libedit
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    rm -f "$pkgdir/usr/share/info/dir"
+}
