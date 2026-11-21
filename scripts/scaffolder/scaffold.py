@@ -3,8 +3,7 @@ import sys
 from pathlib import Path
 from string import Template
 
-BASE_FORMULA = """
-#!/bin/sh
+BASE_FORMULA = """#!/bin/sh
 
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
