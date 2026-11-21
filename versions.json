@@ -436,6 +436,21 @@
     ]
   },
   {
+    "name": "gperf",
+    "version": "3.3",
+    "homepage": "https://www.gnu.org/software/gperf/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gperf/gperf-3.3.ebs",
+    "source": "https://ftp.gnu.org/gnu/gperf/gperf-3.3.tar.gz",
+    "summary": "a tool that generates perfect hash functions and tables",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "grep",
     "version": "3.12",
     "homepage": "https://www.gnu.org/software/grep",
