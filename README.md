@@ -80,8 +80,8 @@ these formulae build packages from third-party projects, regardless of their ori
 | `procps-ng`         | —                  | utilities to monitor system resources                                     |
 | `python-flit-core`  | —                  | a minimal PEP 517 build backend                                           |
 | `python-packaging`  | —                  | core utilities for Python package metadata and version handling           |
-| `python-setuptools` | —                  | built-package format for Python distributions                             |
-| `python-wheel`      | —                  | Python package build system and distribution utilities                    |
+| `python-setuptools` | —                  | Python package build system and distribution utilities                    |
+| `python-wheel`      | —                  | built-package format for Python distributions                             |
 | `meson`             | —                  | the meson build system                                                    |
 | `git`               | —                  | distributed version control system                                        |
 | `samurai`           | —                  | ninja-compatible build tool written in C99                                |
@@ -99,7 +99,7 @@ these formulae build packages from third-party projects, regardless of their ori
 | `lua`               | —                  | a powerful, efficient, lightweight, embeddable scripting language         |
 | `popt`              | —                  | a command-line options parsing library                                    |
 | `efibootmgr`        | —                  | tools to manage EFI boot entries                                          |
-| `efivar`            | —                  | tools and libraries to manage EFI ariables                                |
+| `efivar`            | —                  | tools and libraries to manage EFI variables                               |
 | `grub-efi`          | —                  | GNU Grand Unified Bootloader for EFI-based systems                        |
 | `kbd`               | —                  | tools to manage the Linux console                                         |
 | `iproute2`          | —                  | set of utilities for Linux networking                                     |
