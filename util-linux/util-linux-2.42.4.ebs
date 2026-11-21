@@ -35,7 +35,7 @@ build() {
         --enable-lsblk --enable-swapon --enable-lscpu \
         --enable-switch_root --enable-pivot_root \
         --disable-bash-completion --sbindir=/usr/sbin \
-        --bindir=/usr/bin --libdir=/usr/lib
+        --enable-fallocate --bindir=/usr/bin --libdir=/usr/lib
     make
 }
 
