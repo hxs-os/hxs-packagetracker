@@ -23,5 +23,5 @@ build() {
 }
 
 package() {
-    "${1:-fakeroot}" pip3 install --no-index --find-links dist flit_core --prefix=/usr --root "$pkgdir"
+    "${1:-fakeroot}" pip3 install --no-index --no-deps --ignore-installed --no-compile --find-links dist --prefix=/usr --root "$pkgdir" flit_core
 }

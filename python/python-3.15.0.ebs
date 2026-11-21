@@ -21,7 +21,7 @@ pkgtriggers="man"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
-        --disable-static --enable-shared \
+        --enable-shared \
         --without-static-libpython
     make
 }
@@ -33,7 +33,7 @@ check() {
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 
-    cat << EOF > "$pkgdir/usr/lib/python3.15/EXTERNALLY-MANAGED"
+    cat <<EOF >"$pkgdir/usr/lib/python3.15/EXTERNALLY-MANAGED"
 [externally-managed]
 Error=this Python installation is managed by HxS.
 
