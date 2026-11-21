@@ -15,6 +15,7 @@ pkgdesc="a portable foreign function interface library"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="MIT"
 pkghomepage="https://github.com/libffi/libffi/"
+pkgcheck=true
 pkgdeps="musl"
 pkgtriggers="man,info"
 

@@ -3,7 +3,6 @@ name: Update versions.json
 on:
   push:
     branches: [main]
-  pull_request:
 
 jobs:
   update-versions:

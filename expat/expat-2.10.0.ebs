@@ -17,6 +17,7 @@ pkglicense="MIT"
 pkghomepage="https://libexpat.github.io/"
 pkgdeps="musl"
 pkgtriggers="man"
+pkgcheck=true
 pkgprovides="libexpat"
 
 build() {

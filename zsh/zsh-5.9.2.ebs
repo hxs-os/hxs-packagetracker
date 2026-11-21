@@ -1,0 +1,39 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=zsh
+pkgver=5.9.2
+pkgsrc=https://downloads.sourceforge.net/project/zsh/zsh/$pkgver/zsh-$pkgver.tar.xz
+pkgchecksum=sha256:36fa734374b44783582cec09bcd67822e2f992c779ec1624ab5596df078d2f81
+pkgdesc="the Z shell"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="LicenseRef-zsh"
+pkghomepage="https://zsh.sourceforge.io/"
+pkgcheck=true
+pkgdeps="musl,ncurses"
+pkgtriggers="man,shells"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var --enable-year2038 \
+        --enable-libc-musl --disable-dynamic-nss --enable-multibyte \
+        --enable-unicode9
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+
+    mkdir -p "$pkgdir/usr/share/shells.d"
+    printf "/usr/bin/zsh\n/bin/zsh\n" >"$pkgdir/usr/share/shells.d/zsh"
+}

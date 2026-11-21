@@ -15,6 +15,7 @@ pkgdesc="a standalone and dynamic device manager"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="GPL-2.0-or-later"
 pkghomepage="https://github.com/eudev-project/eudev"
+pkgcheck=true
 pkgdeps="musl,kmod,util-linux"
 pkgtriggers="man"
 

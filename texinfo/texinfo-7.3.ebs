@@ -17,6 +17,7 @@ pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/texinfo"
 pkgcheck=true
 pkgdeps="musl,ncurses"
+pkgprovides="triggers:info"
 pkgtriggers="info"
 
 build() {

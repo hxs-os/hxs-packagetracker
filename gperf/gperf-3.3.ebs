@@ -15,6 +15,7 @@ pkgdesc="a tool that generates perfect hash functions and tables"
 pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="GPL-3.0-or-later"
 pkghomepage="https://www.gnu.org/software/gperf/"
+pkgcheck=true
 pkgdeps="musl"
 pkgtriggers="man,info"
 

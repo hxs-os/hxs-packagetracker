@@ -20,6 +20,7 @@ pkgdesc=""
 pkgmaintainer=""
 pkglicense=""
 pkghomepage=""
+pkgcheck=true
 pkgdeps="musl"
 # pkgtriggers="man"
 # pkgprovides="lib$NAME"
