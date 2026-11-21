@@ -526,6 +526,21 @@
     ]
   },
   {
+    "name": "htop",
+    "version": "3.5.3",
+    "homepage": "https://htop.dev/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/htop/htop-3.5.3.ebs",
+    "source": "https://github.com/htop-dev/htop/releases/download/3.5.3/htop-3.5.3.tar.xz",
+    "summary": "an interactive process viewer",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "hxs-base",
     "version": "0.3.0",
     "homepage": "https://sr.ht/~juanvel400/hxs-base",
