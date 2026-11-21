@@ -285,6 +285,21 @@
     ]
   },
   {
+    "name": "expat",
+    "version": "2.10.0",
+    "homepage": "https://libexpat.github.io/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/expat/expat-2.10.0.ebs",
+    "source": "https://github.com/libexpat/libexpat/releases/download/R_2_10_0/expat-2.10.0.tar.xz",
+    "summary": "a stream-oriented XML parser library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "fakeroot",
     "version": "2.1.4",
     "homepage": "https://wiki.debian.org/FakeRoot",
