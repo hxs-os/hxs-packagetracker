@@ -632,6 +632,21 @@
     ]
   },
   {
+    "name": "libffi",
+    "version": "3.8.1",
+    "homepage": "https://github.com/libffi/libffi/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libffi/libffi-3.8.1.ebs",
+    "source": "https://github.com/libffi/libffi/releases/download/v3.8.1/libffi-3.8.1.tar.gz",
+    "summary": "a portable foreign function interface library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "libisl",
     "version": "0.28",
     "homepage": "https://libisl.sourceforge.io",
