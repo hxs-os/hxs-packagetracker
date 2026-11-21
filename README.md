@@ -1,4 +1,4 @@
-# PackageTracker
+# The HxS PackageTracker
 
 [![Update versions.json](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/update-versions.yml/badge.svg)](https://github.com/hxs-os/hxs-packagetracker/actions/workflows/update-versions.yml)
 
@@ -129,6 +129,10 @@ These formulae build packages from third-party projects, regardless of their ori
 | `bash`              | —                  | the GNU Bourne-Again Shell                                                |
 | `btrfs-progs`       | —                  | programs and libraries to manage btrfs filesystems                        |
 | `pfetch`            | —                  | a pretty system information tool written in POSIX sh                      |
+
+## Index
+
+The [`versions.json`](versions.json) file contains an automatically-generated index of all formula in PackageTracker.
 
 ## License
 

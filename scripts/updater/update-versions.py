@@ -66,6 +66,7 @@ def format_entry(d: dict) -> dict:
         "version": d["pkgver"],
         "homepage": d["pkghomepage"],
         "recipe": f"https://github.com/hxs-os/hxs-packagetracker/blob/main/{d['pkgname']!s}/{d['pkgname']!s}-{d['pkgver']!s}.ebs",
+        "source": d["pkgsrc"],
         "summary": d["pkgdesc"],
         "license": license["expression"],
         "license_ids": license["identifiers"],

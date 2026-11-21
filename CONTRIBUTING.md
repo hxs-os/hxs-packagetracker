@@ -1,6 +1,6 @@
-# Contributing to hxs-packagetracker
+# Contributing to PackageTracker
 
-hxs-packagetracker is maintained on [github](https://github.com/hxs-os/hxs-packagetracker) -- this document explains how to report bugs and send patches there.
+PackageTracker is maintained on [github](https://github.com/hxs-os/hxs-packagetracker). This document explains how to report bugs and send patches there.
 
 ## Reporting Bugs / Requesting Features
 
