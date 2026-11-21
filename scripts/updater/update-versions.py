@@ -8,6 +8,13 @@ from license_expression import ExpressionError, get_spdx_licensing
 
 spdx = get_spdx_licensing()
 
+# packages to filter
+PACKAGE_FILTERS = {"hbase"}
+
+
+def vkey(v: str) -> list:
+    return [int(n) for n in re.findall(r"\d+", v)]
+
 
 def parse_license(v: str) -> dict:
     v = v.strip()
@@ -52,7 +59,7 @@ def parse_formula(p: Path) -> dict:
 def format_entry(d: dict) -> dict:
     name = d["pkgname"]
 
-    if name.endswith(".static"):
+    if name.endswith(".static") or name in PACKAGE_FILTERS:
         return {}
 
     emails = [maintainer_email(em) for em in d["pkgmaintainer"].split(",")]
@@ -72,14 +79,18 @@ def format_entry(d: dict) -> dict:
 
 
 def create_tree(tracker_root: Path) -> list:
-    l = []
+    best = {}
+
     for formula in sorted(tracker_root.rglob("*.ebs")):
         ent = format_entry(parse_formula(formula))
         if not ent:
             continue
 
-        l.append(ent)
-    return l
+        cur = best.get(ent["name"])
+        if cur is None or vkey(ent["version"]) > vkey(cur["version"]):
+            best[ent["name"]] = ent
+
+    return sorted(best.values(), key=lambda e: e["name"])
 
 
 if __name__ == "__main__":
