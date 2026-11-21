@@ -20,7 +20,7 @@ pkgdeps="musl"
 pkgtriggers="man,info"
 
 build() {
-    ./configure ${CONFIGUREARGS:-} --prefix=/usr --disable-static --enable-shared
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-static --enable-shared
     make
 }
 

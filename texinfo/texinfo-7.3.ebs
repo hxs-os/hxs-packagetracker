@@ -20,7 +20,7 @@ pkgdeps="musl,ncurses"
 pkgtriggers="info"
 
 build() {
-    ./configure ${CONFIGUREARGS:-} --prefix=/usr
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
     make
 }
 
@@ -33,7 +33,7 @@ package() {
     rm -f "$pkgdir/usr/share/info/dir"
 
     mkdir -p "$pkgdir/usr/share/xpt/triggers"
-    cat << EOF > "$pkgdir/usr/share/xpt/triggers/info"
+    cat <<EOF >"$pkgdir/usr/share/xpt/triggers/info"
 #!/bin/sh
 
 set -e
