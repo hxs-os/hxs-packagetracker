@@ -1,0 +1,2060 @@
+[
+  {
+    "name": "adam",
+    "version": "0.1.0",
+    "homepage": "https://sr.ht/~juanvel400/adam",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam/adam-0.1.0.ebs",
+    "summary": "a tiny PID 1 implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "adam"
+  },
+  {
+    "name": "adam",
+    "version": "0.2.0",
+    "homepage": "https://sr.ht/~juanvel400/adam",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam/adam-0.2.0.ebs",
+    "summary": "a tiny PID 1 implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "adam"
+  },
+  {
+    "name": "adam",
+    "version": "0.3.0",
+    "homepage": "https://sr.ht/~juanvel400/adam",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam/adam-0.3.0.ebs",
+    "summary": "a tiny PID 1 implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "adam"
+  },
+  {
+    "name": "adam.static",
+    "version": "0.1.0",
+    "homepage": "https://sr.ht/~juanvel400/adam",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam.static/adam.static-0.1.0.ebs",
+    "summary": "a static build of adam",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "adam"
+  },
+  {
+    "name": "adam.static",
+    "version": "0.2.0",
+    "homepage": "https://sr.ht/~juanvel400/adam",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam.static/adam.static-0.2.0.ebs",
+    "summary": "a static build of adam",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "adam"
+  },
+  {
+    "name": "adam.static",
+    "version": "0.3.0",
+    "homepage": "https://sr.ht/~juanvel400/adam",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam.static/adam.static-0.3.0.ebs",
+    "summary": "a static build of adam",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "adam"
+  },
+  {
+    "name": "autoconf",
+    "version": "2.73",
+    "homepage": "https://www.gnu.org/software/autoconf",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/autoconf/autoconf-2.73.ebs",
+    "summary": "m4 macros to generate configure scripts",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "autoconf"
+  },
+  {
+    "name": "automake",
+    "version": "1.19",
+    "homepage": "https://www.gnu.org/software/automake",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/automake/automake-1.19.ebs",
+    "summary": "m4 macros to generate Makefile.in files",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "automake"
+  },
+  {
+    "name": "bash",
+    "version": "5.3",
+    "homepage": "https://www.gnu.org/software/bash/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/bash/bash-5.3.ebs",
+    "summary": "the GNU Bourne-Again Shell",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "bash"
+  },
+  {
+    "name": "binutils",
+    "version": "2.47",
+    "homepage": "https://www.gnu.org/software/binutils",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/binutils/binutils-2.47.ebs",
+    "summary": "GNU collection of binary tools",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "binutils"
+  },
+  {
+    "name": "bison",
+    "version": "3.8.2",
+    "homepage": "https://www.gnu.org/software/bison",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/bison/bison-3.8.2.ebs",
+    "summary": "general-purpose parser generator",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "bison"
+  },
+  {
+    "name": "btrfs-progs",
+    "version": "7.3",
+    "homepage": "https://github.com/kdave/btrfs-progs/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/btrfs-progs/btrfs-progs-7.3.ebs",
+    "summary": "programs and libraries to manage btrfs filesystems",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "btrfs-progs"
+  },
+  {
+    "name": "bzip2",
+    "version": "1.0.8",
+    "homepage": "https://sourceware.org/git/?p=bzip2.git;a=summary",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/bzip2/bzip2-1.0.8.ebs",
+    "summary": "block-sorting file compression format",
+    "license": "bzip2-1.0.8",
+    "license_ids": [
+      "bzip2-1.0.8"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "bzip2"
+  },
+  {
+    "name": "ca-certificates",
+    "version": "2026.09.25",
+    "homepage": "https://curl.se/docs/caextract.html",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/ca-certificates/ca-certificates-2026.09.25.ebs",
+    "summary": "Mozilla CA certificate bundle",
+    "license": "MPL-2.0",
+    "license_ids": [
+      "MPL-2.0"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "ca-certificates"
+  },
+  {
+    "name": "coreutils",
+    "version": "9.12",
+    "homepage": "https://www.gnu.org/software/coreutils/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/coreutils/coreutils-9.12.ebs",
+    "summary": "standard file, shell, and text manipulation utilities of the GNU system",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "coreutils"
+  },
+  {
+    "name": "curl",
+    "version": "8.22.0",
+    "homepage": "https://curl.se",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/curl/curl-8.22.0.ebs",
+    "summary": "URL transfer utility and library",
+    "license": "curl",
+    "license_ids": [
+      "curl"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "curl"
+  },
+  {
+    "name": "dash",
+    "version": "0.5.13.5",
+    "homepage": "http://gondor.apana.org.au/~herbert/dash/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/dash/dash-0.5.13.5.ebs",
+    "summary": "debian almquist shell",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "dash"
+  },
+  {
+    "name": "dash.static",
+    "version": "0.5.13.5",
+    "homepage": "http://gondor.apana.org.au/~herbert/dash/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/dash.static/dash.static-0.5.13.5.ebs",
+    "summary": "a static build of dash",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "dash"
+  },
+  {
+    "name": "dhcpcd",
+    "version": "10.5.2",
+    "homepage": "https://roy.marples.name/projects/dhcpcd",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/dhcpcd/dhcpcd-10.5.2.ebs",
+    "summary": "dhcp / ipv4ll / ipv6ra / dhcpv6 client",
+    "license": "BSD-2-Clause",
+    "license_ids": [
+      "BSD-2-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "dhcpcd"
+  },
+  {
+    "name": "diffutils",
+    "version": "3.12",
+    "homepage": "https://www.gnu.org/software/diffutils",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/diffutils/diffutils-3.12.ebs",
+    "summary": "utilities to compare files",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "diffutils"
+  },
+  {
+    "name": "dosfstools",
+    "version": "4.2",
+    "homepage": "https://github.com/dosfstools/dosfstools/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/dosfstools/dosfstools-4.2.ebs",
+    "summary": "tools to use with FAT filesystems",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "dosfstools"
+  },
+  {
+    "name": "e2fsprogs",
+    "version": "1.47.4",
+    "homepage": "https://e2fsprogs.sourceforge.net/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/e2fsprogs/e2fsprogs-1.47.4.ebs",
+    "summary": "tools to use with ext2/3/4 filesystems",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "e2fsprogs"
+  },
+  {
+    "name": "efibootmgr",
+    "version": "18",
+    "homepage": "https://github.com/rhboot/efibootmgr",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/efibootmgr/efibootmgr-18.ebs",
+    "summary": "tools to manage EFI boot entries",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "efibootmgr"
+  },
+  {
+    "name": "efivar",
+    "version": "39",
+    "homepage": "https://github.com/rhboot/efivar/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/efivar/efivar-39.ebs",
+    "summary": "tools and libraries to manipulate EFI variables",
+    "license": "LGPL-2.1-or-later",
+    "license_ids": [
+      "LGPL-2.1-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "efivar"
+  },
+  {
+    "name": "fakeroot",
+    "version": "2.1.4",
+    "homepage": "https://wiki.debian.org/FakeRoot",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/fakeroot/fakeroot-2.1.4.ebs",
+    "summary": "gives a fake root environment for package building",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "fakeroot"
+  },
+  {
+    "name": "file",
+    "version": "5.48",
+    "homepage": "https://www.darwinsys.com/file/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/file/file-5.48.ebs",
+    "summary": "file type identification utility",
+    "license": "BSD-2-Clause-Darwin",
+    "license_ids": [
+      "BSD-2-Clause-Darwin"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "file"
+  },
+  {
+    "name": "findutils",
+    "version": "4.11.0",
+    "homepage": "https://www.gnu.org/software/findutils",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/findutils/findutils-4.11.0.ebs",
+    "summary": "basic directory searching utilities",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "findutils"
+  },
+  {
+    "name": "flex",
+    "version": "2.6.4",
+    "homepage": "https://github.com/westes/flex",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/flex/flex-2.6.4.ebs",
+    "summary": "the fast lexical analyzer",
+    "license": "BSD-3-Clause-flex",
+    "license_ids": [
+      "BSD-3-Clause-flex"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "flex"
+  },
+  {
+    "name": "gawk",
+    "version": "5.4.1",
+    "homepage": "https://www.gnu.org/software/gawk",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gawk/gawk-5.4.1.ebs",
+    "summary": "GNU implementation of the awk programming language",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "gawk"
+  },
+  {
+    "name": "gcc",
+    "version": "16.1.0",
+    "homepage": "https://www.gnu.org/software/gcc",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gcc/gcc-16.1.0.ebs",
+    "summary": "GNU compiler collection",
+    "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
+    "license_ids": [
+      "GPL-3.0-or-later",
+      "GCC-exception-3.1"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "gcc"
+  },
+  {
+    "name": "gcc",
+    "version": "16.2.0",
+    "homepage": "https://www.gnu.org/software/gcc",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gcc/gcc-16.2.0.ebs",
+    "summary": "GNU compiler collection",
+    "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
+    "license_ids": [
+      "GPL-3.0-or-later",
+      "GCC-exception-3.1"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "gcc"
+  },
+  {
+    "name": "gettext",
+    "version": "1.0",
+    "homepage": "https://www.gnu.org/software/gettext",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gettext/gettext-1.0.ebs",
+    "summary": "utilities for internalization and localization",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "gettext"
+  },
+  {
+    "name": "git",
+    "version": "2.56.0",
+    "homepage": "https://git-scm.com/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/git/git-2.56.0.ebs",
+    "summary": "distributed version control system",
+    "license": "GPL-2.0-only",
+    "license_ids": [
+      "GPL-2.0-only"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "git"
+  },
+  {
+    "name": "gmp",
+    "version": "6.3.0",
+    "homepage": "https://gmplib.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gmp/gmp-6.3.0.ebs",
+    "summary": "gnu multiple precision arithmetic library",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "gmp"
+  },
+  {
+    "name": "grep",
+    "version": "3.12",
+    "homepage": "https://www.gnu.org/software/grep",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/grep/grep-3.12.ebs",
+    "summary": "searches one or more files for patterns",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "grep"
+  },
+  {
+    "name": "grub-efi",
+    "version": "2.14",
+    "homepage": "https://www.gnu.org/software/grub",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/grub-efi/grub-efi-2.14.ebs",
+    "summary": "GNU Grand Unified Bootloader for EFI-based systems",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "grub-efi"
+  },
+  {
+    "name": "gzip",
+    "version": "1.15",
+    "homepage": "https://www.gnu.org/software/gzip",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gzip/gzip-1.15.ebs",
+    "summary": "GNU data compression utility",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "gzip"
+  },
+  {
+    "name": "hbase",
+    "version": "0.3.0",
+    "homepage": "https://git.sr.ht/~juanvel400/hbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase/hbase-0.3.0.ebs",
+    "summary": "a minimal posix core user utils implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "hbase"
+  },
+  {
+    "name": "hbase",
+    "version": "0.4.0",
+    "homepage": "https://git.sr.ht/~juanvel400/hbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase/hbase-0.4.0.ebs",
+    "summary": "a minimal posix core user utils implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "hbase"
+  },
+  {
+    "name": "hbase.static",
+    "version": "0.3.0",
+    "homepage": "https://git.sr.ht/~juanvel400/hbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase.static/hbase.static-0.3.0.ebs",
+    "summary": "a static build of hbase",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "hbase"
+  },
+  {
+    "name": "hbase.static",
+    "version": "0.4.0",
+    "homepage": "https://git.sr.ht/~juanvel400/hbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase.static/hbase.static-0.4.0.ebs",
+    "summary": "a static build of hbase",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "hbase"
+  },
+  {
+    "name": "hello",
+    "version": "0.1.3",
+    "homepage": "https://sr.ht/~juanvel400/hello",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hello/hello-0.1.3.ebs",
+    "summary": "simple hello world program",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "hello"
+  },
+  {
+    "name": "hxs-base",
+    "version": "0.2.0",
+    "homepage": "https://sr.ht/~juanvel400/hxs-base",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hxs-base/hxs-base-0.2.0.ebs",
+    "summary": "base files for an HxS system",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "hxs-base"
+  },
+  {
+    "name": "hxs-base",
+    "version": "0.3.0",
+    "homepage": "https://sr.ht/~juanvel400/hxs-base",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hxs-base/hxs-base-0.3.0.ebs",
+    "summary": "base files for an HxS system",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "hxs-base"
+  },
+  {
+    "name": "hxsbootstrap",
+    "version": "0.1.0",
+    "homepage": "https://sr.ht/~juanvel400/hxsbootstrap",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hxsbootstrap/hxsbootstrap-0.1.0.ebs",
+    "summary": "a simple set of scripts to bootstrap an HxS system",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "hxsbootstrap"
+  },
+  {
+    "name": "iana-etc",
+    "version": "20261009",
+    "homepage": "https://github.com/Mic92/iana-etc",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/iana-etc/iana-etc-20261009.ebs",
+    "summary": "/etc/protocols and /etc/services provided by IANA",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "iana-etc"
+  },
+  {
+    "name": "inetutils",
+    "version": "2.8",
+    "homepage": "https://gnu.org/software/inetutils",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/inetutils/inetutils-2.8.ebs",
+    "summary": "traditional network clients, servers, and utilities",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "inetutils"
+  },
+  {
+    "name": "iproute2",
+    "version": "7.3.0",
+    "homepage": "https://wiki.linuxfoundation.org/networking/iproute2",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/iproute2/iproute2-7.3.0.ebs",
+    "summary": "set of utilities for Linux networking",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "iproute2"
+  },
+  {
+    "name": "kbd",
+    "version": "2.10.0",
+    "homepage": "https://github.com/legionus/kbd",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/kbd/kbd-2.10.0.ebs",
+    "summary": "tools to manage the Linux console",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "kbd"
+  },
+  {
+    "name": "kmod",
+    "version": "34.2",
+    "homepage": "https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/kmod/kmod-34.2.ebs",
+    "summary": "utilities to load and manage Linux kernel modules",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "kmod"
+  },
+  {
+    "name": "less",
+    "version": "710",
+    "homepage": "https://www.greenwoodsoftware.com/less/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/less/less-710.ebs",
+    "summary": "free and open-source file pager",
+    "license": "GPL-3.0-or-later OR Less",
+    "license_ids": [
+      "GPL-3.0-or-later",
+      "Less"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "less"
+  },
+  {
+    "name": "libarchive",
+    "version": "3.8.9",
+    "homepage": "https://libarchive.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libarchive/libarchive-3.8.9.ebs",
+    "summary": "multi-format archive and compression library",
+    "license": "BSD-2-Clause",
+    "license_ids": [
+      "BSD-2-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "libarchive"
+  },
+  {
+    "name": "libedit",
+    "version": "20260512-3.1",
+    "homepage": "https://www.thrysoee.dk/editline/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libedit/libedit-20260512-3.1.ebs",
+    "summary": "autotool- and libtoolized port of the NetBSD editline library",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "libedit"
+  },
+  {
+    "name": "libisl",
+    "version": "0.28",
+    "homepage": "https://libisl.sourceforge.io",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libisl/libisl-0.28.ebs",
+    "summary": "integer set library",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "libisl"
+  },
+  {
+    "name": "libtool",
+    "version": "2.6.2",
+    "homepage": "https://www.gnu.org/software/libtool",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libtool/libtool-2.6.2.ebs",
+    "summary": "generic library support script",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "libtool"
+  },
+  {
+    "name": "linux",
+    "version": "7.3.4",
+    "homepage": "https://www.kernel.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/linux/linux-7.3.4.ebs",
+    "summary": "A monolithic Unix-like kernel",
+    "license": "GPL-2.0-only WITH Linux-syscall-note",
+    "license_ids": [
+      "GPL-2.0-only",
+      "Linux-syscall-note"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "linux"
+  },
+  {
+    "name": "linux-headers",
+    "version": "7.2.9",
+    "homepage": "https://kernel.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/linux-headers/linux-headers-7.2.9.ebs",
+    "summary": "headers for linux kernel interfaces",
+    "license": "GPL-2.0-only WITH Linux-syscall-note",
+    "license_ids": [
+      "GPL-2.0-only",
+      "Linux-syscall-note"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "linux-headers"
+  },
+  {
+    "name": "linux-headers",
+    "version": "7.3.4",
+    "homepage": "https://kernel.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/linux-headers/linux-headers-7.3.4.ebs",
+    "summary": "headers for linux kernel interfaces",
+    "license": "GPL-2.0-only WITH Linux-syscall-note",
+    "license_ids": [
+      "GPL-2.0-only",
+      "Linux-syscall-note"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "linux-headers"
+  },
+  {
+    "name": "lua",
+    "version": "5.5.1",
+    "homepage": "https://lua.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/lua/lua-5.5.1.ebs",
+    "summary": "a powerful, efficient, lightweight, embeddable scripting language",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "lua"
+  },
+  {
+    "name": "m4",
+    "version": "1.4.21",
+    "homepage": "https://www.gnu.org/software/m4",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/m4/m4-1.4.21.ebs",
+    "summary": "GNU m4 macro processor",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "m4"
+  },
+  {
+    "name": "make",
+    "version": "4.4.1",
+    "homepage": "https://www.gnu.org/software/make",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/make/make-4.4.1.ebs",
+    "summary": "GNU make",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "make"
+  },
+  {
+    "name": "man-pages",
+    "version": "6.19",
+    "homepage": "https://www.kernel.org/doc/man-pages/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/man-pages/man-pages-6.19.ebs",
+    "summary": "manual pages for Linux systems",
+    "license": "Various",
+    "license_ids": [
+      "Various"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "man-pages"
+  },
+  {
+    "name": "man-pages",
+    "version": "6.20",
+    "homepage": "https://www.kernel.org/doc/man-pages/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/man-pages/man-pages-6.20.ebs",
+    "summary": "manual pages for Linux systems",
+    "license": "Various",
+    "license_ids": [
+      "Various"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "man-pages"
+  },
+  {
+    "name": "mandoc",
+    "version": "1.14.6",
+    "homepage": "https://mandoc.bsd.lv/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/mandoc/mandoc-1.14.6.ebs",
+    "summary": "a suite of tools for manual pages",
+    "license": "ISC",
+    "license_ids": [
+      "ISC"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "mandoc"
+  },
+  {
+    "name": "meson",
+    "version": "1.12.1",
+    "homepage": "https://mesonbuild.com/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/meson/meson-1.12.1.ebs",
+    "summary": "the meson build system",
+    "license": "Apache-2.0",
+    "license_ids": [
+      "Apache-2.0"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "meson"
+  },
+  {
+    "name": "mpc",
+    "version": "1.4.1",
+    "homepage": "https://www.multiprecision.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/mpc/mpc-1.4.1.ebs",
+    "summary": "multiple precision complex arithmetic library",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "mpc"
+  },
+  {
+    "name": "mpfr",
+    "version": "4.2.2",
+    "homepage": "https://mpfr.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/mpfr/mpfr-4.2.2.ebs",
+    "summary": "multiple-precision floating-point computations library",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "mpfr"
+  },
+  {
+    "name": "musl",
+    "version": "1.2.6",
+    "homepage": "https://musl.libc.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/musl/musl-1.2.6.ebs",
+    "summary": "MIT-licensed implementation of the C standard library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "musl"
+  },
+  {
+    "name": "nano",
+    "version": "9.3",
+    "homepage": "https://www.nano-editor.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/nano/nano-9.3.ebs",
+    "summary": "a free replacement for the Pico text editor",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "nano"
+  },
+  {
+    "name": "ncurses",
+    "version": "6.6",
+    "homepage": "https://invisible-island.net/ncurses/ncurses.html",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/ncurses/ncurses-6.6.ebs",
+    "summary": "software emulation of curses",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "ncurses"
+  },
+  {
+    "name": "opendoas",
+    "version": "6.8.2",
+    "homepage": "https://github.com/Duncaen/OpenDoas/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/opendoas/opendoas-6.8.2.ebs",
+    "summary": "a portable version of the OpenBSD doas command",
+    "license": "ISC",
+    "license_ids": [
+      "ISC"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "opendoas"
+  },
+  {
+    "name": "openssh",
+    "version": "10.6p2",
+    "homepage": "https://www.openssh.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/openssh/openssh-10.6p2.ebs",
+    "summary": "a suite of secure networking utilities based on the secure shell protocol",
+    "license": "BSD",
+    "license_ids": [
+      "BSD"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "openssh"
+  },
+  {
+    "name": "openssl",
+    "version": "4.0.3",
+    "homepage": "https://openssl-library.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/openssl/openssl-4.0.3.ebs",
+    "summary": "robust, commercial-grade, full-featured, TLS toolkit",
+    "license": "Apache-2.0",
+    "license_ids": [
+      "Apache-2.0"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "openssl"
+  },
+  {
+    "name": "openvi",
+    "version": "7.9.33",
+    "homepage": "https://github.com/johnsonjh/OpenVi",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/openvi/openvi-7.9.33.ebs",
+    "summary": "portable implementation of vi, derived from openbsd",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "openvi"
+  },
+  {
+    "name": "patch",
+    "version": "2.8",
+    "homepage": "https://www.gnu.org/software/patch",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/patch/patch-2.8.ebs",
+    "summary": "applies textual changes to files",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "patch"
+  },
+  {
+    "name": "perl",
+    "version": "5.44.0",
+    "homepage": "https://www.perl.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/perl/perl-5.44.0.ebs",
+    "summary": "Perl programming language",
+    "license": "GPL-1.0-or-later",
+    "license_ids": [
+      "GPL-1.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "perl"
+  },
+  {
+    "name": "pfetch",
+    "version": "0.6.0",
+    "homepage": "https://github.com/dylanaraps/pfetch",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pfetch/pfetch-0.6.0.ebs",
+    "summary": "a pretty system information tool written in POSIX sh",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "pfetch"
+  },
+  {
+    "name": "pkgconf",
+    "version": "3.0.8",
+    "homepage": "https://github.com/pkgconf/pkgconf",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pkgconf/pkgconf-3.0.8.ebs",
+    "summary": "package compiler and linker metadata toolkit",
+    "license": "pkgconf",
+    "license_ids": [
+      "pkgconf"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "pkgconf"
+  },
+  {
+    "name": "popt",
+    "version": "1.19",
+    "homepage": "https://github.com/rpm-software-management/popt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/popt/popt-1.19.ebs",
+    "summary": "a command-line options parsing library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "popt"
+  },
+  {
+    "name": "procps-ng",
+    "version": "4.0.7",
+    "homepage": "https://sr.ht/~juanvel400/pxbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/procps-ng/procps-ng-4.0.7.ebs",
+    "summary": "utilities to monitor system resources",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "procps-ng"
+  },
+  {
+    "name": "pxbase",
+    "version": "0.5.0",
+    "homepage": "https://sr.ht/~juanvel400/pxbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase/pxbase-0.5.0.ebs",
+    "summary": "(f.k.a hbase) posix core user utils implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "pxbase"
+  },
+  {
+    "name": "pxbase",
+    "version": "0.6.0",
+    "homepage": "https://sr.ht/~juanvel400/pxbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase/pxbase-0.6.0.ebs",
+    "summary": "posix core user utilities implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "pxbase"
+  },
+  {
+    "name": "pxbase.static",
+    "version": "0.5.0",
+    "homepage": "https://sr.ht/~juanvel400/pxbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase.static/pxbase.static-0.5.0.ebs",
+    "summary": "(f.k.a hbase) a static and multicall build of pxbase",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "pxbase"
+  },
+  {
+    "name": "pxbase.static",
+    "version": "0.6.0",
+    "homepage": "https://sr.ht/~juanvel400/pxbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase.static/pxbase.static-0.6.0.ebs",
+    "summary": "(f.k.a hbase) a static and multicall build of pxbase",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "pxbase"
+  },
+  {
+    "name": "python",
+    "version": "3.15.0",
+    "homepage": "https://www.python.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/python/python-3.15.0.ebs",
+    "summary": "Python programming language",
+    "license": "PSF-2.0",
+    "license_ids": [
+      "PSF-2.0"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "python"
+  },
+  {
+    "name": "python-flit-core",
+    "version": "4.0.2",
+    "homepage": "https://pypi.org/project/flit-core/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/python-flit-core/python-flit-core-4.0.2.ebs",
+    "summary": "a minimal PEP 517 build backend",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "python-flit-core"
+  },
+  {
+    "name": "python-packaging",
+    "version": "26.3",
+    "homepage": "https://pypi.org/project/packaging/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/python-packaging/python-packaging-26.3.ebs",
+    "summary": "core utilities for Python package metadata and version handling",
+    "license": "Apache-2.0 OR BSD-2-Clause",
+    "license_ids": [
+      "Apache-2.0",
+      "BSD-2-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "python-packaging"
+  },
+  {
+    "name": "python-setuptools",
+    "version": "84.0.0",
+    "homepage": "https://pypi.org/project/setuptools/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/python-setuptools/python-setuptools-84.0.0.ebs",
+    "summary": "Python package build system and distribution utilities",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "python-setuptools"
+  },
+  {
+    "name": "python-wheel",
+    "version": "0.48.0",
+    "homepage": "https://pypi.org/project/wheel/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/python-wheel/python-wheel-0.48.0.ebs",
+    "summary": "built-package format for Python distributions",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "python-wheel"
+  },
+  {
+    "name": "rswc",
+    "version": "0.1.0",
+    "homepage": "https://sr.ht/~juanvel400/rswc",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/rswc/rswc-0.1.0.ebs",
+    "summary": "a tiny utility to download files from the network",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "rswc"
+  },
+  {
+    "name": "rswc.static",
+    "version": "0.1.0",
+    "homepage": "https://sr.ht/~juanvel400/rswc",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/rswc.static/rswc.static-0.1.0.ebs",
+    "summary": "a static build of rswc",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "rswc"
+  },
+  {
+    "name": "samurai",
+    "version": "1.3",
+    "homepage": "https://git.sr.ht/~mcf/samurai",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/samurai/samurai-1.3.ebs",
+    "summary": "ninja-compatible build tool written in C99",
+    "license": "ISC AND Apache-2.0 AND MIT",
+    "license_ids": [
+      "ISC",
+      "Apache-2.0",
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "samurai"
+  },
+  {
+    "name": "sbase",
+    "version": "c546c3a",
+    "homepage": "https://core.suckless.org/sbase/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sbase/sbase-c546c3a.ebs",
+    "summary": "collection of unix tools",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "sbase"
+  },
+  {
+    "name": "sbase.static",
+    "version": "c546c3a",
+    "homepage": "https://core.suckless.org/sbase/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sbase.static/sbase.static-c546c3a.ebs",
+    "summary": "a static build of sbase, using the sbase-box multicall binary",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "sbase"
+  },
+  {
+    "name": "scdoc",
+    "version": "1.11.5",
+    "homepage": "https://sr.ht/~sircmpwn/scdoc/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/scdoc/scdoc-1.11.5.ebs",
+    "summary": "small man page generator",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "scdoc"
+  },
+  {
+    "name": "sed",
+    "version": "4.10",
+    "homepage": "https://www.gnu.org/software/sed",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sed/sed-4.10.ebs",
+    "summary": "non-interactive command line editor",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "sed"
+  },
+  {
+    "name": "shadow",
+    "version": "4.20.3",
+    "homepage": "https://github.com/shadow-maint/shadow",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/shadow/shadow-4.20.3.ebs",
+    "summary": "utilities for user and group administration",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "shadow"
+  },
+  {
+    "name": "sharbase",
+    "version": "0.1.0",
+    "homepage": "https://sr.ht/~juanvel400/sharbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase/sharbase-0.1.0.ebs",
+    "summary": "a suite of shar(1)-related utilities",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "sharbase"
+  },
+  {
+    "name": "sharbase",
+    "version": "0.2.0",
+    "homepage": "https://sr.ht/~juanvel400/sharbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase/sharbase-0.2.0.ebs",
+    "summary": "a suite of shar(1)-related utilities",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "sharbase"
+  },
+  {
+    "name": "sharbase.static",
+    "version": "0.1.0",
+    "homepage": "https://sr.ht/~juanvel400/sharbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase.static/sharbase.static-0.1.0.ebs",
+    "summary": "a static build of sharbase",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "sharbase"
+  },
+  {
+    "name": "sharbase.static",
+    "version": "0.2.0",
+    "homepage": "https://sr.ht/~juanvel400/sharbase",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase.static/sharbase.static-0.2.0.ebs",
+    "summary": "a static build of sharbase",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "sharbase"
+  },
+  {
+    "name": "shush",
+    "version": "0.2.0",
+    "homepage": "https://git.sr.ht/~juanvel400/shush",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/shush/shush-0.2.0.ebs",
+    "summary": "a minimal POSIX sh implementation",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "shush"
+  },
+  {
+    "name": "shush.static",
+    "version": "0.2.0",
+    "homepage": "https://git.sr.ht/~juanvel400/shush",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/shush.static/shush.static-0.2.0.ebs",
+    "summary": "a static build of shush, lacking libedit support",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "shush"
+  },
+  {
+    "name": "sinit",
+    "version": "28c44b6",
+    "homepage": "https://core.suckless.org/sinit/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sinit/sinit-28c44b6.ebs",
+    "summary": "suckless init",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "sinit"
+  },
+  {
+    "name": "sqlite3",
+    "version": "3.53.4",
+    "homepage": "https://www.sqlite.org",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sqlite3/sqlite3-3.53.4.ebs",
+    "summary": "a small, fast, self-contained SQL database engine",
+    "license": "blessing",
+    "license_ids": [
+      "blessing"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "sqlite3"
+  },
+  {
+    "name": "texinfo",
+    "version": "7.3",
+    "homepage": "https://www.gnu.org/software/texinfo",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/texinfo/texinfo-7.3.ebs",
+    "summary": "the GNU documentation format",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "texinfo"
+  },
+  {
+    "name": "toybox",
+    "version": "0.8.15",
+    "homepage": "https://landley.net/toybox/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/toybox/toybox-0.8.15.ebs",
+    "summary": "common Linux command-line utilities bundled in a single binary",
+    "license": "0BSD",
+    "license_ids": [
+      "0BSD"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "toybox"
+  },
+  {
+    "name": "toybox.static",
+    "version": "0.8.15",
+    "homepage": "https://landley.net/toybox/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/toybox.static/toybox.static-0.8.15.ebs",
+    "summary": "a static build of toybox",
+    "license": "0BSD",
+    "license_ids": [
+      "0BSD"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "toybox"
+  },
+  {
+    "name": "tzdata",
+    "version": "2026f",
+    "homepage": "https://www.iana.org/time-zones",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/tzdata/tzdata-2026f.ebs",
+    "summary": "time zone database",
+    "license": "LicenseRef-Public-Domain",
+    "license_ids": [
+      "LicenseRef-Public-Domain"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "tzdata"
+  },
+  {
+    "name": "ubase",
+    "version": "e8249b4",
+    "homepage": "https://core.suckless.org/ubase/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/ubase/ubase-e8249b4.ebs",
+    "summary": "collection of unportable tools, similar in spirit to util-linux",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "ubase"
+  },
+  {
+    "name": "ubase.static",
+    "version": "e8249b4",
+    "homepage": "https://core.suckless.org/ubase/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/ubase.static/ubase.static-e8249b4.ebs",
+    "summary": "a static build of ubase, using the ubase-box multicall binary",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "ubase"
+  },
+  {
+    "name": "util-linux",
+    "version": "2.42.4",
+    "homepage": "https://github.com/util-linux/util-linux",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/util-linux/util-linux-2.42.4.ebs",
+    "summary": "low-level system utilities for a Linux system",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "util-linux"
+  },
+  {
+    "name": "vim",
+    "version": "9.2.1345",
+    "homepage": "https://www.vim.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/vim/vim-9.2.1345.ebs",
+    "summary": "vi improved",
+    "license": "Vim",
+    "license_ids": [
+      "Vim"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "vim"
+  },
+  {
+    "name": "xorriso",
+    "version": "1.5.9",
+    "homepage": "https://www.gnu.org/software/xorriso/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xorriso/xorriso-1.5.9.ebs",
+    "summary": "creates Rock Ridge ISO 9660 filesystems",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "xorriso"
+  },
+  {
+    "name": "xpt",
+    "version": "0.10.2",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.10.2.ebs",
+    "summary": "a package manager utility and library",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt",
+    "version": "0.11.0",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.11.0.ebs",
+    "summary": "a package manager utility and library",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt",
+    "version": "0.12.0",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.12.0.ebs",
+    "summary": "a package manager utility and library",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt",
+    "version": "0.13.2",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.13.2.ebs",
+    "summary": "a package manager utility and library",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt",
+    "version": "0.8.0",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.8.0.ebs",
+    "summary": "a package manager utility and library",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt.static",
+    "version": "0.10.2",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.10.2.ebs",
+    "summary": "a static build of xpt, lacking the networking subsystem",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt.static",
+    "version": "0.11.0",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.11.0.ebs",
+    "summary": "a static build of xpt, lacking the networking subsystem",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt.static",
+    "version": "0.12.0",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.12.0.ebs",
+    "summary": "a static build of xpt, lacking the networking subsystem",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt.static",
+    "version": "0.13.2",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.13.2.ebs",
+    "summary": "a static build of xpt, lacking the networking subsystem",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "xpt"
+  },
+  {
+    "name": "xpt.static",
+    "version": "0.8.0",
+    "homepage": "https://git.sr.ht/~juanvel400/xpt",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt.static/xpt.static-0.8.0.ebs",
+    "summary": "a static build of xpt, lacking the networking subsystem",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": "static",
+    "base_package": "xpt"
+  },
+  {
+    "name": "xz",
+    "version": "5.8.4",
+    "homepage": "https://tukaani.org/xz",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xz/xz-5.8.4.ebs",
+    "summary": "C89 implementation of the .xz file format",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "xz"
+  },
+  {
+    "name": "zlib",
+    "version": "1.3.2",
+    "homepage": "https://zlib.net",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/zlib/zlib-1.3.2.ebs",
+    "summary": "a lossless data-compression library",
+    "license": "Zlib",
+    "license_ids": [
+      "Zlib"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "zlib"
+  },
+  {
+    "name": "zlib",
+    "version": "1.4",
+    "homepage": "https://zlib.net",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/zlib/zlib-1.4.ebs",
+    "summary": "a lossless data-compression library",
+    "license": "Zlib",
+    "license_ids": [
+      "Zlib"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "zlib"
+  },
+  {
+    "name": "zstd",
+    "version": "1.5.7",
+    "homepage": "https://facebook.github.io/zstd",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/zstd/zstd-1.5.7.ebs",
+    "summary": "fast real-time compression algorithm",
+    "license": "BSD-3-Clause OR GPL-2.0-only",
+    "license_ids": [
+      "BSD-3-Clause",
+      "GPL-2.0-only"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ],
+    "variant": null,
+    "base_package": "zstd"
+  }
+]
