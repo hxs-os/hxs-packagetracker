@@ -1,36 +1,6 @@
 [
   {
     "name": "adam",
-    "version": "0.1.0",
-    "homepage": "https://sr.ht/~juanvel400/adam",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam/adam-0.1.0.ebs",
-    "source": "https://dl.juanvel400.com/adam/adam-0.1.0.tar.xz",
-    "summary": "a tiny PID 1 implementation",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "adam",
-    "version": "0.2.0",
-    "homepage": "https://sr.ht/~juanvel400/adam",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam/adam-0.2.0.ebs",
-    "source": "https://dl.juanvel400.com/adam/adam-0.2.0.tar.xz",
-    "summary": "a tiny PID 1 implementation",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "adam",
     "version": "0.3.0",
     "homepage": "https://sr.ht/~juanvel400/adam",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/adam/adam-0.3.0.ebs",
@@ -376,22 +346,6 @@
   },
   {
     "name": "gcc",
-    "version": "16.1.0",
-    "homepage": "https://www.gnu.org/software/gcc",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gcc/gcc-16.1.0.ebs",
-    "source": "https://ftp.gnu.org/gnu/gcc/gcc-16.1.0/gcc-16.1.0.tar.xz",
-    "summary": "GNU compiler collection",
-    "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
-    "license_ids": [
-      "GPL-3.0-or-later",
-      "GCC-exception-3.1"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "gcc",
     "version": "16.2.0",
     "homepage": "https://www.gnu.org/software/gcc",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/gcc/gcc-16.2.0.ebs",
@@ -497,57 +451,12 @@
     ]
   },
   {
-    "name": "hbase",
-    "version": "0.3.0",
-    "homepage": "https://git.sr.ht/~juanvel400/hbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase/hbase-0.3.0.ebs",
-    "source": "https://dl.juanvel400.com/hbase/hbase-0.3.0.tar.xz",
-    "summary": "a minimal posix core user utils implementation",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "hbase",
-    "version": "0.4.0",
-    "homepage": "https://git.sr.ht/~juanvel400/hbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hbase/hbase-0.4.0.ebs",
-    "source": "https://dl.juanvel400.com/hbase/hbase-0.4.0.tar.xz",
-    "summary": "a minimal posix core user utils implementation",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
     "name": "hello",
     "version": "0.1.3",
     "homepage": "https://sr.ht/~juanvel400/hello",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hello/hello-0.1.3.ebs",
     "source": "https://dl.juanvel400.com/hello/hello-0.1.3.tar.xz",
     "summary": "simple hello world program",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "hxs-base",
-    "version": "0.2.0",
-    "homepage": "https://sr.ht/~juanvel400/hxs-base",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hxs-base/hxs-base-0.2.0.ebs",
-    "source": "https://main.hxs.juanvel400.com/source/h/hxs-base/hxs-base-0.2.0.tar.gz",
-    "summary": "base files for an HxS system",
     "license": "BSD-3-Clause",
     "license_ids": [
       "BSD-3-Clause"
@@ -755,22 +664,6 @@
   },
   {
     "name": "linux-headers",
-    "version": "7.2.9",
-    "homepage": "https://kernel.org",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/linux-headers/linux-headers-7.2.9.ebs",
-    "source": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.9.tar.xz",
-    "summary": "headers for linux kernel interfaces",
-    "license": "GPL-2.0-only WITH Linux-syscall-note",
-    "license_ids": [
-      "GPL-2.0-only",
-      "Linux-syscall-note"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "linux-headers",
     "version": "7.3.4",
     "homepage": "https://kernel.org",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/linux-headers/linux-headers-7.3.4.ebs",
@@ -825,21 +718,6 @@
     "license": "GPL-3.0-or-later",
     "license_ids": [
       "GPL-3.0-or-later"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "man-pages",
-    "version": "6.19",
-    "homepage": "https://www.kernel.org/doc/man-pages/",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/man-pages/man-pages-6.19.ebs",
-    "source": "https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.19.tar.xz",
-    "summary": "manual pages for Linux systems",
-    "license": "Various",
-    "license_ids": [
-      "Various"
     ],
     "maintainers": [
       "me@juanvel400.com"
@@ -1117,21 +995,6 @@
   },
   {
     "name": "pxbase",
-    "version": "0.5.0",
-    "homepage": "https://sr.ht/~juanvel400/pxbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase/pxbase-0.5.0.ebs",
-    "source": "https://dl.juanvel400.com/pxbase/pxbase-0.5.0.tar.xz",
-    "summary": "(f.k.a hbase) posix core user utils implementation",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "pxbase",
     "version": "0.6.0",
     "homepage": "https://sr.ht/~juanvel400/pxbase",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pxbase/pxbase-0.6.0.ebs",
@@ -1315,21 +1178,6 @@
   },
   {
     "name": "sharbase",
-    "version": "0.1.0",
-    "homepage": "https://sr.ht/~juanvel400/sharbase",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase/sharbase-0.1.0.ebs",
-    "source": "https://dl.juanvel400.com/sharbase/sharbase-0.1.0.tar.xz",
-    "summary": "a suite of shar(1)-related utilities",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "sharbase",
     "version": "0.2.0",
     "homepage": "https://sr.ht/~juanvel400/sharbase",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sharbase/sharbase-0.2.0.ebs",
@@ -1495,70 +1343,10 @@
   },
   {
     "name": "xpt",
-    "version": "0.10.2",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.10.2.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.10.2.tar.xz",
-    "summary": "a package manager utility and library",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "xpt",
-    "version": "0.11.0",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.11.0.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.11.0.tar.xz",
-    "summary": "a package manager utility and library",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "xpt",
-    "version": "0.12.0",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.12.0.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.12.0.tar.xz",
-    "summary": "a package manager utility and library",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "xpt",
     "version": "0.13.2",
     "homepage": "https://git.sr.ht/~juanvel400/xpt",
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.13.2.ebs",
     "source": "https://dl.juanvel400.com/xpt/xpt-0.13.2.tar.xz",
-    "summary": "a package manager utility and library",
-    "license": "BSD-3-Clause",
-    "license_ids": [
-      "BSD-3-Clause"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "xpt",
-    "version": "0.8.0",
-    "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.8.0.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.8.0.tar.xz",
     "summary": "a package manager utility and library",
     "license": "BSD-3-Clause",
     "license_ids": [
@@ -1578,21 +1366,6 @@
     "license": "GPL-2.0-or-later",
     "license_ids": [
       "GPL-2.0-or-later"
-    ],
-    "maintainers": [
-      "me@juanvel400.com"
-    ]
-  },
-  {
-    "name": "zlib",
-    "version": "1.3.2",
-    "homepage": "https://zlib.net",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/zlib/zlib-1.3.2.ebs",
-    "source": "https://zlib.net/zlib-1.3.2.tar.xz",
-    "summary": "a lossless data-compression library",
-    "license": "Zlib",
-    "license_ids": [
-      "Zlib"
     ],
     "maintainers": [
       "me@juanvel400.com"
