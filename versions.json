@@ -1677,6 +1677,21 @@
     ]
   },
   {
+    "name": "wayland-protocols",
+    "version": "1.49",
+    "homepage": "https://wayland.freedesktop.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/wayland-protocols/wayland-protocols-1.49.ebs",
+    "source": "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.49/downloads/wayland-protocols-1.49.tar.xz",
+    "summary": "package containing protocols not available in the wayland package",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "which",
     "version": "2.25",
     "homepage": "https://carlowood.github.io/which/",
@@ -1686,6 +1701,21 @@
     "license": "GPL-3.0-or-later",
     "license_ids": [
       "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "xkeyboard-config",
+    "version": "2.49",
+    "homepage": "https://xkeyboard-config.freedesktop.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xkeyboard-config/xkeyboard-config-2.49.ebs",
+    "source": "https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/archive/xkeyboard-config-2.49/xkeyboard-config-xkeyboard-config-2.49.tar.gz",
+    "summary": "reference database of keyboard configuration data",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
     ],
     "maintainers": [
       "me@juanvel400.com"
