@@ -20,9 +20,10 @@ pkgdeps="musl"
 pkgprovides="libpixman"
 
 build() {
-    meson setup build --prefix=/usr \
+    meson setup build ${MESONFLAGS:-} --prefix=/usr \
         --sysconfdir=/etc --localstatedir=/var \
         --buildtype=release -Dtests=enabled
+    meson compile -C build
 }
 
 check() {

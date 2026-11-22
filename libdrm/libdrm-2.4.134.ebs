@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libdrm
+pkgver=2.4.134
+pkgsrc=https://dri.freedesktop.org/libdrm/libdrm-$pkgver.tar.xz
+pkgchecksum=sha256:ac5e74d157830eb8bee44c6a6bf3ad49774ef0dd2a72bdad74a8f20308b52a95
+pkgdesc="a userspace library for accessing the direct rendering manager"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://github.com/aleksander0m/libdrm"
+pkgcheck=true
+pkgdeps="musl,libpciaccess"
+pkgtriggers="man"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --buildtype=release -Dintel=enabled -Dnouveau=enabled \
+        -Dradeon=enabled -Dudev=true -Damdgpu=enabled
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --destdir "$pkgdir" --strip
+}

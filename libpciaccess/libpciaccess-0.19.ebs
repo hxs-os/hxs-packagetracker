@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libpciaccess
+pkgver=0.19
+pkgsrc=https://gitlab.freedesktop.org/xorg/lib/libpciaccess/-/archive/libpciaccess-$pkgver/libpciaccess-libpciaccess-$pkgver.tar.gz
+pkgchecksum=sha256:ae2d080c8394d2b36a54aed270bc826f1438e41e7daf783ca5cff60285529ae2
+pkgdesc="generic pci access library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://gitlab.freedesktop.org/xorg/lib/libpciaccess"
+pkgcheck=true
+pkgdeps="musl,zlib"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --libdir=lib --sysconfdir=/etc --localstatedir=/var \
+        --buildtype=release -Dzlib=enabled -Dinstall-scanpci=true
+
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --destdir "$pkgdir" --strip
+}

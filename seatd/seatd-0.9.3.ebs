@@ -1,0 +1,37 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=seatd
+pkgver=0.9.3
+pkgsrc=https://git.sr.ht/~kennylevinsen/seatd/archive/$pkgver.tar.gz
+pkgchecksum=sha256:302564d54d8e28191fadfd734f2675ecb0c9e0615a58011b89ef15dfa4dbaa96
+pkgdesc="a minimal seat management daemon"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://sr.ht/~kennylevinsen/seatd/"
+pkgcheck=true
+pkgdeps="musl"
+pkgprovides="libseat"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --buildtype=release -Dexamples=disabled -Dserver=enabled \
+        -Dlibseat-logind=disabled -Dlibseat-builtin=enabled \
+        -Dlibseat-seatd=enabled
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
