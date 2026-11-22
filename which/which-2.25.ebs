@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=which
+pkgver=2.25
+pkgsrc=https://carlowood.github.io/which/which-$pkgver.tar.gz
+pkgchecksum=sha256:1cb83e4f702e60b8211ab5ec4c2afbab1b1dec80209456a7d2faf7584ed225ea
+pkgdesc="shows the full path of commands"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://carlowood.github.io/which/"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man,info"
+
+build() {
+    CFLAGS="${CFLAGS:--std=gnu17}" ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var \
+        --enable-year2038
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+    rm -f "$pkgdir/usr/share/info/dir"
+}
