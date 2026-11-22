@@ -21,7 +21,7 @@ pkgprovides="libmpfr"
 pkgtriggers="info"
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --disable-rpath --enable-year2038
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
     make
 }
 

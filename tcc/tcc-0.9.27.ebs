@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=tcc
+pkgver=0.9.27
+pkgsrc=https://download.savannah.gnu.org/releases/tinycc/tcc-$pkgver.tar.bz2
+pkgchecksum=sha256:de23af78fca90ce32dff2dd45b3432b2334740bb9bb7b05bf60fdbfc396ceb9c
+pkgdesc="tiny c compiler"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="LGPL-2.1-or-later"
+pkghomepage="https://bellard.org/tcc/"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man,info"
+pkgprovides="libtcc"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --config-musl
+    make
+}
+
+check() {
+    make test
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

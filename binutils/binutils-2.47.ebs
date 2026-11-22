@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# the binutils formula uses {TARGET,HOST,BUILD}_TRIPLE variables to support both
+# Canadian cross-compilation and native builds
+
 #shellcheck disable=SC2034
 #shellcheck disable=SC2154
 #shellcheck disable=SC2086
@@ -19,19 +22,26 @@ pkgcheck=true
 pkgdeps="musl,zlib"
 pkgtriggers="man,info"
 
+_triple="${TARGET_TRIPLE:-$(cc -dumpmachine)}"
+
 prepare() {
-    sed '6031s/$add_dir//' -i ltmain.sh
+    sed '6031s/$add_dir//' ltmain.sh >ltmain.sh.tmp
+    mv ltmain.sh.tmp ltmain.sh
 }
 
 build() {
+
     mkdir build
     cd build || return 1
 
-    ../configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+    ../configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr --enable-static \
         --disable-rpath --enable-year2038 \
         --with-system-zlib --disable-werror \
         --with-system-getopt --enable-shared \
-        --enable-static
+        --build="${BUILD_TRIPLE:-${_triple}}" \
+        --host="${HOST_TRIPLE:-${_triple}}" \
+        --target="${TARGET_TRIPLE:-${_triple}}"
     make
 }
 
@@ -42,4 +52,5 @@ check() {
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
     rm -f "$pkgdir/usr/share/info/dir"
+    rm -rf "$pkgdir/usr/${TARGET_TRIPLE:-${_triple}}"
 }

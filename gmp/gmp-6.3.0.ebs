@@ -21,7 +21,7 @@ pkgprovides="libgmp"
 pkgtriggers="man,info"
 
 build() {
-    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
+    CFLAGS="${CFLAGS:--std=gnu17}" ./configure ${CONFIGUREFLAGS:-} --prefix=/usr
     make
 }
 
