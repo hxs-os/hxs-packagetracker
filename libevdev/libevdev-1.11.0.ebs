@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libevdev
+pkgver=1.11.0
+pkgsrc=https://www.freedesktop.org/software/libevdev/libevdev-$pkgver.tar.xz
+pkgchecksum=sha256:63f4ea1489858a109080e0b40bd43e4e0903a1e12ea888d581db8c495747c2d0
+pkgdesc="a wrapper library for evdev devices"
+pkgmaintainer="juanvel400 <me@juanvel400.com"
+pkglicense="MIT"
+pkghomepage="https://wiki.freedesktop.org/Software/libevdev/"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

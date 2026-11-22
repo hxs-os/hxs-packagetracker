@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libxkbcommon
+pkgver=1.13.2
+pkgsrc=https://github.com/xkbcommon/libxkbcommon/archive/refs/tags/xkbcommon-$pkgver.tar.gz
+pkgchecksum=sha256:acc4d5f7c3cbba5f9f8d08d8bdbeede84ecede46792f47929aa9321873385528
+pkgdesc="keymap handling library for toolkits and window systems"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT AND ISC AND HPND AND HPND-sell-variant AND MIT-open-group"
+pkghomepage="https://xkbcommon.org/"
+pkgcheck=true
+pkgdeps="musl,libxml2"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --libdir=lib --sysconfdir=/etc --localstatedir=/var \
+        -Denable-x11=false -Denable-wayland=false \
+        -Dxkb-config-root=/usr/share/X11/xkb \
+        -Dxkb-config-extra-path=/etc/xkb \
+        -Dxkb-config-unversioned-extensions-path=/usr/share/xkeyboard-config.d \
+        -Dxkb-config-versioned-extensions-path=/usr/share/X11/xkb.d
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --destdir "$pkgdir" --strip
+}

@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=mtdev
+pkgver=1.1.7
+pkgsrc=https://bitmath.se/org/code/mtdev/mtdev-$pkgver.tar.gz
+pkgchecksum=sha256:a55bd02a9af4dd266c0042ec608744fff3a017577614c057da09f1f4566ea32c
+pkgdesc="the multitouch protocol translation library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://bitmath.se/org/code/mtdev/"
+pkgcheck=true
+pkgdeps="musl"
+pkgprovides="libmtdev"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
