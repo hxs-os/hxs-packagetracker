@@ -752,6 +752,21 @@
     ]
   },
   {
+    "name": "libevdev",
+    "version": "1.11.0",
+    "homepage": "https://wiki.freedesktop.org/Software/libevdev/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libevdev/libevdev-1.11.0.ebs",
+    "source": "https://www.freedesktop.org/software/libevdev/libevdev-1.11.0.tar.xz",
+    "summary": "a wrapper library for evdev devices",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "juanvel400 <me@juanvel400.com"
+    ]
+  },
+  {
     "name": "libffi",
     "version": "3.8.1",
     "homepage": "https://github.com/libffi/libffi/",
@@ -806,6 +821,25 @@
     "license": "GPL-3.0-or-later",
     "license_ids": [
       "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "libxkbcommon",
+    "version": "1.13.2",
+    "homepage": "https://xkbcommon.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libxkbcommon/libxkbcommon-1.13.2.ebs",
+    "source": "https://github.com/xkbcommon/libxkbcommon/archive/refs/tags/xkbcommon-1.13.2.tar.gz",
+    "summary": "keymap handling library for toolkits and window systems",
+    "license": "MIT AND ISC AND HPND AND HPND-sell-variant AND MIT-open-group",
+    "license_ids": [
+      "MIT",
+      "ISC",
+      "HPND",
+      "HPND-sell-variant",
+      "MIT-open-group"
     ],
     "maintainers": [
       "me@juanvel400.com"
@@ -989,6 +1023,21 @@
     "license": "GPL-3.0-or-later",
     "license_ids": [
       "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "mtdev",
+    "version": "1.1.7",
+    "homepage": "https://bitmath.se/org/code/mtdev/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/mtdev/mtdev-1.1.7.ebs",
+    "source": "https://bitmath.se/org/code/mtdev/mtdev-1.1.7.tar.gz",
+    "summary": "the multitouch protocol translation library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
     ],
     "maintainers": [
       "me@juanvel400.com"
