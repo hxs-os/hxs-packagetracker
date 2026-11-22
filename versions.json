@@ -782,6 +782,21 @@
     ]
   },
   {
+    "name": "libinput",
+    "version": "1.32.0",
+    "homepage": "https://wayland.freedesktop.org/libinput/doc/latest/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libinput/libinput-1.32.0.ebs",
+    "source": "https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.32.0/libinput-1.32.0.tar.gz",
+    "summary": "input device management and event handling library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "libisl",
     "version": "0.28",
     "homepage": "https://libisl.sourceforge.io",
