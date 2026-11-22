@@ -1508,6 +1508,21 @@
     ]
   },
   {
+    "name": "which",
+    "version": "2.25",
+    "homepage": "https://carlowood.github.io/which/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/which/which-2.25.ebs",
+    "source": "https://carlowood.github.io/which/which-2.25.tar.gz",
+    "summary": "shows the full path of commands",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "xorriso",
     "version": "1.5.9",
     "homepage": "https://www.gnu.org/software/xorriso/",
