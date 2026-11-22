@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=apr-util
+pkgver=1.6.6
+pkgsrc=https://archive.apache.org/dist/apr/apr-util-$pkgver.tar.gz
+pkgchecksum=sha256:acd5f38440eda830e40c4fe35c2a6b8119493cfdba9c9d73d985c317beb4e4f8
+pkgdesc="apache portable runtime utilities"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="Apache-2.0"
+pkghomepage="https://apr.apache.org/"
+pkgcheck=true
+pkgdeps="musl,openssl,apr,expat"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --with-apr=/usr --with-gdbm=/usr --with-openssl=/usr \
+        --with-crypto
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
