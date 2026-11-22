@@ -752,6 +752,21 @@
     ]
   },
   {
+    "name": "libxml2",
+    "version": "2.15.4",
+    "homepage": "https://gitlab.gnome.org/GNOME/libxml2",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libxml2/libxml2-2.15.4.ebs",
+    "source": "https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz",
+    "summary": "libraries and utilities used to parse XML files",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "linux",
     "version": "7.3.4",
     "homepage": "https://www.kernel.org",
