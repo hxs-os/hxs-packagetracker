@@ -1115,6 +1115,21 @@
     ]
   },
   {
+    "name": "pixman",
+    "version": "0.46.4",
+    "homepage": "https://www.pixman.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pixman/pixman-0.46.4.ebs",
+    "source": "https://www.cairographics.org/releases/pixman-0.46.4.tar.xz",
+    "summary": "a low-level software library for pixel manipulation",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "pkgconf",
     "version": "3.0.8",
     "homepage": "https://github.com/pkgconf/pkgconf",
@@ -1412,6 +1427,21 @@
     "license": "blessing",
     "license_ids": [
       "blessing"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "tcc",
+    "version": "0.9.27",
+    "homepage": "https://bellard.org/tcc/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/tcc/tcc-0.9.27.ebs",
+    "source": "https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.bz2",
+    "summary": "tiny c compiler",
+    "license": "LGPL-2.1-or-later",
+    "license_ids": [
+      "LGPL-2.1-or-later"
     ],
     "maintainers": [
       "me@juanvel400.com"
