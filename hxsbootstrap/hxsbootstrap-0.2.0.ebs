@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=hxsbootstrap
+pkgver=0.2.0
+pkgsrc=https://main.hxs.juanvel400.com/source/h/hxsbootstrap/hxsbootstrap-$pkgver.tar.xz
+pkgchecksum=sha256:beefb26f018a92a7e14caa77b1c4770bffabf84695be8f2767776c9372fd0e54
+pkgdesc="a simple set of scripts to bootstrap an HxS system"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://sr.ht/~juanvel400/hxsbootstrap"
+pkgcheck=false
+pkgtriggers="man"
+
+build() {
+    :
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX=/usr
+}
