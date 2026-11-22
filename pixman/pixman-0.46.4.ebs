@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=pixman
+pkgver=0.46.4
+pkgsrc=https://www.cairographics.org/releases/pixman-$pkgver.tar.xz
+pkgchecksum=sha256:a098c33924754ad43f981b740f6d576c70f9ed1006e12221b1845431ebce1239
+pkgdesc="a low-level software library for pixel manipulation"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://www.pixman.org/"
+pkgcheck=true
+pkgdeps="musl"
+pkgprovides="libpixman"
+
+build() {
+    meson setup build --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var \
+        --buildtype=release -Dtests=enabled
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --destdir="$pkgdir" --strip
+}
