@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=wayland
+pkgver=1.26.0
+pkgsrc=https://gitlab.freedesktop.org/wayland/wayland/-/releases/$pkgver/downloads/wayland-$pkgver.tar.xz
+pkgchecksum=sha256:64176eaa46e4969903e286f8e5ef8331affc17fdf03ac9b58381d2b23162b7a3
+pkgdesc="a modern display server protocol"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://wayland.freedesktop.org/"
+pkgcheck=true
+pkgdeps="musl,libffi,expat,libxml2"
+pkgprovides="libwayland"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dlibraries=true \
+        -Dtests=true -Ddocumentation=false -Dscanner=true
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
