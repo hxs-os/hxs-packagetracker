@@ -1,0 +1,37 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libinput
+pkgver=1.32.0
+pkgsrc=https://gitlab.freedesktop.org/libinput/libinput/-/archive/$pkgver/libinput-$pkgver.tar.gz
+pkgchecksum=sha256:7dd6c1ca964c86eb6810ccd6639cda634e68bdca43bf3afec39e94e942fac8d4
+pkgdesc="input device management and event handling library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://wayland.freedesktop.org/libinput/doc/latest/"
+pkgcheck=true
+pkgdeps="musl,libevdev,mtdev,eudev"
+pkgtriggers="man"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --libdir=lib --sysconfdir=/etc \
+        --localstatedir=/var --buildtype=release \
+        -Dmtdev=true -Dtests=true -Dlibwacom=false \
+        -Ddebug-gui=false
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --destdir "$pkgdir" --strip
+}
