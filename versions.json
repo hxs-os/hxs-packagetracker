@@ -1448,6 +1448,21 @@
     ]
   },
   {
+    "name": "tree",
+    "version": "2.3.2",
+    "homepage": "https://github.com/Old-Man-Programmer/tree",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/tree/tree-2.3.2.ebs",
+    "source": "https://oldmanprogrammer.net/tar/tree/tree-2.3.2.tgz",
+    "summary": "displays a tree view of a directory",
+    "license": "GPL-2.0-or-later",
+    "license_ids": [
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "tzdata",
     "version": "2026f",
     "homepage": "https://www.iana.org/time-zones",
