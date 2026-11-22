@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=tree
+pkgver=2.3.2
+pkgsrc=https://oldmanprogrammer.net/tar/tree/tree-$pkgver.tgz
+pkgchecksum=sha256:6b941dd6cbecfb4d3250700e4d08d8e0c251488981dd4868b90d744234300e21
+pkgdesc="displays a tree view of a directory"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later"
+pkghomepage="https://github.com/Old-Man-Programmer/tree"
+pkgcheck=false
+pkgdeps="musl"
+pkgtriggers="man"
+
+build() {
+    make
+}
+
+package() {
+    install -d "$pkgdir/usr/bin" \
+        "$pkgdir/usr/share/man/man1"
+
+    install -m 755 tree "$pkgdir/usr/bin/tree"
+    install -m 644 doc/tree.1 "$pkgdir/usr/share/man/man1/tree.1"
+}
