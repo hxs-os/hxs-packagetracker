@@ -24,7 +24,7 @@ build() {
         --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
         --buildtype=release -Dexamples=disabled -Dserver=enabled \
         -Dlibseat-logind=disabled -Dlibseat-builtin=enabled \
-        -Dlibseat-seatd=enabled
+        --libdir=lib -Dlibseat-seatd=enabled
     meson compile -C build
 }
 

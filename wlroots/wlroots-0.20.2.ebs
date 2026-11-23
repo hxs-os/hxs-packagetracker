@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=wlroots
+pkgver=0.20.2
+pkgsrc=https://gitlab.freedesktop.org/wlroots/wlroots/-/releases/$pkgver/downloads/wlroots-$pkgver.tar.gz
+pkgchecksum=sha256:80c567d2ed4efb2cfa6b077f22c7a710d9c78ba4e185a75e8694001114af0733
+pkgdesc="a modular wayland compositor library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://gitlab.freedesktop.org/wlroots/wlroots/"
+pkgcheck=true
+pkgdeps="musl,wayland,wayland-protocols,libdrm,libinput,libxkbcommon,eudev,pixman,seatd"
+pkgprovides="libwlroots"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dxwayland=disabled \
+        -Dsession=enabled
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}

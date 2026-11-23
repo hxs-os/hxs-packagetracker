@@ -21,7 +21,7 @@ pkgprovides="libpixman"
 
 build() {
     meson setup build ${MESONFLAGS:-} --prefix=/usr \
-        --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --sysconfdir=/etc --localstatedir=/var \
         --buildtype=release -Dtests=enabled
     meson compile -C build
 }
