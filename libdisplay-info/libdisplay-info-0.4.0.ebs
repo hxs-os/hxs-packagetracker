@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libdisplay-info
+pkgver=0.4.0
+pkgsrc=https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.4.0/downloads/libdisplay-info-0.4.0.tar.xz
+pkgchecksum=sha256:43b180baa143e2035654759d84e2b2f5ee77d5fe817c423838c7fe59c0d68459
+pkgdesc="edid and displayid library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://gitlab.freedesktop.org/emersion/libdisplay-info"
+pkgcheck=true
+pkgdeps="musl"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}

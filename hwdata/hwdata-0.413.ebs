@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=hwdata
+pkgver=0.413
+pkgsrc=https://github.com/vcrhonek/hwdata/archive/refs/tags/v$pkgver.tar.gz
+pkgchecksum=sha256:5a71ab7a48c668ef912fcfdbec046949087019f8dd7fb967445d36fbeb778350
+pkgdesc="hardware configuration and identification data"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-2.0-or-later AND LicenseRef-XFree86-1.0"
+pkghomepage="https://github.com/vcrhonek/hwdata"
+pkgcheck=true
+pkgdeps="musl"
+
+build() {
+    make || true
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX=/usr
+}
