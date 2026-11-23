@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=fontconfig
+pkgver=2.18.4
+pkgsrc=https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/$pkgver/fontconfig-$pkgver.tar.xz
+pkgchecksum=sha256:95013637eff5f81d4871dd16cd098c273264c16d0f9f0b27cc43b81b2794bee3
+pkgdesc="font configuration and customization library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://wiki.freedesktop.org/Software/fontconfig/"
+pkgcheck=true
+pkgdeps="musl,freetype,libxml2"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dnls=disabled \
+        -Dtools=enabled -Dtests=enabled -Dxml-backend=libxml2
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
