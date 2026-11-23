@@ -934,6 +934,21 @@
     ]
   },
   {
+    "name": "libjpeg",
+    "version": "10",
+    "homepage": "https://ijg.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libjpeg/libjpeg-10.ebs",
+    "source": "https://ijg.org/files/jpegsrc.v10.tar.gz",
+    "summary": "JPEG manipulation library",
+    "license": "IJG",
+    "license_ids": [
+      "IJG"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "libpciaccess",
     "version": "0.19",
     "homepage": "https://gitlab.freedesktop.org/xorg/lib/libpciaccess",
@@ -1865,6 +1880,21 @@
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/wayland-protocols/wayland-protocols-1.49.ebs",
     "source": "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.49/downloads/wayland-protocols-1.49.tar.xz",
     "summary": "package containing protocols not available in the wayland package",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "wbg",
+    "version": "1.3.0",
+    "homepage": "https://codeberg.org/dnkl/wbg",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/wbg/wbg-1.3.0.ebs",
+    "source": "https://codeberg.org/dnkl/wbg/releases/download/1.3.0/wbg-1.3.0.tar.gz",
+    "summary": "super simple wallpaper application for wayland compositors",
     "license": "MIT",
     "license_ids": [
       "MIT"
