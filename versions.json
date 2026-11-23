@@ -768,6 +768,21 @@
     ]
   },
   {
+    "name": "json-c",
+    "version": "0.19",
+    "homepage": "https://github.com/json-c/json-c/wiki",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/json-c/json-c-0.19.ebs",
+    "source": "https://github.com/json-c/json-c/releases/download/json-c-0.19-20260627/json-c-0.19.tar.gz",
+    "summary": "a JSON implementation in C",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "kbd",
     "version": "2.10.0",
     "homepage": "https://github.com/legionus/kbd",
@@ -1355,6 +1370,22 @@
     "license": "GPL-3.0-or-later",
     "license_ids": [
       "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "pcre2",
+    "version": "10.49",
+    "homepage": "http://www.pcre2.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pcre2/pcre2-10.49.ebs",
+    "source": "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.49/pcre2-10.49.tar.gz",
+    "summary": "a library implementing regular expression pattern matching",
+    "license": "BSD-3-Clause WITH PCRE2-exception",
+    "license_ids": [
+      "BSD-3-Clause",
+      "PCRE2-exception"
     ],
     "maintainers": [
       "me@juanvel400.com"
