@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=json-c
+pkgver=0.19
+pkgsrc=https://github.com/json-c/json-c/releases/download/json-c-$pkgver-20260627/json-c-$pkgver.tar.gz
+pkgchecksum=sha256:37ad0249902e301bd9052bf712e511fcc6acff4ecaad4b5900aad9ce564e26de
+pkgdesc="a JSON implementation in C"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://github.com/json-c/json-c/wiki"
+pkgcheck=true
+pkgdeps="musl"
+pkgprovides="libjson-c"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dbuild_apps=false
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
