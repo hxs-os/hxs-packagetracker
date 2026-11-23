@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=foot
+pkgver=1.28.0
+pkgsrc=https://codeberg.org/dnkl/foot/releases/download/$pkgver/foot-$pkgver.tar.gz
+pkgchecksum=sha256:ee73c292a4b457004b38c2df178eac025ab0b849fdd9e13253c1f8b5cf110710
+pkgdesc="a fast, lightweight and minimalistic wayland terminal emulator"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://codeberg.org/dnkl/foot"
+pkgcheck=true
+pkgdeps="musl,wayland,wayland-protocols,pixman,libxkbcommon,fcft,tllist,utf8proc"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Ddocs=disabled \
+        -Dtests=true
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+
+    # avoid collisions with ncurses
+    rm -f "$pkgdir/usr/share/terminfo/f/foot" "$pkgdir/usr/share/terminfo/f/foot-direct"
+}
