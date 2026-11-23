@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=otf-ibm-plex-mono
+pkgver=2.5.0
+pkgsrc=https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%40$pkgver/ibm-plex-mono.zip
+pkgchecksum=sha256:6d23f01257663d8cc49a0d64c22ced630b79e0e2a0ac08a0da86e9a38bbc481c
+pkgdesc="the IBM Plex typeface"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="OFL-1.1"
+pkghomepage="https://www.ibm.com/plex/"
+pkgcheck=false
+pkgdeps="musl,fontconfig"
+pkgprovides="fonts:otf:ibm-plex-mono"
+
+build() {
+    :
+}
+
+package() {
+    install -d "$pkgdir/usr/share/fonts/opentype/otf-ibm-plex-mono"
+    install -m 644 fonts/complete/otf/*.otf "$pkgdir/usr/share/fonts/opentype/otf-ibm-plex-mono"
+}
