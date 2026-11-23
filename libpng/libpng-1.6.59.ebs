@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=libpng
+pkgver=1.6.59
+pkgsrc=https://downloads.sourceforge.net/project/libpng/libpng16/$pkgver/libpng-$pkgver.tar.xz
+pkgchecksum=sha256:d80dd2a38a37f803cb9b6ac7b14bd6e74ddc3b654780a8380bdf93523fdb4389
+pkgdesc="the official PNG reference library"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="libpng"
+pkghomepage="https://www.libpng.org/"
+pkgcheck=true
+pkgdeps="musl,zlib"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var \
+        --enable-intel-sse --enable-hardware-optimizations
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}

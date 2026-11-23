@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=fuzzel
+pkgver=1.15.0
+pkgsrc=https://codeberg.org/dnkl/fuzzel/releases/download/$pkgver/fuzzel-$pkgver.tar.gz
+pkgchecksum=sha256:11bee600e19ee1638db592e41980445673224716fbedbd0213b25153325f4182
+pkgdesc="app launcher and fuzzy finder for Wayland"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://codeberg.org/dnkl/fuzzel"
+pkgcheck=true
+pkgdeps="musl,libpng,tllist,fcft"
+pkgtriggers="man"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dsystem-nanosvg=disabled \
+        -Denable-cairo=disabled
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
