@@ -889,6 +889,21 @@
     ]
   },
   {
+    "name": "libevent",
+    "version": "2.1.13",
+    "homepage": "https://libevent.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libevent/libevent-2.1.13.ebs",
+    "source": "https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz",
+    "summary": "asynchronous event notification library",
+    "license": "BSD-3-Clause",
+    "license_ids": [
+      "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "libffi",
     "version": "3.8.1",
     "homepage": "https://github.com/libffi/libffi/",
@@ -1751,6 +1766,21 @@
     ],
     "maintainers": [
       "juanvel400 <me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "tmux",
+    "version": "3.8",
+    "homepage": "https://tmux.app/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/tmux/tmux-3.8.ebs",
+    "source": "https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz",
+    "summary": "terminal multiplexer",
+    "license": "ISC",
+    "license_ids": [
+      "ISC"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
     ]
   },
   {
