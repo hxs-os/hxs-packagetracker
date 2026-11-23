@@ -450,6 +450,21 @@
     ]
   },
   {
+    "name": "foot",
+    "version": "1.28.0",
+    "homepage": "https://codeberg.org/dnkl/foot",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/foot/foot-1.28.0.ebs",
+    "source": "https://codeberg.org/dnkl/foot/releases/download/1.28.0/foot-1.28.0.tar.gz",
+    "summary": "a fast, lightweight and minimalistic wayland terminal emulator",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "freetype",
     "version": "2.15.0",
     "homepage": "https://freetype.org/",
@@ -1250,6 +1265,21 @@
     "license": "BSD-3-Clause",
     "license_ids": [
       "BSD-3-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "otf-ibm-plex-mono",
+    "version": "2.5.0",
+    "homepage": "https://www.ibm.com/plex/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/otf-ibm-plex-mono/otf-ibm-plex-mono-2.5.0.ebs",
+    "source": "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%402.5.0/ibm-plex-mono.zip",
+    "summary": "the IBM Plex typeface",
+    "license": "OFL-1.1",
+    "license_ids": [
+      "OFL-1.1"
     ],
     "maintainers": [
       "me@juanvel400.com"
