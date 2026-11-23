@@ -481,6 +481,21 @@
     ]
   },
   {
+    "name": "fuzzel",
+    "version": "1.15.0",
+    "homepage": "https://codeberg.org/dnkl/fuzzel",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/fuzzel/fuzzel-1.15.0.ebs",
+    "source": "https://codeberg.org/dnkl/fuzzel/releases/download/1.15.0/fuzzel-1.15.0.tar.gz",
+    "summary": "app launcher and fuzzy finder for Wayland",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "gawk",
     "version": "5.4.1",
     "homepage": "https://www.gnu.org/software/gawk",
@@ -928,6 +943,21 @@
     "license": "MIT",
     "license_ids": [
       "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "libpng",
+    "version": "1.6.59",
+    "homepage": "https://www.libpng.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libpng/libpng-1.6.59.ebs",
+    "source": "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.59/libpng-1.6.59.tar.xz",
+    "summary": "the official PNG reference library",
+    "license": "Libpng",
+    "license_ids": [
+      "Libpng"
     ],
     "maintainers": [
       "me@juanvel400.com"
