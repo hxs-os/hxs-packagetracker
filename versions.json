@@ -270,6 +270,21 @@
     ]
   },
   {
+    "name": "dwl",
+    "version": "0.9",
+    "homepage": "https://codeberg.org/dwl/dwl",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/dwl/dwl-0.9.ebs",
+    "source": "https://codeberg.org/dwl/dwl/releases/download/v0.9/dwl-v0.9.tar.gz",
+    "summary": "a compact, hackable compositor for wayland",
+    "license": "GPL-3.0-or-later",
+    "license_ids": [
+      "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "e2fsprogs",
     "version": "1.47.4",
     "homepage": "https://e2fsprogs.sourceforge.net/",
@@ -360,6 +375,21 @@
     ]
   },
   {
+    "name": "fcft",
+    "version": "3.3.3",
+    "homepage": "https://codeberg.org/dnkl/fcft",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/fcft/fcft-3.3.3.ebs",
+    "source": "https://codeberg.org/dnkl/fcft/releases/download/3.3.3/fcft-3.3.3.tar.gz",
+    "summary": "a simple library for font loading and glyph rasterization",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "file",
     "version": "5.48",
     "homepage": "https://www.darwinsys.com/file/",
@@ -399,6 +429,37 @@
     "license": "BSD-3-Clause-flex",
     "license_ids": [
       "BSD-3-Clause-flex"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "fontconfig",
+    "version": "2.18.4",
+    "homepage": "https://wiki.freedesktop.org/Software/fontconfig/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/fontconfig/fontconfig-2.18.4.ebs",
+    "source": "https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/2.18.4/fontconfig-2.18.4.tar.xz",
+    "summary": "font configuration and customization library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "freetype",
+    "version": "2.15.0",
+    "homepage": "https://freetype.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/freetype/freetype-2.15.0.ebs",
+    "source": "https://download.savannah.gnu.org/releases/freetype/freetype-2.15.0.tar.xz",
+    "summary": "font rendering software library",
+    "license": "FTL AND GPL-2.0-or-later",
+    "license_ids": [
+      "FTL",
+      "GPL-2.0-or-later"
     ],
     "maintainers": [
       "me@juanvel400.com"
@@ -571,6 +632,22 @@
     ]
   },
   {
+    "name": "hwdata",
+    "version": "0.413",
+    "homepage": "https://github.com/vcrhonek/hwdata",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/hwdata/hwdata-0.413.ebs",
+    "source": "https://github.com/vcrhonek/hwdata/archive/refs/tags/v0.413.tar.gz",
+    "summary": "hardware configuration and identification data",
+    "license": "GPL-2.0-or-later AND LicenseRef-XFree86-1.0",
+    "license_ids": [
+      "GPL-2.0-or-later",
+      "LicenseRef-XFree86-1.0"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "hxs-base",
     "version": "0.3.0",
     "homepage": "https://sr.ht/~juanvel400/hxs-base",
@@ -716,6 +793,21 @@
     "license": "BSD-2-Clause",
     "license_ids": [
       "BSD-2-Clause"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "libdisplay-info",
+    "version": "0.4.0",
+    "homepage": "https://gitlab.freedesktop.org/emersion/libdisplay-info",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libdisplay-info/libdisplay-info-0.4.0.ebs",
+    "source": "https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.4.0/downloads/libdisplay-info-0.4.0.tar.xz",
+    "summary": "edid and displayid library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
     ],
     "maintainers": [
       "me@juanvel400.com"
@@ -1572,6 +1664,21 @@
     ]
   },
   {
+    "name": "tllist",
+    "version": "1.1.0",
+    "homepage": "https://codeberg.org/dnkl/tllist",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/tllist/tllist-1.1.0.ebs",
+    "source": "https://codeberg.org/dnkl/tllist/releases/download/1.1.0/tllist-1.1.0.tar.gz",
+    "summary": "a C header file only implementation of a typed linked list",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "juanvel400 <me@juanvel400.com"
+    ]
+  },
+  {
     "name": "toybox",
     "version": "0.8.15",
     "homepage": "https://landley.net/toybox/",
@@ -1623,6 +1730,21 @@
     "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/ubase/ubase-e8249b4.ebs",
     "source": "https://main.hxs.juanvel400.com/source/u/ubase/ubase-e8249b4.tar.gz",
     "summary": "collection of unportable tools, similar in spirit to util-linux",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "utf8proc",
+    "version": "2.12.0",
+    "homepage": "https://juliastrings.github.io/utf8proc/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/utf8proc/utf8proc-2.12.0.ebs",
+    "source": "https://github.com/JuliaStrings/utf8proc/releases/download/v2.12.0/utf8proc-2.12.0.tar.gz",
+    "summary": "a small, clean C library that provides Unicode processing",
     "license": "MIT",
     "license_ids": [
       "MIT"
