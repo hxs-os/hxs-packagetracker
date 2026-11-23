@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=dwl
+pkgver=0.9
+pkgsrc=https://codeberg.org/dwl/dwl/releases/download/v$pkgver/dwl-v$pkgver.tar.gz
+pkgchecksum=sha256:51ed5da49942ca3272b6f2c4f1d7641b0b947a6eb1c264dce8a65b4d245596af
+pkgdesc="a compact, hackable compositor for wayland"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="GPL-3.0-or-later"
+pkghomepage="https://codeberg.org/dwl/dwl"
+pkgcheck=true
+pkgdeps="musl,wlroots,libinput,wayland,wayland-protocols"
+
+build() {
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir" PREFIX=/usr
+}
