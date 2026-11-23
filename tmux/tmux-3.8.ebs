@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=tmux
+pkgver=3.8
+pkgsrc=https://github.com/tmux/tmux/releases/download/$pkgver/tmux-$pkgver.tar.gz
+pkgchecksum=sha256:e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e
+pkgdesc="terminal multiplexer"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="ISC"
+pkghomepage="https://tmux.app/"
+pkgcheck=true
+pkgdeps="musl,libevent,utf8proc"
+pkgtriggers="man"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --enable-utf8proc --disable-utempter --disable-systemd \
+        --disable-sixel --disable-jemalloc
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+}
