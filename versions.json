@@ -1707,6 +1707,21 @@
     ]
   },
   {
+    "name": "wlroots",
+    "version": "0.20.2",
+    "homepage": "https://gitlab.freedesktop.org/wlroots/wlroots/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/wlroots/wlroots-0.20.2.ebs",
+    "source": "https://gitlab.freedesktop.org/wlroots/wlroots/-/releases/0.20.2/downloads/wlroots-0.20.2.tar.gz",
+    "summary": "a modular wayland compositor library",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "xkeyboard-config",
     "version": "2.49",
     "homepage": "https://xkeyboard-config.freedesktop.org/",
