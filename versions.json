@@ -905,6 +905,22 @@
     ]
   },
   {
+    "name": "libcap",
+    "version": "2.78",
+    "homepage": "https://git.kernel.org/pub/scm/libs/libcap/libcap.git/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/libcap/libcap-2.78.ebs",
+    "source": "https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.78.tar.xz",
+    "summary": "linux capabilities library",
+    "license": "BSD-3-Clause OR GPL-2.0-or-later",
+    "license_ids": [
+      "BSD-3-Clause",
+      "GPL-2.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "libdisplay-info",
     "version": "0.4.0",
     "homepage": "https://gitlab.freedesktop.org/emersion/libdisplay-info",
@@ -1356,6 +1372,21 @@
     "license": "ISC",
     "license_ids": [
       "ISC"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "openrc",
+    "version": "0.64.1",
+    "homepage": "https://github.com/OpenRC/openrc",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/openrc/openrc-0.64.1.ebs",
+    "source": "https://github.com/OpenRC/openrc/archive/0.64.1/openrc-0.64.1.tar.gz",
+    "summary": "the OpenRC init system",
+    "license": "BSD-2-Clause",
+    "license_ids": [
+      "BSD-2-Clause"
     ],
     "maintainers": [
       "me@juanvel400.com"
