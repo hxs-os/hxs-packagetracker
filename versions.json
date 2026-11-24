@@ -1846,6 +1846,21 @@
     ]
   },
   {
+    "name": "swaybg",
+    "version": "1.2.2",
+    "homepage": "https://github.com/swaywm/swaybg",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/swaybg/swaybg-1.2.2.ebs",
+    "source": "https://github.com/swaywm/swaybg/releases/download/v1.2.2/swaybg-1.2.2.tar.gz",
+    "summary": "wallpaper tool for wayland compositors",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "tcc",
     "version": "0.9.27",
     "homepage": "https://bellard.org/tcc/",
