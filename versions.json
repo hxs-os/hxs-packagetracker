@@ -1831,6 +1831,21 @@
     ]
   },
   {
+    "name": "sway",
+    "version": "1.12",
+    "homepage": "https://swaywm.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/sway/sway-1.12.ebs",
+    "source": "https://github.com/swaywm/sway/releases/download/1.12/sway-1.12.tar.gz",
+    "summary": "i3-compatible wayland compositor",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "tcc",
     "version": "0.9.27",
     "homepage": "https://bellard.org/tcc/",
