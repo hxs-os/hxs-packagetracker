@@ -1,0 +1,43 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=openrc
+pkgver=0.64.1
+pkgsrc=https://github.com/OpenRC/openrc/archive/$pkgver/openrc-$pkgver.tar.gz
+pkgchecksum=sha256:56d6d24c7fd2ca15d1abd1fb82ce5430629a71acb2c3fa12760300243dbd0baa
+pkgdesc="the OpenRC init system"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-2-Clause"
+pkghomepage="https://github.com/OpenRC/openrc"
+pkgcheck=true
+pkgdeps="musl,libcap"
+pkgtriggers="man"
+pkgprovides="librc,libeinfo"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release --bindir=/usr/bin \
+        --sbindir=/usr/sbin -Dbranding=\"HxS\" -Dshell=/bin/sh \
+        -Dselinux=disabled -Dsysvinit=true -Dpam=false \
+        -Daudit=disabled
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+
+    rm -f "$pkgdir/usr/sbin/init" "$pkgdir/usr/sbin/halt" \
+        "$pkgdir/usr/sbin/poweroff" "$pkgdir/usr/sbin/shutdown" \
+        "$pkgdir/usr/sbin/reboot"
+}
