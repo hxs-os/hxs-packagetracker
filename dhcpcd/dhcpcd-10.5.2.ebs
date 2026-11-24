@@ -16,7 +16,7 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-2-Clause"
 pkghomepage="https://roy.marples.name/projects/dhcpcd"
 pkgcheck=true
-pkgprovides="system:dhcp"
+pkgprovides="system:dhcp,svc:openrc:dhcpcd"
 pkgdeps="musl"
 pkgtriggers="man"
 
@@ -26,9 +26,26 @@ build() {
 }
 
 check() {
-    make test
+    make testusr/sbin/
 }
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+
+    mkdir -p "$pkgdir/etc/init.d"
+    cat <<'EOF' >"$pkgdir/etc/init.d/dhcpcd"
+#!/sbin/openrc-run
+
+description="dhcp / ipv4ll / ipv6ra / dhcpv6 client"
+
+command="/usr/sbin/dhcpcd"
+command_args="-B -f /etc/dhcpcd.conf"
+command_background=true
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+    provide net
+}
+EOF
+    chmod +x "$pkgdir/etc/init.d/dhcpcd"
 }
