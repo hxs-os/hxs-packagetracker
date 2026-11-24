@@ -20,7 +20,7 @@ pkgdeps="musl"
 pkgprovides="libjson-c"
 
 build() {
-    meson setup build ${MESONFLAGS:-} \
+    CFLAGS="${CFLAGS:--Wno-error=switch}" meson setup build ${MESONFLAGS:-} \
         --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
         --libdir=lib --buildtype=release -Dbuild_apps=false
     meson compile -C build
@@ -32,4 +32,18 @@ check() {
 
 package() {
     "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+
+    install -m 644 json_patch.h json_pointer.h "$pkgdir/usr/include"
+    mkdir -p "$pkgdir/usr/lib/pkgconfig"
+    cat <<'EOF' >"$pkgdir/usr/lib/pkgconfig/json-c.pc"
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libjson-c
+Description: a JSON implementation in C
+Version: 0.19
+Libs: -L${libdir} -ljson-c
+Cflags: -I${includedir}
+EOF
 }

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=sway
+pkgver=1.12
+pkgsrc=https://github.com/swaywm/sway/releases/download/$pkgver/sway-$pkgver.tar.gz
+pkgchecksum=sha256:a7b1becc217433c11c6284d36bcea0687b87b77b0ed26a384565292ec321f2b1
+pkgdesc="i3-compatible wayland compositor"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://swaywm.org/"
+pkgcheck=true
+pkgdeps="musl,json-c,wlroots,pango,cairo,wayland,wayland-protocols,pcre2"
+pkgtriggers="man"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dbash-completions=true \
+        -Ddefault-wallpaper=true -Dfish-completions=true -Dgdk-pixbuf=disabled \
+        -Dman-pages=enabled -Dswaybar=true -Dswaynag=true -Dzsh-completions=true \
+        -Dtray=disabled
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+
+}
