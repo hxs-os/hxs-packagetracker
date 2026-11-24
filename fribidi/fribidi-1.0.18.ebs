@@ -1,0 +1,33 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=fribidi
+pkgver=1.0.18
+pkgsrc=https://github.com/fribidi/fribidi/releases/download/v$pkgver/fribidi-$pkgver.tar.xz
+pkgchecksum=sha256:1de5e8073d035388b71d0b2d452b1da1f8caeea8a7702997b401fe1b6250727f
+pkgdesc="the free implementation of unicode bidirectional algorithm"
+pkgmaintainer="juanvel400 <me@juanvel400.com"
+pkglicense="LGPL-2.1-or-later"
+pkghomepage="https://github.com/fribidi/fribidi"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man"
+pkgprovides="libfribidi"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Ddocs=false \
+        -Dtests=true -Dbin=true -Ddeprecated=false
+    meson compile -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}

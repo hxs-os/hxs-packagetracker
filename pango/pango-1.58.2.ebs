@@ -1,0 +1,37 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=pango
+pkgver=1.58.2
+pkgsrc=https://gitlab.gnome.org/GNOME/pango/-/archive/$pkgver/pango-$pkgver.tar.gz
+pkgchecksum=sha256:67b20e56a51aad6673261d2b7d41ced3687e59b82fe8c10a40ea43baf304cf0e
+pkgdesc="a library for layout and rendering of text"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="LGPL-2.0-only"
+pkghomepage="https://gitlab.gnome.org/GNOME/pango"
+pkgcheck=true
+pkgdeps="musl,freetype,fontconfig,cairo"
+pkgprovides="libpango"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dman-pages=false \
+        -Dfreetype=enabled -Dcairo=enabled -Dfontconfig=enabled \
+        -Ddocumentation=false -Dbuild-testsuite=true
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}

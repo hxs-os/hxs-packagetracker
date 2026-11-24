@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=harfbuzz
+pkgver=15.2.0
+pkgsrc=https://github.com/harfbuzz/harfbuzz/releases/download/$pkgver/harfbuzz-$pkgver.tar.xz
+pkgchecksum=sha256:e2ec49090744383cdbe7df808c1cedaafba06a97be8dc4211fe546ba585f12cb
+pkgdesc="text shaping engine"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="http://harfbuzz.github.io/"
+pkgcheck=true
+pkgdeps="musl,libpng,glib,cairo,freetype"
+pkgtriggers="man"
+pkgprovides="libharfbuzz"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dzlib=enabled \
+        -Dwasm=disabled -Dwith_libstdcxx=false -Dpng=enabled \
+        -Dicu=disabled -Dglib=enabled -Dcairo=enabled \
+        -Dfreetype=enabled
+    meson compile -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
