@@ -180,6 +180,22 @@
     ]
   },
   {
+    "name": "cairo",
+    "version": "1.18.6",
+    "homepage": "https://www.cairographics.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/cairo/cairo-1.18.6.ebs",
+    "source": "https://www.cairographics.org/releases/cairo-1.18.6.tar.xz",
+    "summary": "a 2D graphics library",
+    "license": "LGPL-2.1-or-later OR MPL-1.1",
+    "license_ids": [
+      "LGPL-2.1-or-later",
+      "MPL-1.1"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "coreutils",
     "version": "9.12",
     "homepage": "https://www.gnu.org/software/coreutils/",
@@ -481,6 +497,21 @@
     ]
   },
   {
+    "name": "fribidi",
+    "version": "1.0.18",
+    "homepage": "https://github.com/fribidi/fribidi",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/fribidi/fribidi-1.0.18.ebs",
+    "source": "https://github.com/fribidi/fribidi/releases/download/v1.0.18/fribidi-1.0.18.tar.xz",
+    "summary": "the free implementation of unicode bidirectional algorithm",
+    "license": "LGPL-2.1-or-later",
+    "license_ids": [
+      "LGPL-2.1-or-later"
+    ],
+    "maintainers": [
+      "juanvel400 <me@juanvel400.com"
+    ]
+  },
+  {
     "name": "fuzzel",
     "version": "1.15.0",
     "homepage": "https://codeberg.org/dnkl/fuzzel",
@@ -557,6 +588,21 @@
     ]
   },
   {
+    "name": "glib",
+    "version": "2.90.1",
+    "homepage": "https://docs.gtk.org/glib/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/glib/glib-2.90.1.ebs",
+    "source": "https://download.gnome.org/sources/glib/2.90/glib-2.90.1.tar.xz",
+    "summary": "a general-purpose, portable utility library",
+    "license": "LGPL-2.1-or-later",
+    "license_ids": [
+      "LGPL-2.1-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "gmp",
     "version": "6.3.0",
     "homepage": "https://gmplib.org/",
@@ -626,6 +672,21 @@
     "license": "GPL-3.0-or-later",
     "license_ids": [
       "GPL-3.0-or-later"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "harfbuzz",
+    "version": "15.2.0",
+    "homepage": "http://harfbuzz.github.io/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/harfbuzz/harfbuzz-15.2.0.ebs",
+    "source": "https://github.com/harfbuzz/harfbuzz/releases/download/15.2.0/harfbuzz-15.2.0.tar.xz",
+    "summary": "text shaping engine",
+    "license": "MIT",
+    "license_ids": [
+      "MIT"
     ],
     "maintainers": [
       "me@juanvel400.com"
@@ -1355,6 +1416,21 @@
     "license": "OFL-1.1",
     "license_ids": [
       "OFL-1.1"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
+    "name": "pango",
+    "version": "1.58.2",
+    "homepage": "https://gitlab.gnome.org/GNOME/pango",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/pango/pango-1.58.2.ebs",
+    "source": "https://gitlab.gnome.org/GNOME/pango/-/archive/1.58.2/pango-1.58.2.tar.gz",
+    "summary": "a library for layout and rendering of text",
+    "license": "LGPL-2.0-only",
+    "license_ids": [
+      "LGPL-2.0-only"
     ],
     "maintainers": [
       "me@juanvel400.com"
