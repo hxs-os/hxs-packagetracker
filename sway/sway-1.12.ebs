@@ -35,5 +35,4 @@ check() {
 
 package() {
     "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
-
 }

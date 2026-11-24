@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#shellcheck disable=SC2034
+#shellcheck disable=SC2154
+#shellcheck disable=SC2086
+
+#ebs.formulae
+ebsver=1
+
+pkgname=swaybg
+pkgver=1.2.2
+pkgsrc=https://github.com/swaywm/swaybg/releases/download/v$pkgver/swaybg-$pkgver.tar.gz
+pkgchecksum=sha256:a6652a0060a0bea3c3318d9d03b6dddac34f6aeca01b883eef9e58281f5202a1
+pkgdesc="wallpaper tool for wayland compositors"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="MIT"
+pkghomepage="https://github.com/swaywm/swaybg"
+pkgcheck=true
+pkgdeps="musl,cairo,wayland,wayland-protocols"
+pkgtriggers="man"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --libdir=lib --buildtype=release -Dman-pages=enabled \
+        -Dgdk-pixbuf=disabled
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir "$pkgdir"
+}
