@@ -38,7 +38,7 @@ build() {
         --enable-agetty --enable-dmesg --disable-nologin \
         --enable-unshare --enable-uuidgen --enable-hwclock \
         --enable-lsblk --enable-swapon --enable-lscpu \
-        --enable-switch_root --enable-pivot_root \
+        --enable-switch_root --enable-pivot_root --enable-fsck \
         --disable-bash-completion --sbindir=/usr/sbin \
         --enable-fallocate --bindir=/usr/bin --libdir=/usr/lib
     make

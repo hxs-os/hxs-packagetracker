@@ -16,7 +16,7 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="MIT"
 pkghomepage="https://swaywm.org/"
 pkgcheck=true
-pkgdeps="musl,json-c,wlroots,pango,cairo,wayland,wayland-protocols,pcre2"
+pkgdeps="musl,json-c,wlroots,pango,cairo,wayland,wayland-protocols,pcre2,xkeyboard-config"
 pkgtriggers="man"
 
 build() {

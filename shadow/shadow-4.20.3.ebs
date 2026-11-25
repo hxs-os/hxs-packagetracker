@@ -17,7 +17,8 @@ pkglicense="BSD-3-Clause"
 pkghomepage="https://github.com/shadow-maint/shadow"
 pkgcheck=false
 pkgdeps="musl"
-pkgtriggers="man"
+pkgtriggers="man,sysusers"
+pkgprovides="triggers:sysusers"
 
 prepare() {
     find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \;
@@ -41,4 +42,50 @@ build() {
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
     "${1:-fakeroot}" make -C man install-man DESTDIR="$pkgdir"
+
+    mkdir -p "$pkgdir/usr/share/xpt/triggers" \
+        "$pkgdir/usr/share/sysusers.d"
+
+    cat <<'EOF' >"$pkgdir/usr/share/xpt/triggers/sysusers"
+#!/bin/sh
+
+set -e
+
+# xpt: sysusers trigger
+# creates daemon users as specified in fragment files from /usr/share/sysusers.d/*.conf
+
+root="${XPT_ROOT:-}"
+
+[ -z "${root}" ] || [ -d "${root}" ] || {
+    echo "XPT_ROOT is not a directory: ${root}" >&2
+    exit 1
+}
+
+command -v groupadd >/dev/null || exit 0
+command -v useradd >/dev/null || exit 0
+
+for f in "$root"/usr/share/sysusers.d/*.conf; do
+    [ -f "$f" ] || continue
+    while read -r type name _; do
+        [ "$type" = g ] || continue
+        if [ -n "$root" ]; then set -- -R "$root"; else set --; fi
+        grep -q "^$name:" "$root/etc/group" && continue
+        groupadd "$@" -r "$name" || echo "! groupadd failed" >&2
+
+    done < "$f"
+done
+
+for f in "$root"/usr/share/sysusers.d/*.conf; do
+    [ -f "$f" ] || continue
+    while read -r type name group home shell comment; do
+        [ "$type" = u ] || continue
+
+        if [ -n "$root" ]; then set -- -R "$root"; else set --; fi
+        grep -q "^$name:" "$root/etc/passwd" && continue
+
+        useradd "$@" -rM -g "$name" -d "$home" -s "$shell" -c "$comment" "$name" || echo "! useradd failed" >&2
+    done < "$f"
+done
+EOF
+    chmod +x "$pkgdir/usr/share/xpt/triggers/sysusers"
 }
