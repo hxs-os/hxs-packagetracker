@@ -1,9 +1,5 @@
 #!/bin/sh
 
-#shellcheck disable=SC2034
-#shellcheck disable=SC2154
-#shellcheck disable=SC2086
-
 #ebs.formulae
 ebsver=1
 
@@ -19,7 +15,6 @@ pkgcheck=false
 pkgprovides="system:coreutils"
 pkgdeps="musl"
 pkgtriggers="man"
-
 
 build() {
     meson setup build ${MESONFLAGS:-} --buildtype=release --prefix=/usr -Ddoc=enabled

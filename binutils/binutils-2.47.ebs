@@ -3,10 +3,6 @@
 # the binutils formula uses {TARGET,HOST,BUILD}_TRIPLE variables to support both
 # Canadian cross-compilation and native builds
 
-#shellcheck disable=SC2034
-#shellcheck disable=SC2154
-#shellcheck disable=SC2086
-
 #ebs.formulae
 ebsver=1
 
