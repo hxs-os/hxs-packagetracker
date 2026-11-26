@@ -16,9 +16,9 @@ pkgmaintainer="juanvel400 <me@juanvel400.com>"
 pkglicense="BSD-2-Clause"
 pkghomepage="https://roy.marples.name/projects/dhcpcd"
 pkgcheck=true
-pkgprovides="system:dhcp,svc:openrc:dhcpcd"
+pkgprovides="system:dhcp,svc:openrc:dhcpcd,users:dhcpcd"
 pkgdeps="musl"
-pkgtriggers="man"
+pkgtriggers="man,sysusers"
 
 build() {
     ./configure ${CONFIGUREFLAGS:-} --prefix=/usr --sysconfdir=/etc --localstatedir=/var
@@ -26,13 +26,16 @@ build() {
 }
 
 check() {
-    make testusr/sbin/
+    make test
 }
 
 package() {
     "${1:-fakeroot}" make install DESTDIR="$pkgdir"
 
-    mkdir -p "$pkgdir/etc/init.d"
+    mkdir -p "$pkgdir/etc/init.d" "$pkgdir/usr/share/sysusers.d" \
+        "$pkgdir/var/run/dhcpcd"
+    chown 0:0 "$pkgdir/var/run/openntpd"
+
     cat <<'EOF' >"$pkgdir/etc/init.d/dhcpcd"
 #!/sbin/openrc-run
 
@@ -47,5 +50,12 @@ depend() {
     provide net
 }
 EOF
+
     chmod +x "$pkgdir/etc/init.d/dhcpcd"
+
+    cat <<'EOF' >"$pkgdir/usr/share/sysusers.d/dhcpcd.conf"
+# dhcpcd group and users
+g dhcpcd
+u dhcpcd dhcpcd /var/run/dhcpcd /usr/sbin/nologin dhcpcd daemon
+EOF
 }

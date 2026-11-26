@@ -83,7 +83,7 @@ for f in "$root"/usr/share/sysusers.d/*.conf; do
         if [ -n "$root" ]; then set -- -R "$root"; else set --; fi
         grep -q "^$name:" "$root/etc/passwd" && continue
 
-        useradd "$@" -rM -g "$name" -d "$home" -s "$shell" -c "$comment" "$name" || echo "! useradd failed" >&2
+        useradd "$@" -rM -g "$group" -d "$home" -s "$shell" -c "$comment" "$name" || echo "! useradd failed" >&2
     done < "$f"
 done
 EOF
