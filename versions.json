@@ -2163,11 +2163,11 @@
   },
   {
     "name": "xpt",
-    "version": "0.13.2",
+    "version": "0.14.0",
     "homepage": "https://git.sr.ht/~juanvel400/xpt",
-    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.13.2.ebs",
-    "source": "https://dl.juanvel400.com/xpt/xpt-0.13.2.tar.xz",
-    "summary": "a package manager utility and library",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/xpt/xpt-0.14.0.ebs",
+    "source": "https://dl.juanvel400.com/xpt/xpt-0.14.0.tar.xz",
+    "summary": "the xpt package-management suite",
     "license": "BSD-3-Clause",
     "license_ids": [
       "BSD-3-Clause"
