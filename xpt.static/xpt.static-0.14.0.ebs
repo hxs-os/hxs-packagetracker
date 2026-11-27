@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#ebs.formulae
+ebsver=1
+
+pkgname=xpt.static
+pkgver=0.14.0
+pkgsrc=https://dl.juanvel400.com/xpt/xpt-$pkgver.tar.xz
+pkgchecksum=sha256:1ebfc087f90180426dcc2dc5e7dc6909167edf059411e697d7ede42744302b4f
+pkgdesc="a static build of xpt, lacking the networking subsystem"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://git.sr.ht/~juanvel400/xpt"
+pkgcheck=true
+pkgprovides="system:xpt,libxpt"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --buildtype=release -Dtests=enabled -Ddoxygen=disabled \
+        -Debt=enabled -Debt_only=disabled -Dlibxpt=enabled \
+        -Dnetworking=disabled -Ddoc=enabled -Dshell_completions=enabled \
+        -Dstatic=true -Dxpt=enabled -Ddefault_library=static
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir="$pkgdir"
+}

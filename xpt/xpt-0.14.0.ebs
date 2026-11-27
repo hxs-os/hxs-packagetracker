@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#ebs.formulae
+ebsver=1
+
+pkgname=xpt
+pkgver=0.14.0
+pkgsrc=https://dl.juanvel400.com/xpt/xpt-$pkgver.tar.xz
+pkgchecksum=sha256:1ebfc087f90180426dcc2dc5e7dc6909167edf059411e697d7ede42744302b4f
+pkgdesc="the xpt package-management suite"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="BSD-3-Clause"
+pkghomepage="https://git.sr.ht/~juanvel400/xpt"
+pkgcheck=true
+pkgdeps="musl,openssl,libarchive,zstd,sqlite3"
+pkgprovides="system:xpt,libxpt"
+pkgtriggers="man"
+
+build() {
+    meson setup build ${MESONFLAGS:-} \
+        --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+        --buildtype=release -Dtests=enabled -Ddoxygen=disabled \
+        -Debt=enabled -Debt_only=disabled -Dlibxpt=enabled \
+        -Dnetworking=enabled -Ddoc=enabled -Dshell_completions=enabled \
+        -Dstatic=false -Dxpt=enabled
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    "${1:-fakeroot}" meson install -C build --strip --destdir="$pkgdir"
+}
