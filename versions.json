@@ -1378,6 +1378,21 @@
     ]
   },
   {
+    "name": "openntpd",
+    "version": "7.9p1",
+    "homepage": "https://www.openntpd.org/",
+    "recipe": "https://github.com/hxs-os/hxs-packagetracker/blob/main/openntpd/openntpd-7.9p1.ebs",
+    "source": "https://cdn.openbsd.org/pub/OpenBSD/OpenNTPD/openntpd-7.9p1.tar.gz",
+    "summary": "a Network Time Protocol implementation from OpenBSD",
+    "license": "ISC",
+    "license_ids": [
+      "ISC"
+    ],
+    "maintainers": [
+      "me@juanvel400.com"
+    ]
+  },
+  {
     "name": "openrc",
     "version": "0.64.1",
     "homepage": "https://github.com/OpenRC/openrc",
