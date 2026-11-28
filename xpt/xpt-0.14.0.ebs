@@ -23,6 +23,7 @@ build() {
         -Debt=enabled -Debt_only=disabled -Dlibxpt=enabled \
         -Dnetworking=enabled -Ddoc=enabled -Dshell_completions=enabled \
         -Dstatic=false -Dxpt=enabled
+    meson compile -C build
 }
 
 check() {

@@ -21,6 +21,7 @@ build() {
         -Debt=enabled -Debt_only=disabled -Dlibxpt=enabled \
         -Dnetworking=disabled -Ddoc=enabled -Dshell_completions=enabled \
         -Dstatic=true -Dxpt=enabled -Ddefault_library=static
+    meson compile -C build
 }
 
 check() {

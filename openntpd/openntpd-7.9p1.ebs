@@ -1,0 +1,40 @@
+#!/bin/sh
+
+#ebs.formulae
+ebsver=1
+
+pkgname=openntpd
+pkgver=7.9p1
+pkgsrc=https://cdn.openbsd.org/pub/OpenBSD/OpenNTPD/openntpd-$pkgver.tar.gz
+pkgchecksum=sha256:091eeb3f4e358e28c3ab2ea58f93d7a0b5758a20d7c8a0418e162e9b2c27addc
+pkgdesc="a Network Time Protocol implementation from OpenBSD"
+pkgmaintainer="juanvel400 <me@juanvel400.com>"
+pkglicense="ISC"
+pkghomepage="https://www.openntpd.org/"
+pkgcheck=true
+pkgdeps="musl"
+pkgtriggers="man"
+pkgprovides="svc:openrc:ntpd,system:ntpd"
+
+build() {
+    ./configure ${CONFIGUREFLAGS:-} --prefix=/usr \
+        --sysconfdir=/etc --localstatedir=/var --runstatedir=/run
+    make
+}
+
+check() {
+    make check
+}
+
+package() {
+    "${1:-fakeroot}" make install DESTDIR="$pkgdir"
+
+    mkdir -p "$pkgdir/usr/share/sysusers.d" "$pkgdir/var/run/openntpd"
+    chown 0:0 "$pkgdir/var/run/openntpd"
+
+    cat <<'EOF' >"$pkgdir/usr/share/sysusers.d/openntpd.conf"
+# openntpd group and users
+g _ntpd
+u _ntpd _ntpd /var/run/openntpd /usr/sbin/nologin OpenNTP daemon
+EOF
+}
